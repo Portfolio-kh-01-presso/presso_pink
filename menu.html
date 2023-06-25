@@ -4,24 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
+    <link href="/resources/css/menu.css" rel="stylesheet">
     <style>
-        .menu-list img{
-            width: 250px;
-            height: 250px;
+        header{
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 1200px;
+        }
+
+        .top-menu > ul{
+            display: flex;
+            gap: 70px;
+        }
+
+        .top-menu > ul > li{
+            display: flex;
+        }
+        
+        .top-menu > ul > li > a:hover{
+            border-bottom: 2px solid #f1648a;
+        }
+
+        .top-menu-detailed{
+            display: none;
+        }
+
+        .top-menu-detailed > ul > li > a{
+            border-bottom: 1px solid #e8e8e8;
+            color: #666;
+            display: block;
+            font-size: 14px;
+            margin-bottom: 17px;
+            padding-bottom: 17px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="wrap header">
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="/resources/img/menu/from_open_storage.png">
+                </a>
+            </div>
+            <div class="top-menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>소개</span>
+                        </a>
+                        <div class="top-menu-detailed">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>브랜드 소개</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>앱 소개</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>메뉴</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>매장 찾기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>소식</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>채용</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>직가맹점</span>
+                        </a>
+                        <div class="top-menu-detailed">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>브랜드 경쟁력</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>인테리어 특장점</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>직영점 입점제안</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>가맹점 창업문의</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="wrap content">
         <section>
             <article>
-                <div class="first">
+                <div class="main-menu first">
                     <div class="title">
                         <h2>아메리카노 원두 등급 비교</h2>
-                        <hr>
                         <p>가격 대비 높은 원두 등급에 놀라지 마세요!</p>
                     </div>
-                    <div class="list">
+                    <div class="list first">
                     <ul>
                         <li>
                             <img class="coffee-name" src="/resources/img/menu/title-blending.png">
@@ -30,8 +141,8 @@
                                 <br>Colombia Huila Supremo
                                 <br>El Salvador SHG
                             </p>
-                            <img class="shot" src="/resources/img/menu/2-shot.png">
                             <img class="coffee" src="/resources/img/menu/menu-americano.png">
+                            <img class="shot" src="/resources/img/menu/2-shot.png">
                         </li>
                         <li>
                             <img class="coffee-name" src="/resources/img/menu/title-signature.png">
@@ -41,8 +152,8 @@
                                 <br>Brazil BSCA
                                 <br>Colombia Huila Supremo
                             </p>
-                            <img class="shot" src="/resources/img/menu/2-shot.png">
                             <img class="coffee" src="/resources/img/menu/menu-americano.png">
+                            <img class="shot" src="/resources/img/menu/2-shot.png">
                         </li>
                         <li>
                             <img class="badge" src="/resources/img/menu/badge-new.png">
@@ -56,8 +167,8 @@
                                 <br>Brazil BSCA
                                 <br>El Salvador SHG
                             </p>
-                            <img class="shot" src="/resources/img/menu/4-shot.png">
                             <img class="coffee" src="/resources/img/menu/menu-americano.png">
+                            <img class="shot" src="/resources/img/menu/4-shot.png">
                         </li>
                         <li>
                             <img class="badge" src="/resources/img/menu/badge-iceonly.png">
@@ -66,24 +177,23 @@
                                 <br>Colombia Huila Supremo
                                 <br>El Salvador SHG
                             </p>
-                            <img class="shot" src="/resources/img/menu/4-shot-b.png">
                             <img class="coffee" src="/resources/img/menu/menu-americano.png">
+                            <img class="shot" src="/resources/img/menu/4-shot-b.png">
                         </li>
                     </ul>
-                    <div class="info">
+                    <div class="information">
                         <img src="/resources/img/menu/img-bsca.png">
                         <p>* BSCA는 Brazil Specialty Coffee Association 약자임
                             <br>* 원두는 함량순으로 표기, 공통용량 ICE 650 ml/ HOT 500 ml
                         </p>
                     </div>
                 </div>
-                <div class="second">
+                <div class="main-menu second">
                     <div class="title">
                         <h2>스위트 아메리카노 비교</h2>
-                        <hr>
                         <p>취향에 맞는 달콤함을 선택하세요!</p>
                     </div>
-                    <div class="list">
+                    <div class="list second">
                     <ul>
                         <li>
                             <img class="badge" src="/resources/img/menu/badge-good.png">
@@ -114,23 +224,23 @@
                             <img class="coffee" src="/resources/img/menu/honey-object.png">
                         </li>
                     </ul>
-                    <div class="info">
-                        <span>스테비아란?</span>
-                        <p>중남미가 원산지인 다년생 생물로 설탕의 약 200배의 단맛이 있는 천연감미료입니다.
+                    <div class="information">
+                        <p>
+                            <span>스테비아란?</span>
+                            중남미가 원산지인 다년생 생물로 설탕의 약 200배의 단맛이 있는 천연감미료입니다.
                             <br>몸에 거의 흡수되지 않고 그대로 몸 밖으로 배출되어 혈당에 영향을 주지 않습니다.
                         </p>
                     </div>
                 </div>
-                <div class="third">
+                <div class="main-menu third">
                     <div class="title">
                         <h2>메뉴</h2>
-                        <hr>
-                        <p>바나프레소는 합리적인 가격으로 좋은 품질과 맛을 고객님이 느끼실 수 있도록 항상 연구합니다.
+                        <p>호랭다방은 합리적인 가격으로 좋은 품질과 맛을 고객님이 느끼실 수 있도록 항상 연구합니다.
                             <br>주요 메뉴 외 시즌 메뉴 등 다양한 메뉴들과 함께 바나프레소를 즐기세요
                         </p>
                     </div>
                     <nav>
-                        <div class="menu">
+                        <div class="main-menu-bar">
                             <ul>
                                 <li>
                                     <a href="#">COFFEE</a>
@@ -162,7 +272,7 @@
                             </ul>    
                         </div>
                     </nav>
-                    <div class="menu-list 0">
+                    <div class="main-menu-list first">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (1).png">
@@ -187,7 +297,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 1">
+                    <div class="main-menu-list second">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (21).png">
@@ -212,7 +322,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 2">
+                    <div class="main-menu-list third">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (35).png">
@@ -237,7 +347,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 3">
+                    <div class="main-menu-list fourth">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (54).png">
@@ -262,7 +372,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 4">
+                    <div class="main-menu-list fifth">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (62).png">
@@ -287,7 +397,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 5">
+                    <div class="main-menu-list sixth">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (77).png">
@@ -312,7 +422,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 6">
+                    <div class="main-menu-list seventh">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage (97).png">
@@ -337,7 +447,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 7">
+                    <div class="main-menu-list eighth">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage - 2023-06-22T204129.066.png">
@@ -362,7 +472,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-list 8">
+                    <div class="main-menu-list ninth">
                         <ul>
                             <li>
                                 <img src="/resources/img/menu/from_open_storage - 2023-06-22T204143.002.png">
