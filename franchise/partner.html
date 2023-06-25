@@ -1,337 +1,253 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            width: 1654px;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 0;
+            margin: 0;
+            width: 1654px;
+            height: 93px;
+            background-color: white;
+        }
+
+        .inner {
+            margin: 0 227px 0 227px;
+            padding: 0;
+            width: 1200px;
+            height: 105px;
+            background-color: white;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+        }
+
+        .menucontainer {
+            margin:0;
+            padding: 0;
+            width: 588px;
+            height: 105px;
+        }
+
+        nav ul li {
+            padding: 35px 20px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu:hover:not(.home) {
+            text-align: center;
+            background-color: white;
+            color: pink;
+        }
+    </style>
+    <style>
+
+    </style>
+    <style>
+        footer {
+            padding: 60px 0px 50px 0px;
+            width: 1654px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+    <style>
+        #wrapper{
+            margin: 0 200px;
+            padding: 100px 0 0 150px ;
+            width: 1254px;
+            height: 1483px;
+            background-color: white;
+        }
+        .red {
+            color: red;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px
+        }
+        .tit{
+            font-size: x-large;
+        }
+        .pred {
+            float: right;
+            color: red;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px
+        }
+        .h1{
+            margin: 0;
+        }
+        #line{
+            margin: 0;
+        }
+        .tb1_wrap{
+            padding: 25px 0 0 0;
+            width: 1254px;
+            height: 657px;
+        }
+        .tbody{
+            padding: 15px;
+        }
+        table{
+             width: 1254px;
+             height: 600px;
+        }
+        tr, td{
+            font-size: 20px;
+            padding: 15px;
+        }
+        
+        th{ 
+            width: 109px;
+            height: 73px;
+            padding: 15px 0 ;
+        }
+        .radio{
+            display: inline;
+            width: 110px;
+            height: 36px;
+            padding: 15px;
+        }
+        #offer_name ,#offer_hp{
+            font-size: 18px;
+            padding: 0 18px;
+            width: 300px;
+            height: 50px;
+        }
+
+
+    </style>
 </head>
+
 <body>
-    <div id="root">
-        <div class="App">
-            <div id="wrap" class="warp_partner">
-                <div id="contents">
-                    <header width="100%" id="header" class="sc-gLLvby dEzzaX sc-fHekdT idEnbl">
-                        <div class="inner">
-                            <h1 class="logo"><a href="/"><img
-                                        src="https://www.banapresso.com/from_open_storage?ws=fprocess&amp;file=banapresso/open/logo/h_logo_3138e3904929.png"
-                                        alt="Banapresso"></a></h1>
-                            <ul class="menu-list">
-                                <li class="list-item depth "><a href="/banapresso"><span>소개</span></a>
-                                    <ul class="depth-view">
-                                        <li class="  "><a href="/banapresso"><span>브랜드 소개</span></a></li>
-                                        <li class="  "><a href="/app"><span>앱 소개</span></a></li>
-                                    </ul>
-                                </li>
-                                <li class="list-item  "><a href="/menu"><span>메뉴</span></a></li>
-                                <li class="list-item  "><a href="/store"><span>매장 찾기</span></a></li>
-                                <li class="list-item  "><a href="/news"><span>소식</span></a></li>
-                                <li class="list-item  "><a href="/recruit"><span>채용</span></a></li>
-                                <li class="list-item depth "><a href="/store/partner"><span>직가맹점</span></a>
-                                    <ul class="depth-view">
-                                        <li class="  "><a href="/franchise/compete"><span>브랜드 경쟁력</span></a></li>
-                                        <li class="  "><a href="/franchise/interior"><span>인테리어 특장점</span></a></li>
-                                        <li class="  "><a href="/store/partner"><span>직영점 입점제안</span></a></li>
-                                        <li class="  "><a href="/franchise/partner"><span>가맹점 창업문의</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div><a class="btn_franchisee" href="/franchise/partner"></a>
-                    </header>
-                    <article>
-                        <div class="top_visual top-height top_partner">
-                            <div class="inner">
-                                <div class="top_visual_txt">
-                                    <h2>직영점 입점제안</h2>
-                                    <p>현재 수도권 위주로 80여개의 직영점을 출점 했으며,<br>수수료, 고정임대료 2가지 방식으로 임차하여 운영 중입니다. 바나프레소와 함께
-                                        하시면,<br>안정적인 임대 수익과 함께 별다른 이슈 없이 편하게 임대 사업을 진행하실 수 있습니다.</p>
-                                    <p>하단의 상담신청을 작성해 주시면, 친절하고 상세하게 상담해 드리겠습니다.<br>가맹점 관련 기타 문의 사항은 <a href="#" role="none"
-                                            style="color: rgb(241, 100, 138);">store@banapresso.com</a> 연락 주시기 바랍니다.</p>
-                                </div>
-                            </div>
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="../resources/img/recruit/from_open_storage.png" height="35px" width="200px">
+                </a>
+            </h1>
+            <nav>
+                <ul class="menucontainer">
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>소개</strong></div>
+                        <div class="dropdown-content">
+                            <a href="#"></a>
+                            <a href="#"></a>
                         </div>
-                        <nav class="nav-wrap  " style="margin-top: 100px; left: -135px;">
-                            <ul class="page-list">
-                                <li class="list-item  "><a href="/franchise/compete"><span>브랜드 경쟁력</span></a></li>
-                                <li class="list-item  "><a href="/franchise/interior"><span>인테리어 특장점</span></a></li>
-                                <li class="list-item  active"><a href="/store/partner"><span>직영점 입점제안</span></a></li>
-                                <li class="list-item  "><a href="/franchise/partner"><span>가맹점 창업문의</span></a></li>
-                            </ul>
-                        </nav>
-                        <div class="top_visual video_area">
-                            <div class="inner">
-                                <div class="video_frame"><iframe id="ytplayer" title="yt_video" width="1200" height="675"
-                                        src="https://www.youtube.com/embed/HdlJvBs63RQ?autoplay=1&amp;controls=1&amp;disablekb=1&amp;fs=0&amp;loop=1&amp;rel=0"
-                                        style="display: inline;"></iframe></div>
-                            </div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>메뉴</strong></div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>매장 찾기</strong></div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>소식</strong></div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>채용</strong></div>
+                    </li>
+                    <li class="dropdown">
+                        <div class="dropdown-menu"><strong>직가맹점</strong></div>
+                        <div class="dropdown-content">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
                         </div>
-                        <div class="cont_box partner_cont">
-                            <section class="sec_partner2">
-                                <div class="inner">
-                                    <div class="lease_method">
-                                        <h3><i class="icon_building"></i>임대차 방식</h3>
-                                        <ul class="num_list">
-                                            <li><span class="num">1</span><span>보증금/고정 임대료 방식</span>
-                                                <ul class="dot_list">
-                                                    <li>매월 고정된 임대료를 지급받는 방식입니다. (고정임대료 상한선 월 2,000만원)</li>
-                                                </ul>
-                                            </li>
-                                            <li><span class="num">2</span><span>보증금/수수료 방식</span>
-                                                <ul class="dot_list">
-                                                    <li>고정된 임대료 지급이 아닌, 매출의 일정 비율을 건물주님께 지급하는 방식입니다.<br>예) 월 매출 1억원 수수료율 14%
-                                                        : 월 임대료 1,400만원(부가세 별도)</li>
-                                                    <li>수수료 방식의 경우 매장 매출을 실시간 조회 가능한 웹페이지를 제공해드립니다.</li>
-                                                    <li>경우에 따라 매출에 관련 없는 최소 임대 수수료 설정이 가능합니다.</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="sec_partner3">
-                                <div class="inner">
-                                    <div class="application_form">
-                                        <div class="tit_area">
-                                            <h3>상담 신청</h3>
-                                            <p class="fc_red">* 표시 되어진 부분은 필수 항목입니다.</p>
-                                        </div>
-                                        <div class="tbl_wrap">
-                                            <table class="tbl">
-                                                <colgroup>
-                                                    <col style="width: 135px;">
-                                                    <col style="width: auto;">
-                                                </colgroup>
-                                                <tbody>
-                                                    <tr>
-                                                        <th><label for="chk_offer_type_code_0">신청자 구분 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_offer_type_code_1" name="offer_type_code"
-                                                                    value="1" checked=""><label
-                                                                    for="chk_offer_type_code_1">임대인 (본인)</label></div>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_offer_type_code_2" name="offer_type_code"
-                                                                    value="2"><label for="chk_offer_type_code_2">임대인 지인
-                                                                    (가족,지인)</label></div>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_offer_type_code_3" name="offer_type_code"
-                                                                    value="3"><label for="chk_offer_type_code_3">대리인
-                                                                    (부동산,에이전트)</label></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_name_input">이름 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td><input type="text" name="name" id="offer_name_input"
-                                                                class="inp_control w300" value=""></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_email_input">이메일 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="mail select-flex-gap"><input type="text"
-                                                                    name="email" class="inp_control w150"
-                                                                    id="offer_email_input" value=""><span
-                                                                    class="at">@</span><input type="text" name="emailDomain"
-                                                                    class="inp_control w300" value=""><select
-                                                                    class="inp_control w300" name="selEmail">
-                                                                    <option value="">직접입력</option>
-                                                                    <option value="naver.com">naver.com</option>
-                                                                    <option value="hanmail.net">hanmail.net</option>
-                                                                    <option value="daum.net">daum.net</option>
-                                                                    <option value="nate.com">nate.com</option>
-                                                                    <option value="gmail.com">gmail.com</option>
-                                                                    <option value="hotmail.com">hotmail.com</option>
-                                                                    <option value="lycos.co.kr">lycos.co.kr</option>
-                                                                    <option value="empal.com">empal.com</option>
-                                                                    <option value="cyworld.com">cyworld.com</option>
-                                                                    <option value="yahoo.com">yahoo.com</option>
-                                                                    <option value="paran.com">paran.com</option>
-                                                                    <option value="dreamwiz.com">dreamwiz.com</option>
-                                                                </select></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_hp">휴대폰 <span class="fc_red">*</span></label>
-                                                        </th>
-                                                        <td><input type="text" name="hp" class="inp_control w300"
-                                                                id="offer_hp" placeholder="숫자만 입력" maxlength="11" value="">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="chk_store_division_0">점포 구분 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_store_division_code_1"
-                                                                    name="store_division_code" value="1" checked=""><label
-                                                                    for="chk_store_division_code_1">건물</label></div>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_store_division_code_2"
-                                                                    name="store_division_code" value="2"><label
-                                                                    for="chk_store_division_code_2">토지</label></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th class="th_align"><label for="offer_address">점포 주소 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="address_box">
-                                                                <div class="addr_top"><button type="button"
-                                                                        class="btn_outline">주소 찾기</button><input type="text"
-                                                                        name="address" class="inp_control w600"
-                                                                        id="offer_address" placeholder="서울 강남구 삼성동"
-                                                                        readonly="" value=""
-                                                                        style="color: rgb(187, 187, 187); background-color: rgb(248, 248, 248); cursor: default; user-select: none;">
-                                                                </div>
-                                                                <div class="addr_btm"><input type="text"
-                                                                        name="address_detail" class="inp_control w600"
-                                                                        placeholder="상세주소" value=""></div>
-                                                                <p class="fc_red">* 현재 수도권(서울/경기) 지역만 입점이 가능하며, 추후 확대해 나갈
-                                                                    예정입니다.</p>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_floor">면적 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="area_box"><input type="text" name="floor"
-                                                                    class="inp_control w150" id="offer_floor" maxlength="2"
-                                                                    value=""><span>층</span><input type="text" name="py"
-                                                                    class="inp_control w150" value=""><span>평(전용면적)</span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="chk_lease_type_0">임대 방식 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_lease_type_code_1" name="lease_type_code"
-                                                                    value="1" checked=""><label
-                                                                    for="chk_lease_type_code_1">보증금/고정임대료</label></div>
-                                                            <div class="radio"><input type="radio"
-                                                                    id="chk_lease_type_code_2" name="lease_type_code"
-                                                                    value="2"><label
-                                                                    for="chk_lease_type_code_2">보증금/수수료</label></div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_etc_text">내용 <span
-                                                                    class="fc_red">*</span></label></th>
-                                                        <td>
-                                                            <div class="textbox"><textarea cols="80" rows="10" name="etc"
-                                                                    id="offer_etc_text"
-                                                                    placeholder="임대조건 및 상권설명 등을 간략하게 기입해주세요."></textarea>
-                                                                <div class="txt_count"><span class="fc_pink">0</span>/500
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th><label for="offer_image_1">이미지 첨부 <br>(최대 3개)</label></th>
-                                                        <td>
-                                                            <div class="filebox">
-                                                                <div class="btn_file"><input type="file"
-                                                                        name="attach_image1" id="offer_image_1"><button
-                                                                        type="button" class="btn_outline">파일선택</button>
-                                                                </div>
-                                                                <div class="file_list"><input type="text"
-                                                                        class="inp_control w600" placeholder="선택된 파일 없음"
-                                                                        disabled="" value=""></div>
-                                                            </div>
-                                                            <div class="filebox">
-                                                                <div class="btn_file"><input type="file"
-                                                                        name="attach_image2"><button type="button"
-                                                                        class="btn_outline">파일선택</button></div>
-                                                                <div class="file_list"><input type="text"
-                                                                        class="inp_control w600" placeholder="선택된 파일 없음"
-                                                                        disabled="" value=""></div>
-                                                            </div>
-                                                            <div class="filebox">
-                                                                <div class="btn_file"><input type="file"
-                                                                        name="attach_image3"><button type="button"
-                                                                        class="btn_outline">파일선택</button></div>
-                                                                <div class="file_list"><input type="text"
-                                                                        class="inp_control w600" placeholder="선택된 파일 없음"
-                                                                        disabled="" value=""></div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="application_info">
-                                            <ul class="hypen_list">
-                                                <li>- 상담 신청에 대한 회신은 기재해 주신 이메일 또는 유선으로 통상 2주 이내 연락 드립니다.</li>
-                                                <li>- 내부 검토 결과에 따라 진행이 가능할 경우에 한하여 개별 회신을 드리고 있는 점 양해 부탁드립니다.</li>
-                                                <li>- 입점 불가 사유, 상권분석 등을 별도로 설명해 드리지는 않습니다.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="policy_agree">
-                                            <div class="check"><input type="checkbox" id="ex_chk5" name="term_agree"><label
-                                                    for="ex_chk5">개인정보 수집 및 이용 동의 (필수)</label></div>
-                                            <div class="policy">
-                                                <ul class="hypen_list">
-                                                    <li>- 수집 항목 : 신청자 구분, 이름, 이메일, 휴대폰번호, 점포구분, 점포주소, 면적, 임대방식, 개인이 직접 입력한
-                                                        내용</li>
-                                                    <li>- 수집 목적 : 문의 및 결과 회신</li>
-                                                    <li>- 이용 기간 : 원칙적으로, 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체없이 파기합니다.<br>(단,
-                                                        관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와 같이 관계법령에서 정한 일정 기간 동안 개인정보를 보관할 수
-                                                        있습니다.)</li>
-                                                    <li>- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li>
-                                                    <li>- 위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될
-                                                        수 있습니다.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="btn_area"><button type="button" class="btn_application">신청하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </article>
-                </div>
-                <footer width="100%" id="footer" class="sc-eDLJxc diMtfd">
-                    <div width="1200px" class="sc-jTQDnj kylotc"><button type="button" id="btn_top"
-                            class="sc-blmETK eNxgBZ btn_top_animation"><img src="/images/common/btn_top.png" alt="TOP"
-                                loading="eager" width="68" height="68" class="sc-iBdmCd blJlrD"></button>
-                        <div class="foot_cont">
-                            <div class="foot_copy"><img src="/images/common/footer_logo.png" alt="banapresso"></div>
-                            <ul class="foot_menu">
-                                <li class="privacy "><button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
-                                    <ul>
-                                        <li><a href="/privacy">바나프레소앱 개인정보 처리방침</a></li>
-                                        <li><a href="/companyPrivacy">기업사이트 개인정보 처리방침</a></li>
-                                    </ul>
-                                </li>
-                                <li class="privacy "><button class="sc-ifyqMZ eCrSIr">이용약관</button>
-                                    <ul>
-                                        <li><a href="/termsofservice">이용약관</a></li>
-                                        <li><a href="/termsofgift">충전식 상품권 약관</a></li>
-                                        <li><a href="/termsofpoint">잔돈포인트 약관</a></li>
-                                    </ul>
-                                </li>
-                                <li class="bold"><a href="/recruit">채용</a></li>
-                                <li class="bold"><a href="/store/partner">입점제안</a></li>
-                                <li class="bold"><a href="/franchise/partner">가맹점 문의</a></li>
-                                <li class="bold module-layer-btn"><a href="#" role="none">제휴 문의</a></li>
-                                <li class="bold module-layer2-btn"><a href="#" role="none">매장 이용 및 고객 문의</a></li>
-                            </ul>
-                            <address><span><strong><b>상호명</b> : 주식회사 바나플에프엔비</strong></span><span><b>대표자명</b> : 송민기 <i
-                                        class="foot_bar">|</i><b>사업장 소재지</b> : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층 <i
-                                        class="foot_bar">|</i><b>사업자번호</b> : 358-87-00860</span><span><b>대표전화</b> :
-                                    1811-1111 <i class="foot_bar">|</i><b>Fax </b> : 070-4512-0296 <i
-                                        class="foot_bar">|</i><b>이메일</b> : <a
-                                        href="mailto:qna@banapresso.com">qna@banapresso.com 또는 1811-1111</a></span><span
-                                    class="text_copy">© banaple F&amp;B. All Rights Reserved.</span></address>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+        <div id="wrapper">
+            <section>
+                <div class="tit">
+                    <h1 class="h1">상담 신청<p class="pred">*표시 되어진 부분은 필수 항목입니다.</p></h1><hr id="line" width="1254px" style="border: solid 2px black">
+                </div>
+                <div class="tb1_wrap">
+                    <table class="tb1">
+                        <colgroup>
+                            <col style="width: 109px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th align="left">
+                                    <label for="chk_offer_type_0">
+                                        점포유무
+                                        <span class="red"> *</span>
+                                    </label>
+                                </th>
+                                <td>
+                                    <div class="radio">
+                                    <input type="radio" name="offer_code" value="3" checked>
+                                    <label>점포 없음</label>
+                                    </div>
+                                    <div class="radio"></div>
+                                    <input type="radio" name="offer_code" value="1" >
+                                    <label>점포 있음</label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th align="left">
+                                    <label>이름<span class="red"> *</span></label>
+                                </th>
+                                <td>
+                                    <input type="text" name="name" id="offer_name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th align="left">
+                                    <label for="franchise_inp_email">
+                                        이메일<span class="red"> *</span>
+                                    </label>
+                                </th>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th align="left">
+                                    <label for="franchise_inp_hp">
+                                        휴대폰<span class="red"> *</span>
+                                    </label>
+                                </th>
+                                <td>
+                                    <input type="text" name="hp" id="offer_hp" placeholder="숫자만 입력" maxlength="11">
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    <footer>
+        <div>footer</div>
+    </footer>
 </body>
+
 </html>
