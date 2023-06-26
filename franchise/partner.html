@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             width: 1654px;
             margin: 0;
             padding: 0;
         }
+
         header {
             padding: 0;
             margin: 0;
@@ -32,13 +33,20 @@
             top: 10px;
         }
 
+        .Enquiries_for_membership {
+            z-index: 100;
+            position: fixed;
+            top: 150px;
+            right: 250px;
+        }
+
         nav ul {
             float: right;
             list-style-type: none;
         }
 
         .menucontainer {
-            margin:0;
+            margin: 0;
             padding: 0;
             width: 588px;
             height: 105px;
@@ -54,11 +62,25 @@
             position: relative;
         }
 
-        .dropdown-menu:hover:not(.home) {
-            text-align: center;
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
             background-color: white;
             color: pink;
+            border-bottom: 2px solid #f1648a;
         }
+
+        /*         .dropdown-menu:hover:not(.home) {
+            text-align: center;
+            background-color: white;
+            color: pink; 
+        } */
     </style>
     <style>
 
@@ -72,71 +94,118 @@
         }
     </style>
     <style>
-        #wrapper{
+        #wrapper {
             margin: 0 200px;
-            padding: 100px 0 0 150px ;
+            padding: 100px 150px 0 150px;
             width: 1254px;
             height: 1483px;
             background-color: white;
         }
+
         .red {
             color: red;
             font-size: 16px;
             font-weight: 400;
             line-height: 26px
         }
-        .tit{
+
+        .tit {
             font-size: x-large;
         }
+
         .pred {
-            float: right;
+            /* float: right; */
+            position: absolute;
+            right: 490px;
             color: red;
             font-size: 16px;
             font-weight: 400;
             line-height: 26px
         }
-        .h1{
+
+        .h1 {
             margin: 0;
         }
-        #line{
+
+        #line {
             margin: 0;
         }
-        .tb1_wrap{
+
+        .tb1_wrap {
             padding: 25px 0 0 0;
             width: 1254px;
             height: 657px;
         }
-        .tbody{
+
+        .tbody {
             padding: 15px;
         }
-        table{
-             width: 1254px;
-             height: 600px;
+
+        table {
+            width: 1254px;
+            height: 600px;
         }
-        tr, td{
+
+        tr,
+        td {
             font-size: 20px;
             padding: 15px;
         }
-        
-        th{ 
+
+        th {
             width: 109px;
             height: 73px;
-            padding: 15px 0 ;
+            padding: 15px 0;
         }
-        .radio{
+
+        .radio {
             display: inline;
             width: 110px;
             height: 36px;
             padding: 15px;
         }
-        #offer_name ,#offer_hp{
+
+        #offer_name,
+        #offer_hp {
             font-size: 18px;
             padding: 0 18px;
-            width: 300px;
+            width: 260px;
             height: 50px;
         }
 
+        #offer_name1 {
+            width: 150px;
+            height: 48px;
+        }
 
+        .inp_control {
+            width: 300px;
+            height: 54px;
+        }
+
+        .textbox {
+            padding: 0;
+        }
+
+        #textar {
+            width: 790px;
+            height: 220px;
+        }
+        .agree {
+            background-color: rgb(238, 238, 238);
+            width: 1050px;
+            height: 260px;
+            border: 1px solid rgb(235, 232, 232);
+            position: absolute;
+            top: 1100px;
+        }
+        .hypen_list{
+            list-style-type: none;
+        }
+         div .ted{
+            margin: 50px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -147,104 +216,165 @@
                 <a href="#"><img src="../resources/img/recruit/from_open_storage.png" height="35px" width="200px">
                 </a>
             </h1>
+            <div class="Enquiries_for_membership">
+                <a href="#"><img src="../resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
+            </div>
             <nav>
                 <ul class="menucontainer">
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>소개</strong></div>
-                        <div class="dropdown-content">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <div class="dropdown-menu"><a href="#"><strong>소개</strong></a></div>
                     </li>
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>메뉴</strong></div>
+                        <div class="dropdown-menu"><a href="#"><strong>메뉴</strong></a></div>
                     </li>
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>매장 찾기</strong></div>
+                        <div class="dropdown-menu"><a href="#"><strong>매장 찾기</strong></a></div>
                     </li>
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>소식</strong></div>
+                        <div class="dropdown-menu"><a href="#"><strong>소식</strong></a></div>
                     </li>
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>채용</strong></div>
+                        <div class="dropdown-menu"><a href="#"><strong>채용</strong></a></div>
                     </li>
                     <li class="dropdown">
-                        <div class="dropdown-menu"><strong>직가맹점</strong></div>
-                        <div class="dropdown-content">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <div class="dropdown-menu"><a href="#"><strong>직가맹점</strong></a></div>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-        <div id="wrapper">
-            <section>
-                <div class="tit">
-                    <h1 class="h1">상담 신청<p class="pred">*표시 되어진 부분은 필수 항목입니다.</p></h1><hr id="line" width="1254px" style="border: solid 2px black">
-                </div>
-                <div class="tb1_wrap">
-                    <table class="tb1">
-                        <colgroup>
-                            <col style="width: 109px;">
-                            <col style="width: auto;">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th align="left">
-                                    <label for="chk_offer_type_0">
-                                        점포유무
-                                        <span class="red"> *</span>
-                                    </label>
-                                </th>
-                                <td>
-                                    <div class="radio">
+    <div id="wrapper">
+        <section>
+            <div class="tit">
+                <h1 class="h1">상담 신청<p class="pred">*표시 되어진 부분은 필수 항목입니다.</p>
+                </h1>
+            </div>
+            <hr id="line" width="1000px" style="border: solid 2px black">
+            <div class="tb1_wrap">
+                <table class="tb1">
+                    <colgroup>
+                        <col style="width: 109px;">
+                        <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th align="left">
+                                <label for="chk_offer_type_0">
+                                    점포유무
+                                    <span class="red"> *</span>
+                                </label>
+                            </th>
+                            <td>
+                                <div class="radio">
                                     <input type="radio" name="offer_code" value="3" checked>
                                     <label>점포 없음</label>
-                                    </div>
-                                    <div class="radio"></div>
-                                    <input type="radio" name="offer_code" value="1" >
-                                    <label>점포 있음</label>
                                 </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th align="left">
-                                    <label>이름<span class="red"> *</span></label>
-                                </th>
-                                <td>
-                                    <input type="text" name="name" id="offer_name">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th align="left">
-                                    <label for="franchise_inp_email">
-                                        이메일<span class="red"> *</span>
-                                    </label>
-                                </th>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th align="left">
-                                    <label for="franchise_inp_hp">
-                                        휴대폰<span class="red"> *</span>
-                                    </label>
-                                </th>
-                                <td>
-                                    <input type="text" name="hp" id="offer_hp" placeholder="숫자만 입력" maxlength="11">
-                                </td>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                                <div class="radio"></div>
+                                <input type="radio" name="offer_code" value="1">
+                                <label>점포 있음</label>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label>이름<span class="red"> *</span></label>
+                </th>
+                <td>
+                    <input type="text" name="name" id="offer_name">
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="franchise_inp_email">
+                        이메일<span class="red"> *</span>
+                    </label>
+                </th>
+                <td>
+                    <div>
+                        <input type="text" name="email" id="offer_name1"><span>@</span>
+                        <input type="text" name="email" id="offer_name">
+                        <select class="inp_control">
+                            <option value>직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="daum.net">daum.net</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="franchise_inp_hp">
+                        휴대폰<span class="red"> *</span>
+                    </label>
+                </th>
+                <td>
+                    <input type="text" name="hp" id="offer_hp" placeholder="숫자만 입력" maxlength="11">
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="franchise_inp_hp">
+                        지역 선택<span class="red"> *</span>
+                    </label>
+                </th>
+                <td>
+                    <select id="offer_name">
+                        <option value>시/도 (필수)</option>
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="인천광역시">인천광역시</option>
+                        <option value="대전광역시">대전광역시</option>
+                        <option value="광주광역시">광주광역시</option>
+                        <option value="울산광역시">울산광역시</option>
+                    </select>
+                    <select id="offer_name">
+                        <option value>시/구/군 (필수)</option>
+                    </select>
+                    <select id="offer_name">
+                        <option value>읍/면/동 (선택)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="franchise_inp_hp">
+                        내용<span class="red"> *</span>
+                    </label>
+                </th>
+                <td>
+                    <div class="textbox">
+                        <textarea id="textar" cols="80" rows="10" placeholder="임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+    </div>
+    <div class="agree">
+        <div class="check">
+            <input type="checkbox" name="term_agree">
+            <label><strong>개인정보 수집 및 이용 동의(필수)</label>
         </div>
+        <div class="policy">    
+            <ul class="hypen_list">
+                <li style="color: gray;">-수집 항목 : 신청자 구분, 이름, 이메일, 휴대번호, 점포구분, 개인이 직접 입력한 내용</li><br>
+                <li style="color: gray;">-수집 목적 : 문의 및 결과 회신</li><br>
+                <li style="color: gray;">-이용 기간 : 원칙적으로, 개인정보 수집 및 이용 목적이 달성된 후 파기합니다
+                    <br>(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와같이 관계법령에서 정한 일정기간동안 개인정보 보관할 수 있습니다) </li><br>
+                <li style="color: gray;">-소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li><br>
+                <li style="color: gray;">-위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될 수 있습니다.</li><br>
+            </ul>
+            <br>
+            <hr id="line" width="1050px" style="border: solid 2px black">
+            <div class="ted">
+                <button type="button" class="botton1" >신청하기</button>
+            </div>
+        </div>
+    </div>
+    </section>
+    </div>
     <footer>
         <div>footer</div>
     </footer>
