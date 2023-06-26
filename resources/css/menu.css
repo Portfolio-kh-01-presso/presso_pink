@@ -23,46 +23,46 @@ time, mark, audio, video
 
 body {
     font-family: NanumSquare,Sans-serif;
-    width: 1340px;
+    min-width: 1340px;
 }
 
-.main-menu{
+.main-menu {
     margin: 88px auto 100px;
     width: 1200px;
 }
 
-.title{
+.title {
     margin-bottom: 50px;
 }
 
-.content{
+.content {
     margin: 0 auto;
     width: 1200px;
 }
 
-h2{
+h2 {
     font-size: 50px;
     font-weight: 800;
     letter-spacing: -1.26px;
     line-height: 50px;
 }
 
-.title p{
+.title p {
     border-top: 1px solid #d2d2d2;
     margin-top: 20px;
     padding-top: 20px;
 }
 
-ul{
+ul {
 	list-style: none;
 }
 
-.list > ul{
+.list > ul {
     display: flex;
     gap: 20px;
 }
 
-.list > ul > li{
+.list > ul > li {
     box-shadow: 4px 6.9px 11px 0 rgba(0,0,0,.12);
     box-sizing: border-box;
     width: 285px;
@@ -71,47 +71,47 @@ ul{
     position: relative;
 }
 
-.list.first > ul > li:first-child{
+.list.first > ul > li:first-child {
     background: #CDF0EA;
 }
 
-.list.first > ul > li:nth-child(2){
+.list.first > ul > li:nth-child(2) {
     background: #F9F9F9;
 }
 
-.list.first > ul > li:nth-child(3){
+.list.first > ul > li:nth-child(3) {
     background: #F6C6EA;
 }
 
-.list.first > ul > li:last-child{
+.list.first > ul > li:last-child {
     background: #FAF4B7;
 }
 
-.list.second > ul > li:first-child{
+.list.second > ul > li:first-child {
     background: #CDF0EA;
     padding-top: 46px;
 }
 
-.list.second > ul > li:nth-child(2){
+.list.second > ul > li:nth-child(2) {
     background: #F6C6EA;
     padding-top: 46px;
 }
 
-.list.second > ul > li:last-child{
+.list.second > ul > li:last-child {
     background: #FAF4B7;
     padding-top: 46px;
 }
 
-img{
+img {
     vertical-align: top;
 }
 
-.badge{
+.badge {
     display: block;
     padding-bottom: 16px;
 }
 
-.dark{
+.dark {
     background: #40210f;
     color: #fff;
     display: inline-block;
@@ -121,7 +121,7 @@ img{
     padding: 4px 7px;
 }
 
-.light{
+.light {
     background: #946134;
     color: #fff;
     display: inline-block;
@@ -131,48 +131,48 @@ img{
     padding: 4px 7px;
 }
 
-.description{
+.description {
     color: #1e1210;
     font-size: 15px;
     font-weight: 700;
     margin-top: 19px;
 }
 
-.list.second > ul > li > .description{
+.list.second > ul > li > .description {
     font-size: 17px;
     margin-top: 32px
 }
 
-.shot{
+.shot {
     bottom: 20px;
     right: 61px;
     position: absolute;
 }
 
-.coffee{
+.coffee {
     bottom: 26px;
     right: 25px;
     position: absolute;
 }
 
-.list.second > ul > li > .coffee{
+.list.second > ul > li > .coffee {
     bottom: 0;
     right: 0;
 }
 
-.information{
+.information {
     align-items: center;
     display: flex;
     gap: 15px;
     margin-top: 40px;
 }
 
-.information > p{
+.information > p {
     font-size: 13px;
     font-weight: 700;
 }
 
-.information span{
+.information span {
     color: #27620a;
 }
 
@@ -180,63 +180,62 @@ a{
     text-decoration: none;
 }
 
-.main-menu.third{
-    /* height: 500px; */
+.main-menu.third {
     position: relative;
 }
 
-.main-menu-bar{
-    /* left: 50%;
-    margin-left: -600px; */
+/* .menu-bar {
+    height: 500px;
+    left: 50%;
+    margin-left: -600px;
     position: absolute;
 }
 
-.main-menu-bar > ul > li > a{
+.menu-bar > ul > li > a {
     font-family: Century Gothic,Apple SD Gothic Neo,Sans-serif;
     display: inline-block;
     width: 185px;
     font-size: 20px;
     padding: 17px 23px 17px 0;
-    /* position: relative; */
+    position: relative;
 }
 
-.main-menu-bar > ul > li > a:hover{
+.menu-bar > ul > li > a:hover {
     font-weight: 700;
-    /* opacity: 0; */
 }
 
-.main-menu-list{
+.menu-list {
     float: right;
-    /* width: 930px; */
-    /* position: relative; */
-    /* overflow: hidden; */
+    width: 930px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* .main-menu-list > ul{
+.menu-list > ul{
     float: left;
     width: 100%;
-} */
+}
 
-.main-menu-list > ul > li{
+.menu-list > ul > li {
     background: #ececec;
     box-sizing: border-box;
     float: left;
     width: 300px;
     height: 475px;
     margin: 0 15px 15px 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 0 25px;
     position: relative;
-}
+} */
 
-.main-menu-list img{
+.menu-list img {
     width: 250px;
     height: 250px;
     margin-top: 50px;
     position: relative;
 }
 
-.main-menu-list p{
+/* .menu-list p {
     bottom: 0;
     width: 100%;
     height: 110px;
@@ -246,6 +245,6 @@ a{
     position: absolute;
 }
 
-.main-menu-list p b{
+.menu-list p b {
     display: block;
-}
+} */
