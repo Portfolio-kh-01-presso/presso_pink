@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<link href="./reset.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
             padding: 60px 0px 50px 0px;
             width: 1654px;
             height: 300px;
-            background-color: green;
+            background-color: white;
         }
     </style>
     <style>
@@ -188,9 +188,11 @@
         }
 
         #textar {
+            font-size: 20px;
             width: 790px;
             height: 220px;
         }
+
         .agree {
             background-color: rgb(238, 238, 238);
             width: 1050px;
@@ -199,12 +201,49 @@
             position: absolute;
             top: 1100px;
         }
-        .hypen_list{
+
+        .hypen_list {
             list-style-type: none;
         }
-         div .ted{
+
+        div .ted {
             margin: 50px;
             text-align: center;
+        }
+
+        .botton1 {
+            border: none;
+            background-color: #f1648a;
+            border-radius: 150px;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            height: 76px;
+            line-height: 81px;
+            min-width: 250px;
+            padding: 0 10px;
+        }
+
+        #buttona {
+            color: white;
+            background-color: #f1648a;
+        }
+
+        #btn_top {
+            float: right;
+        }
+
+        .foot_menu {
+            list-style: none;
+            display: flex;
+        }
+
+        #footerbom {
+            padding: 0 0 250px 250px;
+        }
+
+        .fottext :not(p) {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -345,7 +384,7 @@
                 </th>
                 <td>
                     <div class="textbox">
-                        <textarea id="textar" cols="80" rows="10" placeholder="임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
+                        <textarea id="textar" cols="80" rows="10" placeholder=" 임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
                     </div>
                 </td>
             </tr>
@@ -357,26 +396,61 @@
             <input type="checkbox" name="term_agree">
             <label><strong>개인정보 수집 및 이용 동의(필수)</label>
         </div>
-        <div class="policy">    
+        <div class="policy">
             <ul class="hypen_list">
                 <li style="color: gray;">-수집 항목 : 신청자 구분, 이름, 이메일, 휴대번호, 점포구분, 개인이 직접 입력한 내용</li><br>
                 <li style="color: gray;">-수집 목적 : 문의 및 결과 회신</li><br>
                 <li style="color: gray;">-이용 기간 : 원칙적으로, 개인정보 수집 및 이용 목적이 달성된 후 파기합니다
-                    <br>(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와같이 관계법령에서 정한 일정기간동안 개인정보 보관할 수 있습니다) </li><br>
+                    <br>(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와같이 관계법령에서 정한 일정기간동안 개인정보 보관할 수 있습니다)
+                </li><br>
                 <li style="color: gray;">-소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li><br>
-                <li style="color: gray;">-위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될 수 있습니다.</li><br>
+                <li style="color: gray;">-위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될 수 있습니다.
+                </li>
+                <br>
             </ul>
             <br>
             <hr id="line" width="1050px" style="border: solid 2px black">
             <div class="ted">
-                <button type="button" class="botton1" >신청하기</button>
+                <button type="button" class="botton1"><a href="#" id="buttona">신청하기</a></button>
             </div>
         </div>
     </div>
     </section>
     </div>
-    <footer>
-        <div>footer</div>
+    <footer width="100%" id="footerbom">
+        <!--                     <div id="bt">
+                        <button type="button" id=btn_top>
+                            <img src="../resources/img/recruit/btn_top.png" width="68" height="68">
+                        </button>
+                    </div> -->
+        <div class="foot_copy"><img src="../resources/img/recruit/footer_logo.png"></div>
+        <ul class="foot_menu">
+            <li class="privacy">
+                <button>개인정보처리방침</button>
+                <ul>
+                    <li><a href="#">바나프레소앱 개인정보 처리방침</a></li>
+                    <li><a href="#">기업사이트 개인정보 처리방침</a></li>
+                </ul>
+            </li>
+            <li class="privacy">
+                <button>이용약관</button>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">충전식 상품권 약관</a></li>
+                    <li><a href="#">잔돈포인트 약관</a></li>
+                </ul>
+            </li>
+            <li><a href="#">채용</a></li>
+            <li><a href="#">입점제안</a></li>
+            <li><a href="#">가맹점 문의</a></li>
+            <li><a href="#">제휴 문의</a></li>
+            <li><a href="#">매장 이용 및 고객 문의</a></li>
+        </ul>
+        <div class="fottext">
+            <span>상호명 : 주식회사 호랑호랑호랑이</span><br>
+            <span style="color: rgb(196, 194, 194);">대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호 :010-1234-1234</span><br>
+            <span>대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호 : 010-1234-1234</span>
+        </div>
     </footer>
 </body>
 
