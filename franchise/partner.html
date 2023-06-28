@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="./reset.css" rel="stylesheet">
+<!-- <link href="./reset.css" rel="stylesheet"> -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,7 @@
             width: 1200px;
             height: 105px;
             background-color: white;
+            opacity: 0.9;
         }
 
         .logo {
@@ -34,7 +36,7 @@
         }
 
         .Enquiries_for_membership {
-            z-index: 100;
+            z-index: 99990;
             position: fixed;
             top: 150px;
             right: 250px;
@@ -53,7 +55,7 @@
         }
 
         nav ul li {
-            padding: 35px 20px;
+            top: 15px;
             text-align: center;
             display: inline-block;
         }
@@ -69,13 +71,16 @@
         a:visited {
             color: black;
         }
-
-        a:hover {
+        #pink{
+            width: 100px;
+            font-weight: 800;
+            
+        }
+        #pink:hover {
             background-color: white;
             color: pink;
-            border-bottom: 2px solid #f1648a;
+            border-bottom: 2px solid #f1648a ;
         }
-
         /*         .dropdown-menu:hover:not(.home) {
             text-align: center;
             background-color: white;
@@ -204,6 +209,7 @@
 
         .hypen_list {
             list-style-type: none;
+            font-weight: 100;
         }
 
         div .ted {
@@ -239,11 +245,71 @@
         }
 
         #footerbom {
-            padding: 0 0 250px 250px;
+            padding: 0 0 0px 300px;
         }
 
-        .fottext :not(p) {
+        footer {
+            font-size: small;
+        }
+        #menu {
+            height: 50px;
+            background: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        .main1 {
+            width: 600px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .main1>li {
+            float: left;
+            width: 25%;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+        }
+        .main1>li:hover .main2 {
+            left: 0;
+        }
+/* 
+        .main1>li a {
+            display: block;
+        }
+ */
+
+        .main1>li a:hover {
+            color: #f1648a;
             font-weight: bold;
+        }
+
+        .main2 {       
+            position: absolute;
+            top: 50px;
+            left: -9999px;
+            background: rgba(226, 226, 226, 0.466);
+            width: 82px;
+            padding: 0 10px 10px 10px;
+            font-size: 11px;
+            font-weight: 100;
+        }
+
+        .main2>li {
+            position: relative;
+        }
+        .inner{
+            position: fixed;
+        }
+        header{
+            position: relative;
+        }
+        .privacy{
+            margin: 10px;
         }
     </style>
 </head>
@@ -258,7 +324,7 @@
             <div class="Enquiries_for_membership">
                 <a href="#"><img src="../resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
             </div>
-            <nav>
+<!--             <nav>
                 <ul class="menucontainer">
                     <li class="dropdown">
                         <div class="dropdown-menu"><a href="#"><strong>소개</strong></a></div>
@@ -279,6 +345,29 @@
                         <div class="dropdown-menu"><a href="#"><strong>직가맹점</strong></a></div>
                     </li>
                 </ul>
+            </nav> -->
+            <nav>
+                <div id="menu">
+                    <ul class="main1">
+                       <li id="pink"><a href="#">소개</a>
+                            <ul class="main2">
+                                <li><a href="#">브랜드소개</a></li>
+                                <li><a href="#">앱소개</a></li>
+                            </ul>
+                        </li>
+                        <li id="pink"><a href="#">메뉴</a></li>
+                        <li id="pink"><a href="#">매장찾기</a></li>
+                        <li id="pink"><a href="#">소식</a></li>
+                        <li id="pink"><a href="#">채용</a></li>
+                        <li id="pink"><a href="#">직가맹점</a>
+                            <ul class="main2" >
+                                <li><a href="#">브랜드 경쟁력</a></li>
+                                <li><a href="#">인테리어 특장점</a></li>
+                                <li><a href="#">가맹점 창업문의</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -305,124 +394,121 @@
                             </th>
                             <td>
                                 <div class="radio">
-                                    <input type="radio" name="offer_code" value="3" checked>
-                                    <label>점포 없음</label>
+                                    <input type="radio" id="chk" name="offer_code" value="3" checked>
+                                    <label for="chk">점포 없음</label>
                                 </div>
                                 <div class="radio"></div>
-                                <input type="radio" name="offer_code" value="1">
-                                <label>점포 있음</label>
+                                <input type="radio" id="chkn" name="offer_code" value="1">
+                                <label for="chkn">점포 있음</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="left">
+                                <label>이름<span class="red"> *</span></label>
+                            </th>
+                            <td>
+                                <input type="text" name="name" id="offer_name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="left">
+                                <label for="franchise_inp_email">
+                                    이메일<span class="red"> *</span>
+                                </label>
+                            </th>
+                            <td>
+                                <div>
+                                    <input type="text" name="email" id="offer_name1"><span>@</span>
+                                    <input type="text" name="email" id="offer_name">
+                                    <select class="inp_control">
+                                        <option value>직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="daum.net">daum.net</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="left">
+                                <label for="franchise_inp_hp">
+                                    휴대폰<span class="red"> *</span>
+                                </label>
+                            </th>
+                            <td>
+                                <input type="text" name="hp" id="offer_hp" placeholder="숫자만 입력" maxlength="11">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="left">
+                                <label for="franchise_inp_hp">
+                                    지역 선택<span class="red"> *</span>
+                                </label>
+                            </th>
+                            <td>
+                                <select id="offer_name">
+                                    <option value>시/도 (필수)</option>
+                                    <option value="서울특별시">서울특별시</option>
+                                    <option value="인천광역시">인천광역시</option>
+                                    <option value="대전광역시">대전광역시</option>
+                                    <option value="광주광역시">광주광역시</option>
+                                    <option value="울산광역시">울산광역시</option>
+                                </select>
+                                <select id="offer_name">
+                                    <option value>시/구/군 (필수)</option>
+                                </select>
+                                <select id="offer_name">
+                                    <option value>읍/면/동 (선택)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th align="left">
+                                <label for="franchise_inp_hp">
+                                    내용<span class="red"> *</span>
+                                </label>
+                            </th>
+                            <td>
+                                <div class="textbox">
+                                    <textarea id="textar" cols="80" rows="10"
+                                        placeholder=" 임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label>이름<span class="red"> *</span></label>
-                </th>
-                <td>
-                    <input type="text" name="name" id="offer_name">
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="franchise_inp_email">
-                        이메일<span class="red"> *</span>
-                    </label>
-                </th>
-                <td>
-                    <div>
-                        <input type="text" name="email" id="offer_name1"><span>@</span>
-                        <input type="text" name="email" id="offer_name">
-                        <select class="inp_control">
-                            <option value>직접입력</option>
-                            <option value="naver.com">naver.com</option>
-                            <option value="nate.com">nate.com</option>
-                            <option value="gmail.com">gmail.com</option>
-                            <option value="hanmail.net">hanmail.net</option>
-                            <option value="daum.net">daum.net</option>
-                        </select>
+            <div class="agree">
+                <div class="check">
+                    <input type="checkbox" name="term_agree">
+                    <label><strong>개인정보 수집 및 이용 동의(필수)</strong></label>
+                </div>
+                <div class="policy">
+                    <ul class="hypen_list">
+                        <li style="color: gray;">-수집 항목 : 신청자 구분, 이름, 이메일, 휴대번호, 점포구분, 개인이 직접 입력한 내용</li><br>
+                        <li style="color: gray;">-수집 목적 : 문의 및 결과 회신</li><br>
+                        <li style="color: gray;">-이용 기간 : 원칙적으로, 개인정보 수집 및 이용 목적이 달성된 후 파기합니다
+                            <br>(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와같이 관계법령에서 정한 일정기간동안 개인정보 보관할 수 있습니다)
+                        </li><br>
+                        <li style="color: gray;">-소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li><br>
+                        <li style="color: gray;">-위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될 수
+                            있습니다.
+                        </li>
+                        <br>
+                    </ul>
+                    <br>
+                    <hr id="line" width="1050px" style="border: solid 1 gray">
+                    <div class="ted">
+                        <button type="button" class="botton1"><a href="#" id="buttona">신청하기</a></button>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="franchise_inp_hp">
-                        휴대폰<span class="red"> *</span>
-                    </label>
-                </th>
-                <td>
-                    <input type="text" name="hp" id="offer_hp" placeholder="숫자만 입력" maxlength="11">
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="franchise_inp_hp">
-                        지역 선택<span class="red"> *</span>
-                    </label>
-                </th>
-                <td>
-                    <select id="offer_name">
-                        <option value>시/도 (필수)</option>
-                        <option value="서울특별시">서울특별시</option>
-                        <option value="인천광역시">인천광역시</option>
-                        <option value="대전광역시">대전광역시</option>
-                        <option value="광주광역시">광주광역시</option>
-                        <option value="울산광역시">울산광역시</option>
-                    </select>
-                    <select id="offer_name">
-                        <option value>시/구/군 (필수)</option>
-                    </select>
-                    <select id="offer_name">
-                        <option value>읍/면/동 (선택)</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="franchise_inp_hp">
-                        내용<span class="red"> *</span>
-                    </label>
-                </th>
-                <td>
-                    <div class="textbox">
-                        <textarea id="textar" cols="80" rows="10" placeholder=" 임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-            </table>
-    </div>
-    <div class="agree">
-        <div class="check">
-            <input type="checkbox" name="term_agree">
-            <label><strong>개인정보 수집 및 이용 동의(필수)</label>
-        </div>
-        <div class="policy">
-            <ul class="hypen_list">
-                <li style="color: gray;">-수집 항목 : 신청자 구분, 이름, 이메일, 휴대번호, 점포구분, 개인이 직접 입력한 내용</li><br>
-                <li style="color: gray;">-수집 목적 : 문의 및 결과 회신</li><br>
-                <li style="color: gray;">-이용 기간 : 원칙적으로, 개인정보 수집 및 이용 목적이 달성된 후 파기합니다
-                    <br>(단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 아래와같이 관계법령에서 정한 일정기간동안 개인정보 보관할 수 있습니다)
-                </li><br>
-                <li style="color: gray;">-소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</li><br>
-                <li style="color: gray;">-위와 같이 개인정보를 처리하는데 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 일부 서비스 제공이 제한 될 수 있습니다.
-                </li>
-                <br>
-            </ul>
-            <br>
-            <hr id="line" width="1050px" style="border: solid 2px black">
-            <div class="ted">
-                <button type="button" class="botton1"><a href="#" id="buttona">신청하기</a></button>
+                </div>
             </div>
-        </div>
-    </div>
-    </section>
+        </section>
     </div>
     <footer width="100%" id="footerbom">
-        <!--                     <div id="bt">
-                        <button type="button" id=btn_top>
-                            <img src="../resources/img/recruit/btn_top.png" width="68" height="68">
-                        </button>
-                    </div> -->
+        <hr>
         <div class="foot_copy"><img src="../resources/img/recruit/footer_logo.png"></div>
         <ul class="foot_menu">
             <li class="privacy">
@@ -446,11 +532,11 @@
             <li><a href="#">제휴 문의</a></li>
             <li><a href="#">매장 이용 및 고객 문의</a></li>
         </ul>
-        <div class="fottext">
-            <span>상호명 : 주식회사 호랑호랑호랑이</span><br>
-            <span style="color: rgb(196, 194, 194);">대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호 :010-1234-1234</span><br>
-            <span>대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호 : 010-1234-1234</span>
-        </div>
+        <span>상호명 : 주식회사 호랑호랑호랑이</span><br>
+        <span style="color: rgb(196, 194, 194);">대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호
+            :010-1234-1234</span><br>
+        <span style="color: rgb(196, 194, 194);">대표전화 : 1511-1111 / Fax : 070-4569-7561 / 이메일 : qna@basdfsd.con 또는
+            1881-5626</span>
     </footer>
 </body>
 
