@@ -34,7 +34,38 @@
             position: absolute;
             top: 10px;
         }
+        .page-list{
+            position: absolute;
+            top: 150px;
+            z-index: 99990;
+            left: -120px;
+            border: solid 1px rgb(216, 214, 214) ;
+            border-radius: 10%;
+            padding: 0;
 
+        }
+        .list-item{
+            display: block;
+            
+            background-color: white;
+            border-color: gray;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+        /* .list-item:hover{
+            background-color: #f1648a;
+            
+            
+        } */
+        .list-item :hover{
+            color: #f1648a;
+           
+        }
+        .list-item > a:hover{
+            border-bottom:solid 2px pink;
+        }
+            
         .Enquiries_for_membership {
             z-index: 99990;
             position: fixed;
@@ -80,6 +111,7 @@
             background-color: white;
             color: pink;
             border-bottom: 2px solid #f1648a ;
+            
         }
         /*         .dropdown-menu:hover:not(.home) {
             text-align: center;
@@ -119,7 +151,6 @@
         }
 
         .pred {
-            /* float: right; */
             position: absolute;
             right: 490px;
             color: red;
@@ -191,11 +222,11 @@
         .textbox {
             padding: 0;
         }
-
         #textar {
             font-size: 20px;
             width: 790px;
             height: 220px;
+            resize: none;
         }
 
         .agree {
@@ -205,8 +236,9 @@
             border: 1px solid rgb(235, 232, 232);
             position: absolute;
             top: 1100px;
+            z-index: 1;
         }
-
+        
         .hypen_list {
             list-style-type: none;
             font-weight: 100;
@@ -229,15 +261,11 @@
             min-width: 250px;
             padding: 0 10px;
         }
-
         #buttona {
             color: white;
             background-color: #f1648a;
         }
 
-        #btn_top {
-            float: right;
-        }
 
         .foot_menu {
             list-style: none;
@@ -286,6 +314,7 @@
         .main1>li a:hover {
             color: #f1648a;
             font-weight: bold;
+            
         }
 
         .main2 {       
@@ -297,6 +326,7 @@
             padding: 0 10px 10px 10px;
             font-size: 11px;
             font-weight: 100;
+           
         }
 
         .main2>li {
@@ -323,6 +353,30 @@
             </h1>
             <div class="Enquiries_for_membership">
                 <a href="#"><img src="../resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
+            </div>
+            <div>
+                <ul class="page-list" style="padding: 10px;">
+                    <li class="list-item"  >
+                        <a href="#">
+                            <span>브랜드 경쟁력</span>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            <span>인테리어 특장점</span>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">
+                            <span>직영점 입점제안</span>
+                        </a>
+                    </li>
+                    <li id="top" class="list-item">
+                        <a href="#";>
+                            <span>가맹점 창업문의</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 <!--             <nav>
                 <ul class="menucontainer">
@@ -472,7 +526,7 @@
                             </th>
                             <td>
                                 <div class="textbox">
-                                    <textarea id="textar" cols="80" rows="10"
+                                    <textarea id="textar" cols="80" rows="10" 
                                         placeholder=" 임대조건 및 상권설명 등을 간략하게 기입해주세요"></textarea>
                                 </div>
                             </td>
