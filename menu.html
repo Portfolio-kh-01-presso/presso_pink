@@ -779,8 +779,9 @@
                                 <img src="/resources/img/menu/footer_logo.png" alt="banapresso">
                             </div>
                             <ul class="foot_menu">
-                                <li class="privacy ">
+                                <li class="privacy">
                                     <button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
+                                    <!-- <button class="sc-ifyqMZ dOCgaz">개인정보처리방침</button> -->
                                     <ul>
                                         <li>
                                             <a href="/privacy">
@@ -794,8 +795,9 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="privacy ">
+                                <li class="privacy">
                                     <button class="sc-ifyqMZ eCrSIr">이용약관</button>
+                                    <!-- <button class="sc-ifyqMZ dOCgaz">이용약관</button> -->
                                     <ul>
                                         <li>
                                             <a href="/termsofservice">
@@ -873,6 +875,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const backToTopButton = document.querySelector("#btn_top");
+        window.addEventListener("scroll", function(){
+            if(window.pageYOffset > 200){
+                backToTopButton.style.display = "block";
+            } else{
+                backToTopButton.style.display = "none";
+            }
+        });
+        backToTopButton.addEventListener("click", function(){
+            window.scrollTo({top: 0, behavior: "smooth"});
+        });
+    </script>
 </body>
 
 </html>
