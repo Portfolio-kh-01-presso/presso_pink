@@ -782,7 +782,6 @@
                             <ul class="foot_menu">
                                 <li class="privacy">
                                     <button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
-                                    <!-- <button class="sc-ifyqMZ dOCgaz">개인정보처리방침</button> -->
                                     <ul>
                                         <li>
                                             <a href="/privacy">
@@ -798,7 +797,6 @@
                                 </li>
                                 <li class="privacy">
                                     <button class="sc-ifyqMZ eCrSIr">이용약관</button>
-                                    <!-- <button class="sc-ifyqMZ dOCgaz">이용약관</button> -->
                                     <ul>
                                         <li>
                                             <a href="/termsofservice">
@@ -888,6 +886,41 @@
         backToTopButton.addEventListener("click", function(){
             window.scrollTo({top: 0, behavior: "smooth"});
         });
+        
+        const title_1 = document.querySelector(".privacy>button");
+        const content_1 = document.querySelector(".privacy ul");
+        const content_2 = document.querySelector(".privacy:nth-child(2) ul");
+        const title_2 = document.querySelector(".privacy:nth-child(2)>button");
+
+        function handleClick(){
+            if(title_1.className === 'sc-ifyqMZ eCrSIr'){
+                title_1.className = 'sc-ifyqMZ dOCgaz';
+                content_1.style.display = "block";
+                content_2.style.display = "none";
+                if(content_2.style.display === "none"){
+                    title_2.className = 'sc-ifyqMZ eCrSIr';
+                }
+            } else if(title_1.className === 'sc-ifyqMZ dOCgaz'){
+                title_1.className = 'sc-ifyqMZ eCrSIr';
+                content_1.style.display = "none";
+            }
+        }
+        title_1.addEventListener('click', handleClick);
+
+        function handleClick2(){
+            if(title_2.className === 'sc-ifyqMZ eCrSIr'){
+                title_2.className = 'sc-ifyqMZ dOCgaz';
+                content_2.style.display = "block";
+                content_1.style.display = "none";
+                if(content_1.style.display === "none"){
+                    title_1.className = 'sc-ifyqMZ eCrSIr';
+                }
+            } else if(title_2.className === 'sc-ifyqMZ dOCgaz'){
+                title_2.className = 'sc-ifyqMZ eCrSIr';
+                content_2.style.display = "none";
+            }
+        }
+        title_2.addEventListener('click', handleClick2);
     </script>
 </body>
 
