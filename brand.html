@@ -1,16 +1,51 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+         $(loadedHandler); // loadedHandler라는 함수를, body의 document가 모두 구성된후 실행함.
+         function loadedHandler(){
+            $(".top_menu ul li a").hover(openMenu,closeMenu);
+            $(".top_menu ul li ul li").hover(openMenu1,closeMenu1);
+            $(".foot_menu li button").on("click",footToggle);
+         }
+         function openMenu(){
+            $(this).next().css("display","block");
+            $(this).css("color","#f1648a");
+         }
+         function closeMenu(){
+            $(this).next().css("display","none");
+            $(this).css("color","black");
+         }
+         function openMenu1(){
+            $(this).parent().css("display","block");
+         }
+         function closeMenu1(){
+            $(this).parent().css("display","none");
+         }
+         function footToggle(){
+            $(this).next().toggle();
+         }
+    </script>
     <style> <!--body와 header에 대한-->
+       
         body{
             position: relative;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            width: 1800px;
+            width: 100%;
+        }
+        *::selection {
+            background-color: #f1648a;
+            color: #fff;
         }
         .Enquiries_for_membership{
             z-index: 100;
@@ -19,43 +54,97 @@
             right: 100px;
         }
         header{
+            width: 100%;
             position: absolute;
             padding:0;
         }
         header .top_logo a{
             position: relative;
             top: 40px;
-            left: 200px;
+            left: 400px;
         }
         header .top_menu{
             position: relative;
-            top:40px;
-            left: 600px;
+            top:0px;
+            left: 900px;
         }
-
-        header .top_menu a{
-            margin: 0 30px;
+        header .top_menu>ul{
+            width: 1000px;
+            height: 0px;
+            display: flex;
+            list-style-type: none;
+        }
+        header .top_menu ul>li{
+            width: 150px;
+            font-family: 'Nanum Gothic', sans-serif; 
+            text-align: center;
+        }
+        header .top_menu ul li a{
+            font-size: 17px;
+            font-weight: bold;
             text-decoration: none;
-            color: black;
+        }
+        header .top_menu ul li ul{
+            background-color: white;
+            display: none;
+            border: 1px solid black ;
+            border-radius: 5%;
+            padding: 0;
+            list-style-type: none;
+        }
+        header .top_menu ul li ul li{
+            line-height: 40px;
+            height: 40px;
+            padding: 0;
+            margin: 0;
         }
         header .top_img{
+            z-index: -9999;
+            background-color: #ebbdc5;
             position: absolute;
-            margin: 70px 0;
+            margin: 30px 0;
             padding: 0;
             width: 100%;
         }
+        .content p{
+            font-weight: 200;
+        }
+        .title p{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        p span{
+            font-weight: bold;
+        }
+        .pink{
+            color: #f1658a;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .history_introduce li,.description p{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
     </style>
     <style>
         main{
             position: relative;
             top: 400px;
-            width: 1000px;
+            width: 1100px;
             margin: 0 auto;
             }
         main .main_introduce img{
             position: absolute;
-            top: 80px;
+            top: 220px;
             right: 0;
+        }
+        main .content p{
+            font-weight: 500;
         }
         main .point_introduce .content ul{
             box-sizing: 0;
@@ -66,20 +155,25 @@
             width: 298px;
             margin: 200px 0px;
         }
-        main .point_introduce .content ul li{   
+        main .point_introduce .content ul li{
+            font-size: 17px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: bold;
             list-style-type: none;
             text-align: center;
         }
         main .point_introduce .content ul:nth-of-type(3){
             position: relative;
-            top: -21px;
+            top: -20px;
         }
-        main .point_introduce .content ul p{   
+        main .point_introduce .content ul p{  
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: bold; 
             list-style-type: none;
             text-align: center;
         }
         main .point_introduce .content ul img{
-            margin: 40px 60px;
+            margin: 20px 60px;
         }
         main .youtube_introduce{
             margin: 200px 0;
@@ -90,6 +184,9 @@
             padding: 0;
         }
         main .bi_introduce ul li{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
             box-sizing:border-box;
             position: relative;
             display:inline-block;
@@ -98,10 +195,13 @@
             width: 490px;
             height: 170px;
         }
+
         main .bi_introduce ul li:first-of-type{
             width: 1000px;
         }
         main .bi_introduce ul li .icon{
+            line-height: 40px;
+            height: 40px;
             position: absolute;
             color:white;
             background-color: black;
@@ -139,15 +239,17 @@
             top:-45px;            
         }
         main .color_introduce .description ul li:nth-child(1){
-            background-color: deeppink;
+            background-color: #f1658a;
         }
         main .color_introduce .description ul li:nth-child(2){
-            background-color:antiquewhite
+            background-color:#feb0c0;
         }
         main .color_introduce .description ul li:nth-child(3){
-            background-color:beige
+            background-color:#f29ea3;
         }
         main .color_introduce .description ul li span{
+            font-weight: bold;
+            color: white;
             padding-left: 20px;
             line-height: 190px;
         }
@@ -165,20 +267,25 @@
         main .character_introduce ul li:last-child img{
             padding-left: 15px;
         }
+        
+        main .teen_introduce .description p span{
+            background-color: #ffe65a;
+        }
         main .teen_introduce .description img{
             margin: 40px 140px;
         }
         main .history_introduce{
-            margin:100px 0;
+            margin:80 0 0 -80px;
         }
         main .history_introduce .description ul img{
             margin-bottom: 20px;
         }
         main .history_introduce .description ul li{
+            width: 380px;
             list-style-type: none;
         }
         main .history_introduce .description .odd{
-            margin-left: 600px;
+            margin-left: 700px;
         }
         main .history_introduce .description .even{
             box-sizing: border-box;
@@ -189,19 +296,80 @@
         </style>
         <style>   <!--footer에 대한-->
         footer{
+            font-family: 'Nanum Gothic', sans-serif;
             margin: 0;
             padding: 0;
-            width: 1200px;
+            width: 1400px;
         }
-        footer ul li{
+        footer .foot_menu{
+            position: relative;
+            bottom: 0px;
+            z-index: 100;
+            height: 40px;
+        }
+        footer ul{
+            margin: 0;
+            padding: 0;
+        }
+        footer>ul>li{
             display: inline-block;
             margin: 0 10px;
             padding: 0;
         }
-        footer img{
-            margin-left: 50px;
+        footer ul>li a{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 17px;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 0;
         }
-        footer ul li:last-child{
+        footer ul>li button{
+            font-size: 17px;
+            padding: 0;
+            border: none;
+            background-color: white;
+        }
+        footer .foot_menu>li:nth-of-type(1){
+            width: 136px;
+            height: 23.4px;
+            z-index: 1;
+        }
+        footer .foot_menu>li:nth-of-type(2){
+            width: 68px;
+            height: 23.4px;
+            z-index: 1;
+        }
+        footer ul>li>ul{
+            position: absolute;
+            top: 100%;
+            border: 1px solid black;
+            list-style-type: none;
+            width: 250px;
+            height: 70px;
+            display: none;
+            padding: 0;
+            margin: 0;
+            text-align: start;
+        }
+        footer>ul>li>ul:nth-of-type(2){   
+            z-index: 10;
+            width: 140px;
+            height: 400px;
+            margin: 0;
+        }
+        footer ul>li>ul>li>a{
+            font-size: 17px;
+            font-weight: 400;
+            margin: 0;
+            color: black;
+        }
+        footer img{
+            position: absolute;
+            z-index: -10;
+            bottom: 200px;
+        }
+        footer>ul>li:last-child{
             margin-bottom: 50px;
         }
     </style>
@@ -216,8 +384,28 @@
             <a href="#"><img src="./resources/img/Introduction_brand/from_open_storage.png"></a>
         </span>
         <span class="top_menu">
-            <a href="소개">소개</a><a href="메뉴">메뉴</a><a href="매장찾기">매장찾기</a>
-            <a href="소식">소식</a></a><a href="채용">채용</a></a><a href="직가맹점">직가맹점</a>
+            <ul>
+               <li><a href="#" class="menu">소개</a>
+                    <ul class="menu">
+                        <li><a href="brand.html">브랜드소개</a></li>
+                        <hr>
+                        <li><a href="#">앱소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">소식</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#" class="menu">직가맹점</a>
+                    <ul class="menu">
+                        <li><a href="#">브랜드 경쟁력</a></li>
+                        <hr>
+                        <li><a href="#">인테리어 특장점</a></li>
+                        <hr>
+                        <li><a href="#">가맹점 창업문의</a></li>
+                    </ul>
+                </li>
+            </ul>
         </span>
         <div class="top_img">
             <img src="./resources/img/Introduction_brand/introduce-top-visual.2fd12619fb9a67d2971b.png">
@@ -225,13 +413,14 @@
     </header>
     <main>
         <div class="main_introduce">
-            <div class="title top">
+            <div class="title top">      
             <p>바나프레소 소개<p>
+            <hr>
             <br>          
             </div>
             <img src="./resources/img/Introduction_brand/coffee.png">
             <div class="content">
-            <p><span>“훌륭한 맛을 아는 자는 더 이상 헤매지 않는다.“</span> </p>
+            <p><span>“훌륭한 맛을 아는 자는 더 이상 헤매지 않는다.“</span></p>
             <p><span>“뛰어난 맛을 변함없이 유지할 수 있는 것이 맛의 제 1원칙이다.”</span></p>
             <p>바나프레소는 합리적인 가격에 고품질의 커피 그리고</p>
             <p>신선한 베이커리를 제공받을 수 있는 <span>커피 &디저트 브랜드</span>입니다.
@@ -251,7 +440,7 @@
             <div class="content">
                 <ul>
                     <img src="./resources/img/Introduction_brand/i_order_system.png">
-                    <p>편리한 주문 시스템</p>
+                    <p class="pink">편리한 주문 시스템</p>
                     <li> APP 모바일 주문과</li>
                     <li>키오스크 시스템으로</li>
                     <li>고객의 기다림을 최소화하는</li>
@@ -259,7 +448,7 @@
                 </ul>
                 <ul>
                     <img src="./resources/img/Introduction_brand/i_premium.png">
-                    <p>프리미엄 커피</p>
+                    <p class="pink">프리미엄 커피</p>
                     <li>고품질의 원두를 자체 물류를 통해</li>
                     <li>선도와 풍미를 최상으로 유지합니다.</li>
                     <li>고성능 머신으로 정교한 맛의</li>
@@ -267,7 +456,7 @@
                 </ul>
                 <ul>
                     <img src="./resources/img/Introduction_brand/i_bigsize.png">
-                    <p>대용량 사이즈</p>
+                    <p class="pink">대용량 사이즈</p>
                     <li>오랜 시간 커피&음료의</li>
                     <li>맛을 즐기실 수 있도록</li>
                     <li>대용량 사이즈로 서비스합니다.</li>
@@ -282,7 +471,7 @@
             <p>BI</p>
             </div>
             <div class="description">
-            <p><span>바나</span>프레소에서<span>토끼(bunny)</span> + <span>프리미엄 원두</span>를 안고 있는 모습을 형상화한 심볼은</p>
+            <p><span class="pink">바나</span>프레소에서<span class="pink">토끼(bunny)</span> + <span class="pink">프리미엄 원두</span>를 안고 있는 모습을 형상화한 심볼은</p>
             <p>친근함과 작은 즐거움을 선사합니다.</p>
             </div>
             <ul>
@@ -310,7 +499,7 @@
             <p>CHARACTER</p>
             </div>
             <div class="description">
-            <p>시그니처 메뉴인 아메리카노와 NEW 복숭아 아이스티에서 영감을 얻어 개발한 캐릭터 에티 & 복티는</p>
+            <p>시그니처 메뉴인 아메리카노와 <span class="pink">NEW 복숭아 아이스티</span>에서 영감을 얻어 개발한 캐릭터 에티 & 복티는</p>
             <p>고객 커뮤니케이션, MD 상품 등에서 다양하게 활동하고 있는 바나프레소 마스코트 입니다.</p>
             <br>
             <p>메인 마스코트인 ‘에티’는 빠른 스피드를 자랑하는 토끼 캐릭터로서,</p>
@@ -322,9 +511,9 @@
             <p>발 빠르게 변화하고 있는 하이엔드 카페 브랜드 바나프레소입니다.</p>
             </div>
             <ul>
-                <li><img src="" class="comment1"><img src="./resources/img/Introduction_brand/baby_ethi.png"><p class="name">에티ETHI</p><p><span class="favort">최애음료</span class="tea"><span>생과일 쥬스</span></p></li>
-                <li><img src="" class="comment2"><img src="./resources/img/Introduction_brand/ethi.png"><p class="name">에티ETHI</p><p><span class="favort">최애음료</span><span class="tea">아메리카노</span></p></li>
-                <li><img src="" class="comment3"><img src="./resources/img/Introduction_brand/bokthi.png"><p class="name">복티 BOKTHI</p><p><span class="favort">최애음료</span><span class="tea">복숭아 아이스티</span></p></li>
+                <li><img src="" class="comment1"><img src="./resources/img/Introduction_brand/baby_ethi.png"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
+                <li><img src="" class="comment2"><img src="./resources/img/Introduction_brand/ethi.png"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
+                <li><img src="" class="comment3"><img src="./resources/img/Introduction_brand/bokthi.png"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
             </ul>
         </div>
         <div class="teen_introduce">
@@ -361,7 +550,7 @@
                     <li>ㆍ사이드 결제 전용 POS 개발</li>
                     <li>ㆍ직영 80호점 : 구로비즈메트로점 오픈</li>
                     <li>ㆍ가맹 1호점 : 충무로점 오픈</li>
-                    <li>ㆍ가맹 2호점 : 홍대입구역사거리점 오픈</li>
+                    <li>ㆍ가맹 2호점 : 홍대입구역사거리점 오픈 </li>
                 </ul>
                 <ul class="odd">
                     <img src="./resources/img/Introduction_brand/i_2021.png">
@@ -403,19 +592,20 @@
                 </ul>
             </div>
         </div>
+
     <main>
+
     <footer>
         <img src="./resources/img/Introduction_brand/footer_logo.png">
-        <br>
+        
         <ul class="foot_menu">
-            <li><button>개인정보처리방침</button>
+            <li><button type="button">개인정보처리방침</button>
                 <ul>
-                    <li><a href="/termsofservice">이용약관</a></li><!--
-                    --><li><a href="/termsofgift">충전식 상품권 약관</a></li><!--
-                    --><li><a href="/termsofpoint">잔돈포인트 약관</a></li>
+                    <li><a href="/termsofservice">바나프레소앱 개인정보 처리방침</a></li><!--
+                    --><li><a href="/termsofgift">기업사이트 개인정보 처리방침</a></li>
                 </ul>
             </li>
-            <li><button>이용약관</button>
+            <li><button type="button">이용약관</button>
                 <ul>
                     <li><a href="/termsofservice">이용약관</a></li><li><a href="/termsofgift">충전식 상품권 약관</a></li><li><a href="/termsofpoint">잔돈포인트 약관</a></li>
                 </ul>
