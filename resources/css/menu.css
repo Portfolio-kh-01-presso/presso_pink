@@ -497,10 +497,6 @@ h2.description {
     z-index: 100;
 }
 
-.menu_list_cont.hide {
-    display: none;
-}
-
 .menu_list_cont ul {
     float: left;
     width: 100%;
