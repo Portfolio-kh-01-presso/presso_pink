@@ -32,7 +32,13 @@
          }
          function footToggle(){
             $(this).next().toggle();
+            if($(this).parent().next().children("ul").css("display")==="block"){
+            $(this).parent().next().children("ul").toggle();
+        }
+         if($(this).parent().prev().children("ul").css("display")==="block"){
+            $(this).parent().prev().children("ul").toggle();
          }
+        }
     </script>
     <style> <!--body와 header에 대한-->
        
@@ -60,12 +66,19 @@
         }
         header .top_logo a{
             position: relative;
-            top: 40px;
+            top: 15px;
             left: 400px;
+        }
+        header .top_fixed{
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.61);
+            z-index: 100;
+            position: fixed;
+            top: 0;
         }
         header .top_menu{
             position: relative;
-            top:0px;
+            top:-30px;
             left: 900px;
         }
         header .top_menu>ul{
@@ -83,18 +96,19 @@
             font-size: 17px;
             font-weight: bold;
             text-decoration: none;
+            color:  rgb(116, 113, 113);
         }
         header .top_menu ul li ul{
             background-color: white;
             display: none;
-            border: 1px solid black ;
-            border-radius: 5%;
+            border: 1px solid gainsboro ;
+            border-radius: 4%;
             padding: 0;
             list-style-type: none;
         }
         header .top_menu ul li ul li{
             line-height: 40px;
-            height: 40px;
+            height: 45px;
             padding: 0;
             margin: 0;
         }
@@ -102,7 +116,7 @@
             z-index: -9999;
             background-color: #ebbdc5;
             position: absolute;
-            margin: 30px 0;
+            margin: 58px 0;
             padding: 0;
             width: 100%;
         }
@@ -138,13 +152,19 @@
             width: 1100px;
             margin: 0 auto;
             }
+            .enter{
+                margin-bottom: 50px;
+            }
         main .main_introduce img{
             position: absolute;
             top: 220px;
             right: 0;
         }
         main .content p{
+            color:  rgb(43, 42, 42);
+            font-size: 19px;
             font-weight: 500;
+            line-height: 0.8;
         }
         main .point_introduce .content ul{
             box-sizing: 0;
@@ -287,6 +307,9 @@
         main .history_introduce .description .odd{
             margin-left: 700px;
         }
+        main .history_introduce .description .even img{
+            margin-left: 285px;
+        }
         main .history_introduce .description .even{
             box-sizing: border-box;
             width: 376px;
@@ -342,27 +365,31 @@
         }
         footer ul>li>ul{
             position: absolute;
+            background-color: white;
             top: 100%;
-            border: 1px solid black;
+            border: 1px solid rgb(116, 113, 113);
             list-style-type: none;
-            width: 250px;
+            width: 260px;
             height: 70px;
+            line-height:1.5;
             display: none;
             padding: 0;
             margin: 0;
             text-align: start;
         }
-        footer>ul>li>ul:nth-of-type(2){   
+        footer>ul>li:nth-child(2) ul{
             z-index: 10;
-            width: 140px;
-            height: 400px;
+            width: 200px;
+            height: 100px;
             margin: 0;
         }
+        footer ul>li>ul>li{
+            margin: 5px;
+        }
         footer ul>li>ul>li>a{
-            font-size: 17px;
-            font-weight: 400;
+            font-size: 15px;
             margin: 0;
-            color: black;
+            color:  rgb(77, 75, 75);
         }
         footer img{
             position: absolute;
@@ -377,18 +404,19 @@
 </head>
 <body>
     <div class="Enquiries_for_membership">
-    <a href="#"><img src="./resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
+    <a href="#"><img src="/resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
     </div>
     <header>
+        <div class="top_fixed">
         <span class="top_logo">
-            <a href="#"><img src="./resources/img/Introduction_brand/from_open_storage.png"></a>
+            <a href="#"><img src="/resources/img/Introduction_brand/from_open_storage.png"></a>
         </span>
         <span class="top_menu">
             <ul>
                <li><a href="#" class="menu">소개</a>
                     <ul class="menu">
                         <li><a href="brand.html">브랜드소개</a></li>
-                        <hr>
+                        <hr color="gainsboro" width="120px">
                         <li><a href="#">앱소개</a></li>
                     </ul>
                 </li>
@@ -399,16 +427,17 @@
                 <li><a href="#" class="menu">직가맹점</a>
                     <ul class="menu">
                         <li><a href="#">브랜드 경쟁력</a></li>
-                        <hr>
+                        <hr color="gainsboro" width="120px">
                         <li><a href="#">인테리어 특장점</a></li>
-                        <hr>
+                        <hr color="gainsboro" width="120px">
                         <li><a href="#">가맹점 창업문의</a></li>
                     </ul>
                 </li>
             </ul>
         </span>
+    </div>
         <div class="top_img">
-            <img src="./resources/img/Introduction_brand/introduce-top-visual.2fd12619fb9a67d2971b.png">
+            <img src="/resources/img/Introduction_brand/introduce-top-visual.2fd12619fb9a67d2971b.png">
         </div>
     </header>
     <main>
@@ -418,28 +447,34 @@
             <hr>
             <br>          
             </div>
-            <img src="./resources/img/Introduction_brand/coffee.png">
+            <img src="/resources/img/Introduction_brand/coffee.png">
             <div class="content">
+            <br><br><br>
             <p><span>“훌륭한 맛을 아는 자는 더 이상 헤매지 않는다.“</span></p>
+            <div class="enter"></div>
             <p><span>“뛰어난 맛을 변함없이 유지할 수 있는 것이 맛의 제 1원칙이다.”</span></p>
+            <div class="enter"></div>
             <p>바나프레소는 합리적인 가격에 고품질의 커피 그리고</p>
-            <p>신선한 베이커리를 제공받을 수 있는 <span>커피 &디저트 브랜드</span>입니다.
-            </p>               
+            <p>신선한 베이커리를 제공받을 수 있는 <span>커피 &디저트 브랜드</span>입니다.</p>
+            <div class="enter"></div>               
             <p>에티오피아 최고급 원두(Guji)를 사용해</p>
-            <p>누구나 부담 없이 고품질의 커피를 향유할 수 있도록 노력했습니다.</p>                
+            <p>누구나 부담 없이 고품질의 커피를 향유할 수 있도록 노력했습니다.</p>      
+            <div class="enter"></div>          
             <p>자체 개발한 키오스크 및 전용 APP으로</p>
             <p>편리하고 빠르게 주문 결제할 수 있는 <span>원스톱 시스템</span>을 구축하였습니다.</p>
             <p>또한 테이크 아웃-홀-배달을 동시에 할 수 있는</p>
-            <p>국내 유일, 국내 최초의 독자적 IT기술을 접목한 커피 전문 F&B입니다.</p>              
+            <p>국내 유일, 국내 최초의 독자적 IT기술을 접목한 커피 전문 F&B입니다.</p>
+            <div class="enter"></div>              
             <p>2017년 첫 시작으로 현재 약 90여 개의 매장을 직영으로 확장·운영하고 있습니다.</p>
-            <p>2023년부터는 가맹점을 통해 더 많은 분과 함께 하고자 합니다.</p>              
+            <p>2023년부터는 가맹점을 통해 더 많은 분과 함께 하고자 합니다.</p>
+            <div class="enter"></div>              
             <p>앞으로도 합리적인 가격에 맛과 감성을 놓치지 않겠습니다. 바나프레소가 커피 프랜차이즈의 미래입니다.</p>
             </div>
         </div>
         <div class="point_introduce">         
             <div class="content">
                 <ul>
-                    <img src="./resources/img/Introduction_brand/i_order_system.png">
+                    <img src="/resources/img/Introduction_brand/i_order_system.png">
                     <p class="pink">편리한 주문 시스템</p>
                     <li> APP 모바일 주문과</li>
                     <li>키오스크 시스템으로</li>
@@ -447,7 +482,7 @@
                     <li>편리한 주문 시스템입니다.</li>
                 </ul>
                 <ul>
-                    <img src="./resources/img/Introduction_brand/i_premium.png">
+                    <img src="/resources/img/Introduction_brand/i_premium.png">
                     <p class="pink">프리미엄 커피</p>
                     <li>고품질의 원두를 자체 물류를 통해</li>
                     <li>선도와 풍미를 최상으로 유지합니다.</li>
@@ -455,7 +490,7 @@
                     <li>에스프레소를 선사합니다.</li>
                 </ul>
                 <ul>
-                    <img src="./resources/img/Introduction_brand/i_bigsize.png">
+                    <img src="/resources/img/Introduction_brand/i_bigsize.png">
                     <p class="pink">대용량 사이즈</p>
                     <li>오랜 시간 커피&음료의</li>
                     <li>맛을 즐기실 수 있도록</li>
@@ -475,9 +510,9 @@
             <p>친근함과 작은 즐거움을 선사합니다.</p>
             </div>
             <ul>
-                <li><span class="icon">MANI BI</span><img src="./resources/img/Introduction_brand/i_bana_bi.png"></li>
-                <li><span class="icon">SYMBOL</span><img src="./resources/img/Introduction_brand/i_bana_symbol.png"></li>
-                <li><span class="icon">SUB BI</span><img src="./resources/img/Introduction_brand/i_bana_sub_bi.png"></li>
+                <li><span class="icon">MANI BI</span><img src="/resources/img/Introduction_brand/i_bana_bi.png"></li>
+                <li><span class="icon">SYMBOL</span><img src="/resources/img/Introduction_brand/i_bana_symbol.png"></li>
+                <li><span class="icon">SUB BI</span><img src="/resources/img/Introduction_brand/i_bana_sub_bi.png"></li>
             </ul>
         </div>
         <div class="color_introduce">
@@ -511,9 +546,9 @@
             <p>발 빠르게 변화하고 있는 하이엔드 카페 브랜드 바나프레소입니다.</p>
             </div>
             <ul>
-                <li><img src="" class="comment1"><img src="./resources/img/Introduction_brand/baby_ethi.png"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
-                <li><img src="" class="comment2"><img src="./resources/img/Introduction_brand/ethi.png"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
-                <li><img src="" class="comment3"><img src="./resources/img/Introduction_brand/bokthi.png"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
+                <li><img src="" class="comment1"><img src="/resources/img/Introduction_brand/baby_ethi.png"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
+                <li><img src="" class="comment2"><img src="/resources/img/Introduction_brand/ethi.png"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
+                <li><img src="" class="comment3"><img src="/resources/img/Introduction_brand/bokthi.png"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
             </ul>
         </div>
         <div class="teen_introduce">
@@ -526,7 +561,7 @@
                 <br>               
                 <p>밝고 화사한 노란색과 따뜻하고 달콤한 바나 핑크가 어우러진</p>
                 <p>바나프레소 (TEEN)의 인테리어 컨셉은 머무는 분들로 하여금 긍정적이고 기분 좋은 장소로 기억 될 수 있게 만듭니다.</p>
-                <img src="./resources/img/Introduction_brand/intro-bana2000.png">
+                <img src="/resources/img/Introduction_brand/intro-bana2000.png">
             </div>
         </div>
         <div class="history_introduce">
@@ -537,14 +572,14 @@
                 <p>2017년, 1호점인 논현점을 시작으로</p>
                 <p>커피는 물론 차별화된 제품과 서비스를 선보였습니다.</p>
                 <ul  class="odd">
-                    <img src="./resources/img/Introduction_brand/i_2023.png">
+                    <img src="/resources/img/Introduction_brand/i_2023.png">
                     <li>ㆍ바나프레소 (TEEN) 런칭</li>
                     <li>ㆍ자체 물류센터 오픈 예정</li>
                     <li>ㆍ정기 사업설명회 개최</li>
                     <li>ㆍ캐릭터 ‘에티복티’ 인스타툰 오픈</li>
                 </ul>
                 <ul class="even">
-                    <img src="./resources/img/Introduction_brand/i_2022.png">
+                    <img src="/resources/img/Introduction_brand/i_2022.png">
                     <li>ㆍ자동 우유스팀기 개발</li>
                     <li>ㆍ수온 조절 핫워터 디스펜서 개발</li>
                     <li>ㆍ사이드 결제 전용 POS 개발</li>
@@ -553,7 +588,7 @@
                     <li>ㆍ가맹 2호점 : 홍대입구역사거리점 오픈 </li>
                 </ul>
                 <ul class="odd">
-                    <img src="./resources/img/Introduction_brand/i_2021.png">
+                    <img src="/resources/img/Introduction_brand/i_2021.png">
                     <li>ㆍ높이 조절 키오스크 개발</li>
                     <li>ㆍ직영 70호점 : 방배역점 오픈</li>
                     <li>ㆍ캐릭터 ‘복티’ 개발 / 상표권 등록</li>
@@ -561,25 +596,25 @@
                     <li>ㆍHACCP 생산 시설 오픈</li>
                 </ul>
                 <ul class="even">
-                    <img src="./resources/img/Introduction_brand/i_2020.png">
+                    <img src="/resources/img/Introduction_brand/i_2020.png">
                     <li>ㆍ직영 55호점 삼성중앙역점 오픈</li>
                 </ul>
                 <ul class="odd">
-                    <img src="./resources/img/Introduction_brand/i_2019.png">
+                    <img src="/resources/img/Introduction_brand/i_2019.png">
                     <li>ㆍ자동 더치 추출 머신 개발</li>
                     <li>ㆍ직영 40호점 돌파</li>
                     <li>ㆍ쿠키/마카롱 생산시설 신설</li>
                     <li>ㆍ베이커리 R&amp;D PART 신설</li>
                 </ul>
                 <ul class="even">
-                    <img src="./resources/img/Introduction_brand/i_2018.png">
+                    <img src="/resources/img/Introduction_brand/i_2018.png">
                     <li>ㆍBANA APP. (V.2.1 출시)</li>
                     <li>ㆍ직영 10호점 돌파</li>
                     <li>ㆍ캐릭터 ‘에티’ 개발</li>
                     <li>ㆍ바나 태그 라벨 시스템 개발</li>
                 </ul>
                 <ul class="odd">
-                    <img src="./resources/img/Introduction_brand/i_2017.png">
+                    <img src="/resources/img/Introduction_brand/i_2017.png">
                     <li>ㆍ㈜바나플에프엔비 설립</li>
                     <li>ㆍFOOD PRO : 자체 매장관리 프로그램 출시</li>
                     <li>ㆍ바나프레소 자체 APPLICATION<br>&nbsp;&nbsp;&nbsp;바나 APP 론칭</li>
@@ -587,7 +622,7 @@
                     <li>ㆍR&amp;D 연구실 신설</li>
                 </ul>
                 <ul class="even">
-                    <img src="./resources/img/Introduction_brand/i_2016.png">
+                    <img src="/resources/img/Introduction_brand/i_2016.png">
                     <li>ㆍ프랜차이즈 사업본부 구성</li>
                 </ul>
             </div>
@@ -596,7 +631,7 @@
     <main>
 
     <footer>
-        <img src="./resources/img/Introduction_brand/footer_logo.png">
+        <img src="/resources/img/Introduction_brand/footer_logo.png">
         
         <ul class="foot_menu">
             <li><button type="button">개인정보처리방침</button>
