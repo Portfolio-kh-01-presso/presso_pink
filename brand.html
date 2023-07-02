@@ -12,25 +12,25 @@
     <script>
          $(loadedHandler); // loadedHandler라는 함수를, body의 document가 모두 구성된후 실행함.
          function loadedHandler(){
-            $(".top_menu ul li a").hover(openMenu,closeMenu);
-            $(".top_menu ul li ul li").hover(openMenu1,closeMenu1);
-            $(".foot_menu li button").on("click",footToggle);
+            $(".top_menu ul li a").hover(openTopMenu,closeTopMenu);
+            $(".top_menu ul li ul").hover(openTopMenu1,closeTopMenu1);
+            $(".foot_menu li button").on("click",footMenuToggle);
          }
-         function openMenu(){
+         function openTopMenu(){
             $(this).next().css("display","block");
             $(this).css("color","#f1648a");
          }
-         function closeMenu(){
+         function closeTopMenu(){
             $(this).next().css("display","none");
             $(this).css("color","black");
          }
-         function openMenu1(){
-            $(this).parent().css("display","block");
+         function openTopMenu1(){
+            $(this).css("display","block");
          }
-         function closeMenu1(){
-            $(this).parent().css("display","none");
+         function closeTopMenu1(){
+            $(this).css("display","none");
          }
-         function footToggle(){
+         function footMenuToggle(){
             $(this).next().toggle();
             if($(this).parent().next().children("ul").css("display")==="block"){
             $(this).parent().next().children("ul").toggle();
