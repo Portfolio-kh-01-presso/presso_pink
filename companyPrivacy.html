@@ -7,6 +7,118 @@
     <title>바나프레소 - 기업사이트 개인정보 처리방침</title>
 </head>
 <link rel="stylesheet" href="/resources/css/main.css">
+<style>
+    .idEnbl {
+    width: 100%;
+    height: 93px;
+    transition: all 0.1s ease 0s;
+    z-index: 101;
+}
+.hDfwhw {
+    width: 100%;
+    height: 70px;
+    transition: all 0.1s ease 0s;
+    z-index: 101;
+}
+.dEzzaX {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.cxRRkY {
+    position: absolute;
+    padding: 0px;
+    width: 68px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+}
+.eCrSIr::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr {
+    display: block;
+    outline: none;
+    padding: 0px 20px 0px 0px;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr:hover {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.dOCgaz:hover {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.dOCgaz::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.dOCgaz {
+    display: block;
+    outline: none;
+    padding: 0px 20px 0px 0px;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.dOCgaz::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.cvNIZq {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 102;
+}
+</style>
 <body>
     <div id="root">
         <div class="App">
@@ -176,12 +288,12 @@
                             class="sc-blmETK eNxgBZ btn_top_animation"><img src="/images/common/btn_top.png" alt="TOP"
                                 loading="eager" width="68" height="68" class="sc-iBdmCd blJlrD"></button>
                         <div class="foot_cont">
-                            <div class="foot_copy"><img src="/images/common/footer_logo.png" alt="banapresso"></div>
+                            <div class="foot_copy"><img src="/resources/img/Introduction_app/footer_logo.png" alt="banapresso"></div>
                             <ul class="foot_menu">
                                 <li class="privacy "><button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
                                     <ul>
-                                        <li><a href="/privacy/privacy.html">바나프레소앱 개인정보 처리방침</a></li>
-                                        <li><a href="/privacy/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
+                                        <li><a href="/privacy.html">바나프레소앱 개인정보 처리방침</a></li>
+                                        <li><a href="/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
                                     </ul>
                                 </li>
                                 <li class="privacy "><button class="sc-ifyqMZ eCrSIr">이용약관</button>
@@ -210,7 +322,59 @@
             </div>
         </div>
     </div>
-
+    <script>
+        window.addEventListener("scroll", function(){
+                    if(window.pageYOffset > 1){
+                        document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT hDfwhw';
+                    } else{
+                        document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT idEnbl';
+                    }
+                });
+        const backToTopButton = document.querySelector("#btn_top");
+        window.addEventListener("scroll", function(){
+            if(window.pageYOffset > 200){
+                backToTopButton.style.display = "block";
+            } else{
+                backToTopButton.style.display = "none";
+            }
+        });
+        backToTopButton.addEventListener("click", function(){
+            window.scrollTo({top: 0, behavior: "smooth"});
+        });
+        
+        const title_1 = document.querySelector(".privacy>button");
+        const content_1 = document.querySelector(".privacy ul");
+        const content_2 = document.querySelector(".privacy:nth-child(2) ul");
+        const title_2 = document.querySelector(".privacy:nth-child(2)>button");
+        function handleClick(){
+            if(title_1.className === 'sc-ifyqMZ eCrSIr'){
+                title_1.className = 'sc-ifyqMZ dOCgaz';
+                content_1.style.display = "block";
+                content_2.style.display = "none";
+                if(content_2.style.display === "none"){
+                    title_2.className = 'sc-ifyqMZ eCrSIr';
+                }
+            } else if(title_1.className === 'sc-ifyqMZ dOCgaz'){
+                title_1.className = 'sc-ifyqMZ eCrSIr';
+                content_1.style.display = "none";
+            }
+        }
+        title_1.addEventListener('click', handleClick);
+        function handleClick2(){
+            if(title_2.className === 'sc-ifyqMZ eCrSIr'){
+                title_2.className = 'sc-ifyqMZ dOCgaz';
+                content_2.style.display = "block";
+                content_1.style.display = "none";
+                if(content_1.style.display === "none"){
+                    title_1.className = 'sc-ifyqMZ eCrSIr';
+                }
+            } else if(title_2.className === 'sc-ifyqMZ dOCgaz'){
+                title_2.className = 'sc-ifyqMZ eCrSIr';
+                content_2.style.display = "none";
+            }
+        }
+        title_2.addEventListener('click', handleClick2);
+        </script>
 </body>
 
 </html>

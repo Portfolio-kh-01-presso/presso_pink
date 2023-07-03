@@ -23,6 +23,12 @@
     transition: all 0.1s ease 0s;
     z-index: 101;
 }
+.hDfwhw {
+    width: 100%;
+    height: 70px;
+    transition: all 0.1s ease 0s;
+    z-index: 101;
+}
 .dEzzaX {
     width: 100%;
     position: sticky;
@@ -1124,7 +1130,7 @@ img {
                         <ul class="menu-list">
                             <li class="list-item depth"><a href="/banapresso.html"><span>소개</span></a>
                                 <ul class="depth-view">
-                                    <li class=""><a href="/banapresso.html"><span>브랜드 소개</span></a></li>
+                                    <li class=""><a href="/brand.html"><span>브랜드 소개</span></a></li>
                                     <li class=""><a href="/app.html"><span>앱 소개</span></a></li>
                                 </ul>
                             </li>
@@ -1254,15 +1260,15 @@ img {
                         <ul class="foot_menu">
                             <li class="privacy "><button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
                                 <ul>
-                                    <li><a href="/privacy/privacy.html">호랭다방앱 개인정보 처리방침</a></li>
-                                    <li><a href="/privacy/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
+                                    <li><a href="/privacy.html">호랭다방앱 개인정보 처리방침</a></li>
+                                    <li><a href="/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
                                 </ul>
                             </li>
                             <li class="privacy "><button class="sc-ifyqMZ eCrSIr">이용약관</button>
                                 <ul>
-                                    <li><a href="/termsof/termsofservice.html">이용약관</a></li>
-                                    <li><a href="/termsof/termsofgift.html">충전식 상품권 약관</a></li>
-                                    <li><a href="/termsof/termsofpoint.html">잔돈포인트 약관</a></li>
+                                    <li><a href="/termsofservice.html">이용약관</a></li>
+                                    <li><a href="/termsofgift.html">충전식 상품권 약관</a></li>
+                                    <li><a href="/termsofpoint.html">잔돈포인트 약관</a></li>
                                 </ul>
                             </li>
                             <li class="bold"><a href="/recruit.html">채용</a></li>
@@ -1285,6 +1291,13 @@ img {
     </div>
 </div>
 <script>
+window.addEventListener("scroll", function(){
+            if(window.pageYOffset > 1){
+                document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT hDfwhw';
+            } else{
+                document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT idEnbl';
+            }
+        });
 const backToTopButton = document.querySelector("#btn_top");
 window.addEventListener("scroll", function(){
     if(window.pageYOffset > 200){
