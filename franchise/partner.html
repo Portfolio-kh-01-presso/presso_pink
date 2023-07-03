@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>가맹점 창업문의</title>
     <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
     integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
     <!-- <link href="./partner.css" rel="stylesheet"> -->
    
 </head>
+
 <style>
-    body {
+    @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+body {
     width: 1654px;
     margin: 0;
     padding: 0;
@@ -26,7 +29,7 @@ header {
 }
 
 .inner {
-    margin: 0 227px 0 227px;
+    margin: 0 300px 0 300px;
     padding: 0;
     width: 1200px;
     height: 105px;
@@ -65,11 +68,14 @@ header {
     
     
 } */
+
 .list-item :hover {
     color: #f1648a;
 
 }
-
+a{
+    text-decoration: none;
+}
 .list-item>a:hover {
     border-bottom: solid 2px pink;
 }
@@ -78,7 +84,7 @@ header {
     z-index: 99990;
     position: fixed;
     top: 150px;
-    right: 250px;
+    right: 120px;
 }
 
 nav ul {
@@ -139,7 +145,7 @@ a:visited {
 } */
 #wrapper {
     margin: 0 200px;
-    padding: 100px 150px 0 150px;
+    padding: 100px 150px 0 250px;
     width: 1254px;
     height: 1483px;
     background-color: white;
@@ -463,16 +469,19 @@ footer img {
 footer>ul>li:last-child {
     margin-bottom: 50px;
 }
+a {
+    text-decoration: none;
+}
 </style>
 <body>
     <header>
         <div class="inner">
             <h1 class="logo">
-                <a href="#"><img src="../resources/img/recruit/from_open_storage.png" height="35px" width="200px">
+                <a href="#"><img src="/resources/img/recruit/from_open_storage.png" height="35px" width="200px">
                 </a>
             </h1>
             <div class="Enquiries_for_membership">
-                <a href="#"><img src="../resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
+                <a href="#"><img src="/resources/img/Introduction_brand/Enquiries_for_membership.png"></a>
             </div>
             <div>
                 <ul class="page-list" style="padding: 10px;">
@@ -525,15 +534,15 @@ footer>ul>li:last-child {
                     <ul class="main1">
                        <li id="pink"><a href="#">소개</a>
                             <ul class="main2">
-                                <li><a href="../brand.html">브랜드소개</a></li>
+                                <li><a href="/brand.html">브랜드소개</a></li>
                                 <hr style="margin: 0 ;">
-                                <li><a href="../app.html">앱소개</a></li>
+                                <li><a href="/app.html">앱소개</a></li>
                             </ul>
                         </li>
-                        <li id="pink"><a href="../menu.html">메뉴</a></li>
+                        <li id="pink"><a href="/menu.html">메뉴</a></li>
                         <li id="pink"><a href="#">매장찾기</a></li>
-                        <li id="pink"><a href="../news.html">소식</a></li>
-                        <li id="pink"><a href="../recruit.html">채용</a></li>
+                        <li id="pink"><a href="/news.html">소식</a></li>
+                        <li id="pink"><a href="/recruit.html">채용</a></li>
                         <li id="pink"><a href="#">직가맹점</a>
                             <ul class="main2" >
                                 <li><a href="#">브랜드 경쟁력</a></li>
@@ -542,7 +551,7 @@ footer>ul>li:last-child {
                                 <hr style="margin: 0 ;">
                                 <li><a href="#">직영점 입점제안</a></li>
                                 <hr style="margin: 0 ;">
-                                <li><a href="./partner.html">가맹점 창업문의</a></li>
+                                <li><a href="/partner.html">가맹점 창업문의</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -693,20 +702,20 @@ footer>ul>li:last-child {
         <ul class="foot_menu">
             <li><button type="button">개인정보처리방침</button>
                 <ul>
-                    <li><a href="/termsofservice">바나프레소앱 개인정보 처리방침</a></li><!--
-                    --><li><a href="/termsofgift">기업사이트 개인정보 처리방침</a></li>
+                    <li><a href="/privacy/privacy.html">바나프레소앱 개인정보 처리방침</a></li><!--
+                    --><li><a href="/privacy/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
                 </ul>
             </li>
             <li><button type="button">이용약관</button>
                 <ul>
-                    <li><a href="/termsofservice">이용약관</a></li>
-                    <li><a href="/termsofgift">충전식 상품권 약관</a></li>
-                    <li><a href="/termsofpoint">잔돈포인트 약관</a></li>
+                    <li><a href="/termsof/termsofservice.html">이용약관</a></li>
+                    <li><a href="/termsof/termsofgift.html">충전식 상품권 약관</a></li>
+                    <li><a href="/termsof/termsofpoint.html">잔돈포인트 약관</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="bold">채용</a></li> <!--
-        --><li><a href="#" class="bold">입점제안</a></li><!--
-        --><li><a href="#" class="bold">가맹점 문의</a></li><!--
+            <li><a href="/recruit.html" class="bold">채용</a></li> <!--
+        --><li><a href="/store/partner.html" class="bold">입점제안</a></li><!--
+        --><li><a href="franchise/partner.html" class="bold">가맹점 문의</a></li><!--
         --><li><a href="#" class="bold">제휴문의</a></li><!--
         --><li><a href="#" class="bold">매장 이용 및 고객문의</a></li>
         </ul>
