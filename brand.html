@@ -1,20 +1,21 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.7.0.slim.js"
-        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
     <script>
          $(loadedHandler); // loadedHandler라는 함수를, body의 document가 모두 구성된후 실행함.
          function loadedHandler(){
             $(".top_menu ul li a").hover(openTopMenu,closeTopMenu);
             $(".top_menu ul li ul").hover(openTopMenu1,closeTopMenu1);
             $(".foot_menu li button").on("click",footMenuToggle);
+            $(window).on("scroll",scroll_EffectHandler);
          }
          function openTopMenu(){
             $(this).next().css("display","block");
@@ -38,10 +39,26 @@
          if($(this).parent().prev().children("ul").css("display")==="block"){
             $(this).parent().prev().children("ul").toggle();
          }
-        }
+         }
+         function scroll_EffectHandler(){
+            console.log("scroll_Effect 실행됨")
+            $(".scrollEffect").each(function(i){
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                console.log($(this));
+                $(this).animate({opacity:1},700);
+            }
+        }); 
+         }
+
     </script>
-    <style> <!--body와 header에 대한-->
-       
+     <!--body와 header에 대한-->
+    <style>
+        .scrollEffect{ 
+            opacity: 0;
+        }
         body{
             position: relative;
             box-sizing: border-box;
@@ -106,7 +123,7 @@
             padding: 0;
             list-style-type: none;
         }
-        header .top_menu ul li ul li{
+        header .top_menu ul li ul li{  
             line-height: 40px;
             height: 45px;
             padding: 0;
@@ -416,24 +433,24 @@
         </span>
         <span class="top_menu">
             <ul>
-               <li><a href="#" class="menu">소개</a>
+               <li><a href="/brand.html" class="menu">소개</a>
                     <ul class="menu">
-                        <li><a href="brand.html">브랜드소개</a></li>
+                        <li><a href="/brand.html">브랜드소개</a></li>
                         <hr color="gainsboro" width="120px">
-                        <li><a href="#">앱소개</a></li>
+                        <li><a href="/app.html">앱소개</a></li>
                     </ul>
                 </li>
-                <li><a href="#">메뉴</a></li>
-                <li><a href="#">매장찾기</a></li>
-                <li><a href="#">소식</a></li>
-                <li><a href="#">채용</a></li>
-                <li><a href="#" class="menu">직가맹점</a>
+                <li><a href="/menu.html">메뉴</a></li>
+                <li><a href="/index.html">매장찾기</a></li>
+                <li><a href="/news.html">소식</a></li>
+                <li><a href="/recruit.html">채용</a></li>
+                <li><a href="/recruit.html" class="menu">직가맹점</a>
                     <ul class="menu">
-                        <li><a href="#">브랜드 경쟁력</a></li>
+                        <li><a href="./franchise/compete.html">브랜드 경쟁력</a></li>
                         <hr color="gainsboro" width="120px">
-                        <li><a href="#">인테리어 특장점</a></li>
+                        <li><a href="./franchise/interior.html">인테리어 특장점</a></li>
                         <hr color="gainsboro" width="120px">
-                        <li><a href="#">가맹점 창업문의</a></li>
+                        <li><a href="./franchise/partner.html">가맹점 창업문의</a></li>
                     </ul>
                 </li>
             </ul>
@@ -446,18 +463,18 @@
     <main>
         <div class="main_introduce">
             <div class="title top">      
-            <p>바나프레소 소개<p>
+            <p>호랭다방 소개<p>
             <hr>
             <br>          
             </div>
-            <img src="/resources/img/Introduction_brand/coffee.png">
+            <img src="/resources/img/Introduction_brand/coffee.png" class="scrollEffect">
             <div class="content">
             <br><br><br>
             <p><span>“훌륭한 맛을 아는 자는 더 이상 헤매지 않는다.“</span></p>
             <div class="enter"></div>
             <p><span>“뛰어난 맛을 변함없이 유지할 수 있는 것이 맛의 제 1원칙이다.”</span></p>
             <div class="enter"></div>
-            <p>바나프레소는 합리적인 가격에 고품질의 커피 그리고</p>
+            <p>호랭다방은 합리적인 가격에 고품질의 커피 그리고</p>
             <p>신선한 베이커리를 제공받을 수 있는 <span>커피 &디저트 브랜드</span>입니다.</p>
             <div class="enter"></div>               
             <p>에티오피아 최고급 원두(Guji)를 사용해</p>
@@ -471,12 +488,12 @@
             <p>2017년 첫 시작으로 현재 약 90여 개의 매장을 직영으로 확장·운영하고 있습니다.</p>
             <p>2023년부터는 가맹점을 통해 더 많은 분과 함께 하고자 합니다.</p>
             <div class="enter"></div>              
-            <p>앞으로도 합리적인 가격에 맛과 감성을 놓치지 않겠습니다. 바나프레소가 커피 프랜차이즈의 미래입니다.</p>
+            <p>앞으로도 합리적인 가격에 맛과 감성을 놓치지 않겠습니다. 호랭다방은 커피 프랜차이즈의 미래입니다.</p>
             </div>
         </div>
         <div class="point_introduce">         
             <div class="content">
-                <ul>
+                <ul class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_order_system.png">
                     <p class="pink">편리한 주문 시스템</p>
                     <li> APP 모바일 주문과</li>
@@ -484,7 +501,7 @@
                     <li>고객의 기다림을 최소화하는</li>
                     <li>편리한 주문 시스템입니다.</li>
                 </ul>
-                <ul>
+                <ul class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_premium.png">
                     <p class="pink">프리미엄 커피</p>
                     <li>고품질의 원두를 자체 물류를 통해</li>
@@ -492,7 +509,7 @@
                     <li>고성능 머신으로 정교한 맛의</li>
                     <li>에스프레소를 선사합니다.</li>
                 </ul>
-                <ul>
+                <ul class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_bigsize.png">
                     <p class="pink">대용량 사이즈</p>
                     <li>오랜 시간 커피&음료의</li>
@@ -509,13 +526,13 @@
             <p>BI</p>
             </div>
             <div class="description">
-            <p><span class="pink">바나</span>프레소에서<span class="pink">토끼(bunny)</span> + <span class="pink">프리미엄 원두</span>를 안고 있는 모습을 형상화한 심볼은</p>
+            <p><span class="pink">호랭</span>다방에서<span class="pink">호랑이(tiger)</span> + <span class="pink">프리미엄 원두</span>를 안고 있는 모습을 형상화한 심볼은</p>
             <p>친근함과 작은 즐거움을 선사합니다.</p>
             </div>
             <ul>
-                <li><span class="icon">MANI BI</span><img src="/resources/img/Introduction_brand/i_bana_bi.png"></li>
-                <li><span class="icon">SYMBOL</span><img src="/resources/img/Introduction_brand/i_bana_symbol.png"></li>
-                <li><span class="icon">SUB BI</span><img src="/resources/img/Introduction_brand/i_bana_sub_bi.png"></li>
+                <li><span class="icon">MANI BI</span><img src="/resources/img/Introduction_brand/i_bana_bi.png" class="scrollEffect"></li>
+                <li><span class="icon">SYMBOL</span><img src="/resources/img/Introduction_brand/i_bana_symbol.png" class="scrollEffect"></li>
+                <li><span class="icon">SUB BI</span><img src="/resources/img/Introduction_brand/i_bana_sub_bi.png" class="scrollEffect"></li>
             </ul>
         </div>
         <div class="color_introduce">
@@ -523,12 +540,12 @@
             <p>COLOR</p>
             </div >
             <div class="description">
-            <p>바나프레소의 브랜드 컬러인 핑크는 부드럽고 달콤한 맛과 따뜻한 친절을 대표하는 색깔입니다.</p>
+            <p>호랭다방 브랜드 컬러인 핑크는 부드럽고 달콤한 맛과 따뜻한 친절을 대표하는 색깔입니다.</p>
             <p>맛있는 음료와 디저트로 고객들에게 만족과 행복감을 주고,</p>
             <p>바쁜 일상 속에서 잠시 쉬어 갈 수 있는 장소가 되겠다는 브랜드 정체성을 컬러로 표현하였습니다.</p>
             <br>
             <ul>
-            <li><span>바나 핑크 ㅣPantone 709C</span></li><li><span>베이비 핑크 ㅣPantone 1767C</span></li><li><span>피치 핑크 ㅣPantone 1775C</span></li>
+            <li><span>호랭 핑크 ㅣPantone 709C</span></li><li><span>베이비 핑크 ㅣPantone 1767C</span></li><li><span>피치 핑크 ㅣPantone 1775C</span></li>
             </ul>
             </div>
         </div>
@@ -538,32 +555,32 @@
             </div>
             <div class="description">
             <p>시그니처 메뉴인 아메리카노와 <span class="pink">NEW 복숭아 아이스티</span>에서 영감을 얻어 개발한 캐릭터 에티 & 복티는</p>
-            <p>고객 커뮤니케이션, MD 상품 등에서 다양하게 활동하고 있는 바나프레소 마스코트 입니다.</p>
+            <p>고객 커뮤니케이션, MD 상품 등에서 다양하게 활동하고 있는 호랭다방 마스코트 입니다.</p>
             <br>
             <p>메인 마스코트인 ‘에티’는 빠른 스피드를 자랑하는 토끼 캐릭터로서,</p>
             <p>IT 기술을 접목한 스마트한 장비들을 통해 빠르게 음료를 제조하고</p>
-            <p>신속하게 고객에게 제공하는 바나프레소의 서비스를 닮았습니다.</p>
+            <p>신속하게 고객에게 제공하는 호랭다방의 서비스를 닮았습니다.</p>
             <br>
             <p>또한 주변 환경 변화에 민감하게 반응하는 토끼처럼,</p>
             <p>여느 브랜드보다 먼저 자동화&무인화 솔루션을 준비하며</p>
-            <p>발 빠르게 변화하고 있는 하이엔드 카페 브랜드 바나프레소입니다.</p>
+            <p>발 빠르게 변화하고 있는 하이엔드 카페 브랜드 호랭다방입니다.</p>
             </div>
             <ul>
-                <li><img src="" class="comment1"><img src="/resources/img/Introduction_brand/baby_ethi.png"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
-                <li><img src="" class="comment2"><img src="/resources/img/Introduction_brand/ethi.png"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
-                <li><img src="" class="comment3"><img src="/resources/img/Introduction_brand/bokthi.png"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
+                <li><img src="" class="comment1"><img src="/resources/img/Introduction_brand/baby_ethi.png" class="scrollEffect"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
+                <li><img src="" class="comment2"><img src="/resources/img/Introduction_brand/ethi.png" class="scrollEffect"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
+                <li><img src="" class="comment3"><img src="/resources/img/Introduction_brand/bokthi.png" class="scrollEffect"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
             </ul>
         </div>
         <div class="teen_introduce">
             <div class="title">
-                <p>바나프레소(TEEN)</p>
+                <p>호랭다방(TEEN)</p>
             </div>
             <div class="description">
-                <p>바나프레소 (TEEN)은 더 많은 지역에서 더 많은 고객들이 자사 브랜드를 경험할 수 있도록,</p>
-                <p><span>창업 비용의 부담을 획기적으로 낮추어 런칭한 바나프레소의 서브 브랜드입니다.</span></p>
+                <p>호랭다방 (TEEN)은 더 많은 지역에서 더 많은 고객들이 자사 브랜드를 경험할 수 있도록,</p>
+                <p><span>창업 비용의 부담을 획기적으로 낮추어 런칭한 호랭다방의 서브 브랜드입니다.</span></p>
                 <br>               
                 <p>밝고 화사한 노란색과 따뜻하고 달콤한 바나 핑크가 어우러진</p>
-                <p>바나프레소 (TEEN)의 인테리어 컨셉은 머무는 분들로 하여금 긍정적이고 기분 좋은 장소로 기억 될 수 있게 만듭니다.</p>
+                <p>호랭다방 (TEEN)의 인테리어 컨셉은 머무는 분들로 하여금 긍정적이고 기분 좋은 장소로 기억 될 수 있게 만듭니다.</p>
                 <img src="/resources/img/Introduction_brand/intro-bana2000.png">
             </div>
         </div>
@@ -574,14 +591,14 @@
             <div class="description">
                 <p>2017년, 1호점인 논현점을 시작으로</p>
                 <p>커피는 물론 차별화된 제품과 서비스를 선보였습니다.</p>
-                <ul  class="odd">
+                <ul  class="odd" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2023.png">
-                    <li>ㆍ바나프레소 (TEEN) 런칭</li>
+                    <li>ㆍ호랭다방 (TEEN) 런칭</li>
                     <li>ㆍ자체 물류센터 오픈 예정</li>
                     <li>ㆍ정기 사업설명회 개최</li>
                     <li>ㆍ캐릭터 ‘에티복티’ 인스타툰 오픈</li>
                 </ul>
-                <ul class="even">
+                <ul class="even" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2022.png">
                     <li>ㆍ자동 우유스팀기 개발</li>
                     <li>ㆍ수온 조절 핫워터 디스펜서 개발</li>
@@ -590,7 +607,7 @@
                     <li>ㆍ가맹 1호점 : 충무로점 오픈</li>
                     <li>ㆍ가맹 2호점 : 홍대입구역사거리점 오픈 </li>
                 </ul>
-                <ul class="odd">
+                <ul class="odd" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2021.png">
                     <li>ㆍ높이 조절 키오스크 개발</li>
                     <li>ㆍ직영 70호점 : 방배역점 오픈</li>
@@ -598,33 +615,33 @@
                     <li>ㆍ직영 매출 200억 돌파</li>
                     <li>ㆍHACCP 생산 시설 오픈</li>
                 </ul>
-                <ul class="even">
+                <ul class="even" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2020.png">
                     <li>ㆍ직영 55호점 삼성중앙역점 오픈</li>
                 </ul>
-                <ul class="odd">
+                <ul class="odd" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2019.png">
                     <li>ㆍ자동 더치 추출 머신 개발</li>
                     <li>ㆍ직영 40호점 돌파</li>
                     <li>ㆍ쿠키/마카롱 생산시설 신설</li>
                     <li>ㆍ베이커리 R&amp;D PART 신설</li>
                 </ul>
-                <ul class="even">
+                <ul class="even" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2018.png">
                     <li>ㆍBANA APP. (V.2.1 출시)</li>
                     <li>ㆍ직영 10호점 돌파</li>
                     <li>ㆍ캐릭터 ‘에티’ 개발</li>
-                    <li>ㆍ바나 태그 라벨 시스템 개발</li>
+                    <li>ㆍ호랭 태그 라벨 시스템 개발</li>
                 </ul>
-                <ul class="odd">
+                <ul class="odd" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2017.png">
-                    <li>ㆍ㈜바나플에프엔비 설립</li>
+                    <li>ㆍ호랭다방 설립</li>
                     <li>ㆍFOOD PRO : 자체 매장관리 프로그램 출시</li>
-                    <li>ㆍ바나프레소 자체 APPLICATION<br>&nbsp;&nbsp;&nbsp;바나 APP 론칭</li>
+                    <li>ㆍ호랭다방 자체 APPLICATION<br>&nbsp;&nbsp;&nbsp;바나 APP 론칭</li>
                     <li>ㆍ직영 1호점 : 논현점 오픈</li>
                     <li>ㆍR&amp;D 연구실 신설</li>
                 </ul>
-                <ul class="even">
+                <ul class="even" class="scrollEffect">
                     <img src="/resources/img/Introduction_brand/i_2016.png">
                     <li>ㆍ프랜차이즈 사업본부 구성</li>
                 </ul>
@@ -639,7 +656,7 @@
         <ul class="foot_menu">
             <li><button type="button">개인정보처리방침</button>
                 <ul>
-                    <li><a href="/termsofservice">바나프레소앱 개인정보 처리방침</a></li><!--
+                    <li><a href="/termsofservice">호랭다방앱 개인정보 처리방침</a></li><!--
                     --><li><a href="/termsofgift">기업사이트 개인정보 처리방침</a></li>
                 </ul>
             </li>
@@ -655,10 +672,10 @@
         --><li><a href="#" class="bold">매장 이용 및 고객문의</a></li>
         </ul>
         <ul>
-            <li class="bold">상호명: 주식회사 바나플에프엔비</li>
-            <li>대표자명 : 송민기 /사업장 소재지 : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층 /사업자번호 : 358-87-00860</li>
-            <li>대표전화 : 1811-1111 |Fax : 070-4512-0296 |이메일 : qna@banapresso.com 또는 1811-1111</li>
-            <li>© banaple F&B. All Rights Reserved.</li>
+            <li class="bold">상호명: 주식회사 호랭다방</li>
+            <li>대표자명 : 백의헌 /사업장 소재지 : 서울특별시 강남구 테헤란로10길 9 7층 /사업자번호 : 345-12-01234</li>
+            <li>대표전화 : 1111-1111 |Fax : 070-4567-0134 |이메일 : qna@horang.com 또는 1111-1111</li>
+            <li>© horang F&B. All Rights Reserved.</li>
         </ul>
     </footer>
 </body>
