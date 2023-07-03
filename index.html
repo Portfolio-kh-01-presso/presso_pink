@@ -764,6 +764,17 @@
     </div>
 </body>
 <script>
+    document.querySelector(".bold.module-layer-btn>a").setAttribute("href","javascript:void(0)");
+    document.querySelector(".bold.module-layer2-btn>a").setAttribute("href","javascript:void(0)");
+
+    window.addEventListener("scroll", function(){
+        if(window.pageYOffset > 50){
+            document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT hDfwhw';
+        } else{
+            document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT idEnbl';
+        }
+    });
+
     const backToTopButton = document.querySelector("#btn_top");
         window.addEventListener("scroll", function(){
             if(window.pageYOffset > 200){
