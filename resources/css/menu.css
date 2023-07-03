@@ -117,6 +117,11 @@ legend {
     width: 0;
 }
 
+#contents {
+    position: relative;
+    z-index: auto;
+}
+
 header {
     height: 93px;
     position: static;
