@@ -1087,11 +1087,6 @@ footer .foot_cont .foot_copy {
     -ms-transform: rotate(-45deg);
 }
 
-.btn_top_animation {
-    position: relative;
-    z-index: 200;
-}
-
 #btn_top {
     bottom: 100px;
     display: none;
