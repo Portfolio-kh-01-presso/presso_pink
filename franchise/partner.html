@@ -1,349 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- <link href="./reset.css" rel="stylesheet"> -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            width: 1654px;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            padding: 0;
-            margin: 0;
-            width: 1654px;
-            height: 93px;
-            background-color: white;
-        }
-
-        .inner {
-            margin: 0 227px 0 227px;
-            padding: 0;
-            width: 1200px;
-            height: 105px;
-            background-color: white;
-            opacity: 0.9;
-        }
-
-        .logo {
-            position: absolute;
-            top: 10px;
-        }
-        .page-list{
-            position: absolute;
-            top: 150px;
-            z-index: 99990;
-            left: -120px;
-            border: solid 1px rgb(216, 214, 214) ;
-            border-radius: 10%;
-            padding: 0;
-
-        }
-        .list-item{
-            display: block;
-            
-            background-color: white;
-            border-color: gray;
-            text-align: center;
-            height: 40px;
-            line-height: 40px;
-        }
-        /* .list-item:hover{
-            background-color: #f1648a;
-            
-            
-        } */
-        .list-item :hover{
-            color: #f1648a;
-           
-        }
-        .list-item > a:hover{
-            border-bottom:solid 2px pink;
-        }
-            
-        .Enquiries_for_membership {
-            z-index: 99990;
-            position: fixed;
-            top: 150px;
-            right: 250px;
-        }
-
-        nav ul {
-            float: right;
-            list-style-type: none;
-        }
-
-        .menucontainer {
-            margin: 0;
-            padding: 0;
-            width: 588px;
-            height: 105px;
-        }
-
-        nav ul li {
-            top: 15px;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: black;
-        }
-        #pink{
-            width: 100px;
-            font-weight: 800;
-            
-        }
-        #pink:hover {
-            background-color: white;
-            color: pink;
-            border-bottom: 2px solid #f1648a ;
-            
-        }
-        /*         .dropdown-menu:hover:not(.home) {
-            text-align: center;
-            background-color: white;
-            color: pink; 
-        } */
-    </style>
-    <style>
-
-    </style>
-    <style>
-        footer {
-            padding: 60px 0px 50px 0px;
-            width: 1654px;
-            height: 300px;
-            background-color: white;
-        }
-    </style>
-    <style>
-        #wrapper {
-            margin: 0 200px;
-            padding: 100px 150px 0 150px;
-            width: 1254px;
-            height: 1483px;
-            background-color: white;
-        }
-
-        .red {
-            color: red;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 26px
-        }
-
-        .tit {
-            font-size: x-large;
-        }
-
-        .pred {
-            position: absolute;
-            right: 490px;
-            color: red;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 26px
-        }
-
-        .h1 {
-            margin: 0;
-        }
-
-        #line {
-            margin: 0;
-        }
-
-        .tb1_wrap {
-            padding: 25px 0 0 0;
-            width: 1254px;
-            height: 657px;
-        }
-
-        .tbody {
-            padding: 15px;
-        }
-
-        table {
-            width: 1254px;
-            height: 600px;
-        }
-
-        tr,
-        td {
-            font-size: 20px;
-            padding: 15px;
-        }
-
-        th {
-            width: 109px;
-            height: 73px;
-            padding: 15px 0;
-        }
-
-        .radio {
-            display: inline;
-            width: 110px;
-            height: 36px;
-            padding: 15px;
-        }
-
-        #offer_name,
-        #offer_hp {
-            font-size: 18px;
-            padding: 0 18px;
-            width: 260px;
-            height: 50px;
-        }
-
-        #offer_name1 {
-            width: 150px;
-            height: 48px;
-        }
-
-        .inp_control {
-            width: 300px;
-            height: 54px;
-        }
-
-        .textbox {
-            padding: 0;
-        }
-        #textar {
-            font-size: 20px;
-            width: 790px;
-            height: 220px;
-            resize: none;
-        }
-
-        .agree {
-            background-color: rgb(238, 238, 238);
-            width: 1050px;
-            height: 260px;
-            border: 1px solid rgb(235, 232, 232);
-            position: absolute;
-            top: 1100px;
-            z-index: 1;
-        }
-        
-        .hypen_list {
-            list-style-type: none;
-            font-weight: 100;
-        }
-
-        div .ted {
-            margin: 50px;
-            text-align: center;
-        }
-
-        .botton1 {
-            border: none;
-            background-color: #f1648a;
-            border-radius: 150px;
-            color: white;
-            font-size: 24px;
-            font-weight: 700;
-            height: 76px;
-            line-height: 81px;
-            min-width: 250px;
-            padding: 0 10px;
-        }
-        #buttona {
-            color: white;
-            background-color: #f1648a;
-        }
-
-
-        .foot_menu {
-            list-style: none;
-            display: flex;
-        }
-
-        #footerbom {
-            padding: 0 0 0px 300px;
-        }
-
-        footer {
-            font-size: small;
-        }
-        #menu {
-            height: 50px;
-            background: white;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-
-        .main1 {
-            width: 600px;
-            height: 100%;
-            margin: 0 auto;
-        }
-
-        .main1>li {
-            float: left;
-            width: 25%;
-            line-height: 50px;
-            text-align: center;
-            position: relative;
-        }
-        .main1>li:hover .main2 {
-            left: 0;
-        }
-/* 
-        .main1>li a {
-            display: block;
-        }
- */
-
-        .main1>li a:hover {
-            color: #f1648a;
-            font-weight: bold;
-            
-        }
-
-        .main2 {       
-            position: absolute;
-            top: 50px;
-            left: -9999px;
-            background: rgba(226, 226, 226, 0.466);
-            width: 82px;
-            padding: 0 10px 10px 10px;
-            font-size: 11px;
-            font-weight: 100;
-           
-        }
-
-        .main2>li {
-            position: relative;
-        }
-        .inner{
-            position: fixed;
-        }
-        header{
-            position: relative;
-        }
-        .privacy{
-            margin: 10px;
-        }
-    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+    integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
+    <!-- <link href="./partner.css" rel="stylesheet"> -->
+   
 </head>
+<style>
+    body {
+    width: 1654px;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    padding: 0;
+    margin: 0;
+    width: 1654px;
+    height: 93px;
+    background-color: white;
+}
+
+.inner {
+    margin: 0 227px 0 227px;
+    padding: 0;
+    width: 1200px;
+    height: 105px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+}
+
+.page-list {
+    position: absolute;
+    top: 150px;
+    z-index: 99990;
+    left: -120px;
+    border: solid 1px rgb(216, 214, 214);
+    border-radius: 10%;
+    padding: 0;
+
+}
+
+.list-item {
+    display: block;
+
+    background-color: white;
+    border-color: gray;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* .list-item:hover{
+    background-color: #f1648a;
+    
+    
+} */
+.list-item :hover {
+    color: #f1648a;
+
+}
+
+.list-item>a:hover {
+    border-bottom: solid 2px pink;
+}
+
+.Enquiries_for_membership {
+    z-index: 99990;
+    position: fixed;
+    top: 150px;
+    right: 250px;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+}
+
+.menucontainer {
+    margin: 0;
+    padding: 0;
+    width: 588px;
+    height: 105px;
+}
+
+nav ul li {
+    top: 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+#pink {
+    width: 100px;
+    font-weight: 800;
+
+}
+
+#pink:hover {
+    background-color: white;
+    color: pink;
+    border-bottom: 2px solid #f1648a;
+
+}
+
+/*         .dropdown-menu:hover:not(.home) {
+    text-align: center;
+    background-color: white;
+    color: pink; 
+} */
+
+
+/* footer {
+    padding: 60px 0px 50px 0px;
+    width: 1654px;
+    height: 300px;
+    background-color: white;
+} */
+#wrapper {
+    margin: 0 200px;
+    padding: 100px 150px 0 150px;
+    width: 1254px;
+    height: 1483px;
+    background-color: white;
+}
+
+.red {
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px
+}
+
+.tit {
+    font-size: x-large;
+}
+
+.pred {
+    position: absolute;
+    right: 490px;
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px
+}
+
+.h1 {
+    margin: 0;
+}
+
+#line {
+    margin: 0;
+}
+
+.tb1_wrap {
+    padding: 25px 0 0 0;
+    width: 1254px;
+    height: 657px;
+}
+
+.tbody {
+    padding: 15px;
+}
+
+table {
+    width: 1254px;
+    height: 600px;
+}
+
+tr,
+td {
+    font-size: 20px;
+    padding: 15px;
+}
+
+th {
+    width: 109px;
+    height: 73px;
+    padding: 15px 0;
+}
+
+.radio {
+    display: inline;
+    width: 110px;
+    height: 36px;
+    padding: 15px;
+}
+
+#offer_name,
+#offer_hp {
+    font-size: 18px;
+    padding: 0 18px;
+    width: 260px;
+    height: 50px;
+}
+
+#offer_name1 {
+    width: 150px;
+    height: 48px;
+}
+
+.inp_control {
+    width: 300px;
+    height: 54px;
+}
+
+.textbox {
+    padding: 0;
+}
+
+#textar {
+    font-size: 20px;
+    width: 790px;
+    height: 220px;
+    resize: none;
+}
+
+.agree {
+    background-color: rgb(238, 238, 238);
+    width: 1050px;
+    height: 260px;
+    border: 1px solid rgb(235, 232, 232);
+    position: absolute;
+    top: 1100px;
+    z-index: 1;
+}
+
+.hypen_list {
+    list-style-type: none;
+    font-weight: 100;
+}
+
+div .ted {
+    margin: 50px;
+    text-align: center;
+}
+
+.botton1 {
+    border: none;
+    background-color: #f1648a;
+    border-radius: 150px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    height: 76px;
+    line-height: 81px;
+    min-width: 250px;
+    padding: 0 10px;
+}
+
+#buttona {
+    color: white;
+    background-color: #f1648a;
+}
+
+
+.foot_menu {
+    list-style: none;
+    display: flex;
+}
+
+#footerbom {
+    padding: 0 0 0px 300px;
+}
+
+footer {
+    font-size: small;
+    margin: 0 150px;
+}
+
+#menu {
+    height: 50px;
+    background: white;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.main1 {
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main1>li {
+    float: left;
+    width: 25%;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.main1>li:hover .main2 {
+    left: 0;
+}
+
+/* 
+.main1>li a {
+    display: block;
+}
+*/
+*::selection {
+    background-color: #f1648a;
+    color: #fff;
+}
+.main1>li a:hover {
+    color: #f1648a;
+    font-weight: bold;
+
+}
+
+.main2 {
+    border: 0.5px solid rgb(207, 206, 206);
+    position: absolute;
+    left: -9999px;
+    /* background: rgba(226, 226, 226, 0.466); */
+    background: white;
+    width: 97px;
+    padding: 0 10px 10px 10px;
+    font-size: 11px;
+    font-weight: 100;
+    border-radius: 5%;
+    top: 52px;
+}
+
+.main2>a {
+    text-align: center;
+
+}
+
+.main2>li {
+    display: inline-block;
+}
+
+.inner {
+    position: fixed;
+}
+
+header {
+    position: relative;
+}
+
+.privacy {
+    margin: 10px;
+}
+
+footer {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0 0 0 350px;
+    padding: 0;
+    width: 1400px;
+}
+
+footer .foot_menu {
+    position: relative;
+    bottom: 0px;
+    z-index: 100;
+    height: 40px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer>ul>li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0;
+}
+
+footer ul>li a {
+    color: rgb(77, 75, 75);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 0;
+}
+
+footer ul>li button {
+    color: rgb(77, 75, 75);
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0;
+    border: none;
+    background-color: white;
+}
+
+footer .foot_menu>li:nth-of-type(1) {
+    width: 136px;
+    height: 23.4px;
+    z-index: 1;
+}
+
+footer .foot_menu>li:nth-of-type(2) {
+    width: 68px;
+    height: 23.4px;
+    z-index: 1;
+}
+
+footer ul>li>ul {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    border: 1px solid rgb(116, 113, 113);
+    list-style-type: none;
+    width: 260px;
+    height: 70px;
+    line-height: 1.5;
+    display: none;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+footer>ul>li:nth-child(2) ul {
+    z-index: 10;
+    width: 200px;
+    height: 100px;
+    margin: 0;
+}
+
+footer ul>li>ul>li {
+    margin: 5px;
+}
+
+footer ul>li>ul>li>a {
+    font-size: 15px;
+    margin: 0;
+    color: rgb(77, 75, 75);
+}
+
+footer img {
+
+    padding: 20px;
+}
+
+footer>ul>li:last-child {
+    margin-bottom: 50px;
+}
+</style>
 <body>
     <header>
         <div class="inner">
@@ -405,19 +525,24 @@
                     <ul class="main1">
                        <li id="pink"><a href="#">소개</a>
                             <ul class="main2">
-                                <li><a href="#">브랜드소개</a></li>
-                                <li><a href="#">앱소개</a></li>
+                                <li><a href="../brand.html">브랜드소개</a></li>
+                                <hr style="margin: 0 ;">
+                                <li><a href="../app.html">앱소개</a></li>
                             </ul>
                         </li>
-                        <li id="pink"><a href="#">메뉴</a></li>
+                        <li id="pink"><a href="../menu.html">메뉴</a></li>
                         <li id="pink"><a href="#">매장찾기</a></li>
-                        <li id="pink"><a href="#">소식</a></li>
-                        <li id="pink"><a href="#">채용</a></li>
+                        <li id="pink"><a href="../news.html">소식</a></li>
+                        <li id="pink"><a href="../recruit.html">채용</a></li>
                         <li id="pink"><a href="#">직가맹점</a>
                             <ul class="main2" >
                                 <li><a href="#">브랜드 경쟁력</a></li>
+                                <hr style="margin: 0 ;">
                                 <li><a href="#">인테리어 특장점</a></li>
-                                <li><a href="#">가맹점 창업문의</a></li>
+                                <hr style="margin: 0 ;">
+                                <li><a href="#">직영점 입점제안</a></li>
+                                <hr style="margin: 0 ;">
+                                <li><a href="./partner.html">가맹점 창업문의</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -561,37 +686,45 @@
             </div>
         </section>
     </div>
-    <footer width="100%" id="footerbom">
-        <hr>
-        <div class="foot_copy"><img src="../resources/img/recruit/footer_logo.png"></div>
+    <footer>
+        <div>
+        <img src="/resources/img/Introduction_brand/footer_logo.png">
+    </div>
         <ul class="foot_menu">
-            <li class="privacy">
-                <button>개인정보처리방침</button>
+            <li><button type="button">개인정보처리방침</button>
                 <ul>
-                    <li><a href="#">바나프레소앱 개인정보 처리방침</a></li>
-                    <li><a href="#">기업사이트 개인정보 처리방침</a></li>
+                    <li><a href="/termsofservice">바나프레소앱 개인정보 처리방침</a></li><!--
+                    --><li><a href="/termsofgift">기업사이트 개인정보 처리방침</a></li>
                 </ul>
             </li>
-            <li class="privacy">
-                <button>이용약관</button>
+            <li><button type="button">이용약관</button>
                 <ul>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">충전식 상품권 약관</a></li>
-                    <li><a href="#">잔돈포인트 약관</a></li>
+                    <li><a href="/termsofservice">이용약관</a></li>
+                    <li><a href="/termsofgift">충전식 상품권 약관</a></li>
+                    <li><a href="/termsofpoint">잔돈포인트 약관</a></li>
                 </ul>
             </li>
-            <li><a href="#">채용</a></li>
-            <li><a href="#">입점제안</a></li>
-            <li><a href="#">가맹점 문의</a></li>
-            <li><a href="#">제휴 문의</a></li>
-            <li><a href="#">매장 이용 및 고객 문의</a></li>
+            <li><a href="#" class="bold">채용</a></li> <!--
+        --><li><a href="#" class="bold">입점제안</a></li><!--
+        --><li><a href="#" class="bold">가맹점 문의</a></li><!--
+        --><li><a href="#" class="bold">제휴문의</a></li><!--
+        --><li><a href="#" class="bold">매장 이용 및 고객문의</a></li>
         </ul>
-        <span>상호명 : 주식회사 호랑호랑호랑이</span><br>
-        <span style="color: rgb(196, 194, 194);">대표자명 : 김민성 / 사업장 소개지 : 서울특별시 강남구 테헤란로 81길 9(삼성동,바나플빌딩)3층 / 사업자번호
-            :010-1234-1234</span><br>
-        <span style="color: rgb(196, 194, 194);">대표전화 : 1511-1111 / Fax : 070-4569-7561 / 이메일 : qna@basdfsd.con 또는
-            1881-5626</span>
+        <ul>
+            <li class="bold">상호명: 주식회사 바나플에프엔비</li>
+            <li>대표자명 : 송민기 /사업장 소재지 : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층 /사업자번호 : 358-87-00860</li>
+            <li>대표전화 : 1811-1111 |Fax : 070-4512-0296 |이메일 : qna@banapresso.com 또는 1811-1111</li>
+            <li>© banaple F&B. All Rights Reserved.</li>
+        </ul>
     </footer>
+    <script>
+        $(".foot_menu li button").on("click",footMenuToggle);
+
+        function footMenuToggle(){
+            $(this).next().toggle();
+            
+        }
+   </script>
 </body>
 
 </html>
