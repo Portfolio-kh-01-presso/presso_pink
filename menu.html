@@ -3413,6 +3413,14 @@
             }
         })
 
+        window.addEventListener("scroll", function(){
+            if(window.pageYOffset > 50){
+                document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT hDfwhw';
+            } else{
+                document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT idEnbl';
+            }
+        });
+
         const backToTopButton = document.querySelector("#btn_top");
         window.addEventListener("scroll", function(){
             if(window.pageYOffset > 200){
