@@ -4,182 +4,1315 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="세상에서 가장 귀여운 & 맛있는 & 행복한 & 분위기 좋은 다방">
-    <title>호랭다방 - APP</title>
+    <style data-styled="active" data-styled-version="5.3.8"></style>
+    <title>호랭다방</title>
+    <script src="/html/projectpresso/re!.js"></script>
+    <!-- <script defer="defer" src="/html/projectpresso/main.7f039d42.js"></script> -->
 </head>
+<style>
+
+    /* 기본 font */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+    /* 기본 */
+
+    /* style */
+.idEnbl {
+    width: 100%;
+    height: 93px;
+    transition: all 0.1s ease 0s;
+    z-index: 101;
+}
+.dEzzaX {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.cxRRkY {
+    position: absolute;
+    padding: 0px;
+    width: 68px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+}
+.eCrSIr::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr {
+    display: block;
+    outline: none;
+    padding: 0px 20px 0px 0px;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.eCrSIr:hover {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.dOCgaz:hover {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.dOCgaz::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+.dOCgaz {
+    display: block;
+    outline: none;
+    padding: 0px 20px 0px 0px;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.dOCgaz::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 8px;
+    height: 1px;
+    background: rgb(119, 119, 119);
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in-out 0s;
+}
+    /* style */
+    p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+h2.title {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -1.26px;
+    line-height: 50px
+}
+h2.description {
+    border-top: 1px solid #929291;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+    padding-top: 30px
+}
+h3.title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 36px
+}
+/* 루트 */
+:root {
+    --primary-color: #f1658a;
+    --skew: skew(-0.1deg)
+}
+/* 바디 */
+body {
+    background: #fff;
+    font-family: NanumSquare,sans-serif;
+    min-width: 1340px
+}
+/* -- */
+body,div,form,h1,h2,h3,h4,h5,h6,input,li,p,ul {
+    -webkit-text-size-adjust: none;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0
+}
+img {
+    border: 0;
+    vertical-align: top
+}
+dl,li,ol,ul {
+    list-style: none
+}
+
+button,input {
+    vertical-align: middle
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer
+}
+a {
+    color: #333
+}
+a,a:active,a:hover {
+    text-decoration: none
+}
+address,cite,code,dfn,em,var {
+    font-style: normal;
+    font-weight: 400
+}
+caption {
+    border: 0;
+    display: block;
+    left: -9999px;
+    text-indent: 9999px;
+    white-space: nowrap
+}
+caption,label,legend {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0
+}
+select::-ms-expand {
+    display: none
+}
+::selection {
+    background-color: #f1648a;
+    color: #fff
+}
+.menu-list .list-item.depth .depth-view {
+    top: 70px
+}
+header {
+    height: 93px;
+    position: static;
+    z-index: 1000
+}
+
+header,header .inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1200px
+}
+
+header .inner .logo a {
+    display: flex
+}
+
+header .menu-list {
+    display: flex;
+    gap: 70px
+}
+
+header .menu-list .list-item a {
+    position: relative
+}
+
+header .menu-list .list-item a:after {
+    border-bottom: 2px solid #f1648a;
+    bottom: -5px;
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: .5s ease;
+    width: 0
+}
+
+header .menu-list .list-item:hover>a {
+    color: #f1648a;
+    font-weight: 700
+}
+
+header .menu-list .list-item:hover>a:after {
+    width: 100%
+}
+
+header .menu-list .list-item {
+    padding: 34px 0!important
+}
+
+header .menu-list .list-item>a {
+    font-size: 16px
+}
+
+header .menu-list .list-item.depth {
+    position: relative
+}
+
+header .menu-list .list-item.depth .depth-view {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: none;
+    left: 50%;
+    padding: 17px;
+    position: absolute;
+    top: 83px;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 150px;
+    z-index: 9999
+}
+
+header .menu-list .list-item.depth .depth-view a {
+    border-bottom: 1px solid #e8e8e8;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    text-align: center
+}
+
+header .menu-list .list-item.depth .depth-view li:last-child a {
+    border-bottom: 0;
+    margin: 0;
+    padding: 0
+}
+
+header .menu-list .list-item.depth:hover .depth-view {
+    display: block
+}
+
+header .menu-list .list-item.depth:hover .depth-view a:hover {
+    color: #000;
+    font-weight: 700
+}
+/* ----------- */
+footer {
+    background: #fff;
+    border-top: 1px solid #cecece;
+    padding: 60px 0 50px;
+    position: relative
+}
+
+footer .foot_cont {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px
+}
+
+footer .foot_cont address span {
+    color: #333;
+    display: block;
+    font-size: 15px;
+    line-height: 1.8
+}
+
+footer .foot_cont address span b {
+    color: #333;
+    font-weight: 400
+}
+
+footer .foot_cont address span strong b {
+    font-weight: 700
+}
+
+footer .foot_cont .foot_bar {
+    display: inline-block;
+    font-style: italic;
+    height: 10px;
+    line-height: 11px;
+    margin: 0 15px;
+    width: 1px
+}
+
+footer .foot_cont a {
+    color: #333
+}
+
+footer .foot_cont .foot_copy {
+    margin-bottom: 10px
+}
+
+.foot_menu,.foot_menu>li {
+    vertical-align: top
+}
+
+.foot_menu>li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 20px;
+    position: relative
+}
+
+.foot_menu>li:first-child {
+    margin-left: 0
+}
+
+.foot_menu>li>a {
+    display: block;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out
+}
+
+.foot_menu>li>a:hover {
+    color: #000;
+    font-weight: 700
+}
+
+.foot_menu>li.bold {
+    font-weight: 700
+}
+
+.privacy,.privacy>a {
+    position: relative
+}
+
+.privacy>a {
+    padding-right: 20px;
+    z-index: 1
+}
+
+.privacy>a:after {
+    right: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg)
+}
+
+.privacy>a:after,.privacy>a:before {
+    background: #777;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    width: 8px
+}
+
+.privacy>a:before {
+    right: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg)
+}
+
+.privacy>ul {
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    bottom: 41px;
+    display: none;
+    left: 0;
+    padding: 10px 0;
+    position: absolute;
+    width: 210px;
+    z-index: 10
+}
+
+.privacy>ul li a {
+    display: block;
+    font-size: 13px;
+    line-height: 30px;
+    padding: 0 15px
+}
+
+.privacy>ul li a:hover {
+    text-decoration: underline
+}
+
+.privacy.on>ul {
+    display: block
+}
+
+.privacy.on>a:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg)
+}
+
+.privacy.on>a:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg)
+}
+
+.btn_top_animation {
+    position: relative;
+    z-index: 200
+}
+
+#btn_top {
+    bottom: 100px;
+    display: none;
+    left: 50%;
+    margin-left: 750px;
+    position: fixed;
+    right: 500px;
+    z-index: 200
+}
+.btn_franchisee {
+    align-items: center;
+    background: url(data:image/png;base64,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) 0 0 no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 172px;
+    padding-top: 41px;
+    position: fixed;
+    right: 60px;
+    text-align: center;
+    top: 154px;
+    width: 164px;
+    z-index: 1000
+}
+
+.btn_franchisee .icon_store_top {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAYAAABGiCfwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRCNDM1MzBBRjA1QzExRUM5MTNCRDYwQTNFMUM4ODdFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRCNDM1MzBCRjA1QzExRUM5MTNCRDYwQTNFMUM4ODdFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REI0MzUzMDhGMDVDMTFFQzkxM0JENjBBM0UxQzg4N0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REI0MzUzMDlGMDVDMTFFQzkxM0JENjBBM0UxQzg4N0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4p7RsXAAABOklEQVR42sxVQW7CMBB0ILRqxQfgCXkDB9QDUh+A6EOQuBae00v5A+IHNOJAOYYD9AFFIHcWTSKDCBhpsTrSxM6svCPbm42x1hryFcysLjLmPXhE8iAysGH0sQKbMqlQSGj0A0aK3DBv4pp1OX4q72p8lJ/nOeMZd5w71GCHeb8O14VHQmENxspmNeYVJFIg1gRCxQRE7MwjZ27voQXdmZjtOa9yfHDimtpezOZ8GYB1sO8s0NTmUo3ywX0EOMW3/HvIsQVTsEemClqOohGfqyAtFLmDV6MvnsAhuAB/OQ6pe+7x+M7KetwzOC35QU4ZL1tb5PY1GzG+BF/AOscl9XdNswXj7RO9Rf3bx8y3GnfsCI/g9qRL7NiF4mvV6Gt2Ke699t+Wvsr/bHJmy9e6wa0xwSTkzqI/AQYAFBi9v8KwunQAAAAASUVORK5CYII=) no-repeat 50% 50%;
+    display: inline-block;
+    height: 26px;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 27px
+}
+
+.btn_franchisee strong {
+    border-bottom: 1px solid #e64a79;
+    font-size: 22px;
+    padding: 0 0 15px
+}
+
+.btn_franchisee .number,.btn_franchisee strong {
+    color: #fff;
+    display: inline-block;
+    line-height: 23px;
+    text-shadow: 0 0 1px #52001617;
+    width: 100px
+}
+
+.btn_franchisee .number {
+    border-top: 1px solid #fd7ead;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0 0
+}
+
+.btn_franchisee .icon_arrow_right_top {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY4MUFFMDM2RjA1QzExRUNCN0M1OTU4Q0Q4RDA5MDFBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY4MUFFMDM3RjA1QzExRUNCN0M1OTU4Q0Q4RDA5MDFBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjgxQUUwMzRGMDVDMTFFQ0I3QzU5NThDRDhEMDkwMUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjgxQUUwMzVGMDVDMTFFQ0I3QzU5NThDRDhEMDkwMUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7KhbEMAAACX0lEQVR42rSXTU8TURSG74ytLSotpkZkoYAaDLpkITEuWPorjH9Nf4U7XbiQhUttJCR8uMAmEGlBpRVb39M8Y26a2J4Zy0meTFO457333DkfTQaDQXBYVSyIhpgVFVEWv0RPdMSROBBnk5wlE0Rr4oGYt/91bM6ctcRnNpJLNBUPxRJifXEovopv4ientNPOiOvilrjBWnO6Kz6xdqKohfIxp7Q/fmHnZ85rsMjcZrN22s3RtaOitugpu/8uPoh2yG91sSauEpV3sXAseglBO+GxeE8Ii5qFfl3McWIT/p3dXWarCJ4Skv8RDKzfxF8N/yEWrfPS9AlpL0zHevjr478ei65w8bvjXvWC1sFvgs5QtEoe2m62w8XYNv5Np5pSaRKSuutwYC/ER3Enh2gX/6azkFLaAl96rEHheJNTOPPfSKmlIUc+PhM74q54Kxad6455zmZ3Gkhij+2JDYSXcwhnxWF4p6Uor7y2L57z2VLhpTNvzUomeh5VEK/ZXb7is6XDC2eFMjtPo2PPOAUXCekyghs8Pc1gGGYTPYmqksdeI7iD4J5z3RzPk5SOH0hcj1k/beYUNLvJ86jEiPEI0YqjQDwpUJEqNHlraQfZnbYoifcvqAzew38ru1OzLXaxRBuaptV4Bwbo/O0ybd7AlI5/eUqCZfyl+G+PNvEmbegaM1J5CoLr+Ovgf+KMdEoD7hQM6RqCY2ekf02D+9yFdxpcoWK5p8F4SFsdmXtbYPfyg/JpKXeFwjIP8dzbzIaxPBN+nZ3nnfC3xrXKpMBvmRrJXuK0XUrpofe3zB8BBgB7qroqMBNtNgAAAABJRU5ErkJggg==) no-repeat 50% 50%;
+    display: inline-block;
+    height: 29px;
+    margin-left: 20px;
+    vertical-align: top;
+    width: 29px
+}
+.fadeinbottom {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    transition: all .5s cubic-bezier(.455,.03,.515,.955);
+    transition-delay: .2s;
+    will-change: transform
+}
+
+.fadeinbottom.active {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+
+.fadeinleft {
+    opacity: 0;
+    -webkit-transform: translate(30px);
+    transform: translate(30px);
+    transition: all .5s cubic-bezier(.455,.03,.515,.955);
+    transition-delay: .2s;
+    will-change: transform
+}
+
+.fadeinleft.active {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+
+.fadeinright {
+    opacity: 0;
+    -webkit-transform: translate(-30px);
+    transform: translate(-30px);
+    transition: all .5s cubic-bezier(.455,.03,.515,.955);
+    transition-delay: .2s;
+    will-change: transform
+}
+
+.fadeinright.active {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+
+.fadeintop {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    transition: all .5s cubic-bezier(.455,.03,.515,.955);
+    transition-delay: .2s;
+    will-change: transform
+}
+
+.fadeintop.active {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+.page-top-visual {
+    background: #d9ccbb url(/static/media/menu-top-visual.45cf0e7117d728f653eb.png) 50% no-repeat;
+    height: 216px;
+    width: 100%
+}
+.page-top-visual.app {
+    background: url(/github/presso/resources/img/Introduction_app/app-top-visual.c4f48852c9c885d06b10.png) 50% no-repeat;
+    height: 216px;
+    position: relative
+}
+
+.page-top-visual.app:before {
+    background: #ede5ea;
+    left: 0
+}
+
+.page-top-visual.app:after,.page-top-visual.app:before {
+    content: "";
+    height: 216px;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: -1
+}
+
+.page-top-visual.app:after {
+    background: #7d5341;
+    right: 0
+}
+
+#contents {
+    position: relative;
+    z-index: 50
+}
+
+/*  */
+
+.bana-app .title-wrap {
+    padding-top: 100px
+}
+
+.bana-app .layout-wrap,.bana-app .title-wrap {
+    margin: 0 auto;
+    width: 1000px
+}
+
+.bana-app .layout-wrap .introduce .description {
+    border-top: 1px solid #d2d2d2;
+    margin-top: 36px;
+    padding-top: 60px;
+    position: relative
+}
+
+.bana-app .layout-wrap .introduce .description .phone-image {
+    position: absolute;
+    right: 0;
+    top: -36px
+}
+
+.bana-app .layout-wrap .introduce .description .phone-icon-01 {
+    position: absolute;
+    right: 274px;
+    top: 76px
+}
+
+.bana-app .layout-wrap .introduce .description .phone-icon-02 {
+    position: absolute;
+    right: 67px;
+    top: 192px
+}
+
+.bana-app .layout-wrap .introduce .description .phone-image:after {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAABYCAMAAAC3QJuLAAABAlBMVEVHcEzyyer4zOn8zur1y+v0y+r3zOrzzOf+zuv0y+n+zur2y+r+zur/z+v/z+vcvu3hwe3+zur9zuniwezdvuzjwerjwuzjwerkw/Dxhab/z+vVuuz5yubavvHsgqL///86IRM5IBPyi6v8+fr/yuf3scvzkrH6t9X1nLn2p8TpecP/8fX92+z7w+Lrl8pIKR/uhKWdu7Hxy+P7v9n6o7zZvO6+wcKsX2/ifpzpiqqCtqKwvbnOxcv95vDsxuy4ZnjFbYOVUlxuSkXmyNxbNC7nk7bdqdbzotfcsuL60t7/eodrspSBcmrj4N7/hJHvgrr/kJ7VdY+lm5T/8r//6Ir/3VVLGAn0AAAAGXRSTlMAVDGPeyNACv4WqWbyvuX309HdwOr/nq6s3Td+SgAABc1JREFUWMOtmQd32jwUhiEQRkgzmiatjGPhBcaAAUPYhBVCM9p0ff//r3zyxJZkOQHe03HSnD557/WrK0skEjsqm0mn0pls4rA6OuEcFQ4IzadPOV+fDgTNJi+5kE4OWn9Ax4eoP0dy9+tENnPJRWiPUBynuGjtmol84ZRj6WwnauYTF6fjHeoPPyhFoXFTH3xUhTOc8LPbVUlubs/6lV8/fz53KZYzu9bvcZ+nv54ru0Y4m/xMyz9S9xn5pfx7Lr/bUvWkas9qhVZIIXap5piJUmhULsefxdW/k3ieP9qpfo5rNKK/l0Pc1DtGNamOBICmMOzyPG34RI8qt6sIC0CXYZfnk2RbWdSG5bIDgFQGQGHY5S8J7Cm7/qrNncIOUBl2eR6P8Ke4+hFOkiCUQTnM22yUjeLZ5fk0tmIZTVARVQISx1VBHcIqCGZi09B1Q2/4dvnTMDfF5Eo1hKugRqgQ1q2W+DL0t7c33TB4X+EIs5aCAjQIp0DjuLIkQ1iWAt/a6EZ9augBbnjDZwZMAzUINRQEFTxBWAHbVazrbw0IjbfNlhuO8BmLWwEdCJ/Qk7Od1yznXv4q+tvG0HW9seUm4/prmpzpBqLsBsF37qcBOQ5RsQgfkdjV6GXkcFEQpk4QfOd+KZWKvtErQS4f2j+Jwdgbtdttb2H4QbCdS8EI5wxFCWHDEU7j62eFuD3vKz8IdoRV0KEsYZ4a4Ty22tujdm/MbyPsBsF13m0o5BKmRzic4F57PDEDcwd0vQgDzV7WQNKqHapdLMJJrL0vJiXCVYfpSVIVit1whLPYUxtP8AjLXUBIUkm7WIRPQg/tZRzyi4LwJAGayh2S+zkqwqvxuB3uSxVEqNWqkOBQhIOTfdzDZo8WxRUEQSW4kRE2TXz0RNlFXIF0zIjwu7pg2RWEljsgTJ8begW8jB5oTLuCsEao8WjS7k3M+AhjG1y0XafF5mQyao977bgIv6cLLY8rIZQyaU9GvZeVzS1ERDi0DzHszh8WnmGeR7Oq99IziQgfR+7HUXZnJbG0tLiaU/74pR0XYV/laG6/JIpi0zbsRGK18hKRYk1hZ5Yxsc3Fb4GaYWqE6+5vZhsWouV25jy5Ks6lRhhO6/I0Jg190eqCWJrRuaFTTMa1i3YxWGcvYaEp/uk1/f5qxFrOUyIMa39hrVZjPbaZKP6Ql5bjOYV7f128IV4k0N7w778alOssbl8Ul692J2Z4H8zruyISEWHE/fsP1gIxE/r9/mw2n/8Wgn5dzYXQsLy3oUgZIsLoNQSpvu3vouSquXDJrUHToZbs/g7Wg8GwYdfv6yLILTiGURfk2jYPLrf5UCotW+hrTa0O+y7XasNgYMGHAailLB7hWt36Fcjv0kaWenBZEvtAqqOfKquzpuXW7u7ACXEYWyxQTgT10HobzIUl4o5l9OeD9ZKCuLImzGdzB+hwhxj3ghJhYj4gv8id1Qz0jjZBP0J+8qbk0Bjafz9i3C8J1iugu+AsvyhWyK9mcV9/yFNnE1oj3HcLvC4yuSnq/EVDpuSQF8jvj9fJ65+6xfI8PhrfcWzxin02cgwLD24mBmAqI7fowQ0prKCw0yd+KFDKTmAtsPjwG73j1Czs6rHI1hfsjFggDpzuEpsvFjMrvcJQNa+LscLve7IxG30rrn5qF6iH2kpgqzce3wEtXlEuezKUV5PhYGC/Pj7e3cZDz9P0W1DiFFMdCGj3lYzvt7fx2K+RN4pYhHOqM8Qsahz3Ism6kMPsDsGWy64/5goNO4evHW6M3auj2Gu54Csgf317Zxt+tLB3UYsg+a5LRL+197bJO2O9ZnU3lX/nleeJA72+xXS3W/3BU8z9/S0psv7Cxy7saVDC7vlNPvFBXVG54foziY/rKMbuR+v3dc6ye7P7xzbpSLsXmcQeytPtfknv+yneBYX7de+PrdDwwbEXycRBdBOEnqcP9ynm9tF9O04cUsffzg9YPzba9vi//wMVOT3V/ZoLIwAAAABJRU5ErkJggg==) 0 0 no-repeat;
+    content: "";
+    display: block;
+    height: 88px;
+    width: 87px
+}
+
+.bana-app .layout-wrap .introduce .description p {
+    font-size: 20.5px
+}
+
+.bana-app .layout-wrap .introduce .description p:nth-child(2) {
+    padding-top: 34px
+}
+
+.bana-app .layout-wrap .introduce .description span {
+    color: var(--primary-color)
+}
+
+.bana-app .layout-wrap .introduce .app-function-list {
+    background: #f6f7f7;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px
+}
+
+.bana-app .layout-wrap .introduce .app-function-list .list-item {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 37px 0 40px;
+    text-align: center;
+    -webkit-transform: skew(-.1deg);
+    transform: skew(-.1deg)
+}
+
+.bana-app .layout-wrap .introduce .app-function-list .list-item img {
+    display: block;
+    margin: 0 auto 23px
+}
+
+.bana-app .layout-wrap .introduce .app-function-list .list-item span {
+    color: var(--primary-color)
+}
+
+.bana-app .app-benefit {
+    margin-top: 146px
+}
+
+.bana-app .app-benefit .contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 30px
+}
+
+.bana-app .app-benefit .contents .benefit-list {
+    display: flex;
+    gap: 20px
+}
+
+.bana-app .app-benefit .contents .benefit-list.first .list-item {
+    height: 352px
+}
+
+.bana-app .app-benefit .contents .benefit-list.last .list-item {
+    height: 329px;
+    position: relative
+}
+
+.bana-app .app-benefit .contents .benefit-list.last .list-item .icon-app {
+    align-items: center;
+    background: #b88f63;
+    border-radius: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 18.5px;
+    font-style: normal;
+    font-weight: 900;
+    height: 66px;
+    justify-content: center;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 66px
+}
+
+.bana-app .app-benefit .contents .benefit-list .list-item {
+    align-items: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    font-size: 18.5px;
+    font-weight: 700;
+    padding-top: 59px;
+    text-align: center;
+    width: 100%
+}
+
+.bana-app .app-benefit .contents .benefit-list .list-item h4 {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 22px;
+    margin: 30px 0 24px
+}
+
+.bana-app .app-benefit .contents .benefit-list .list-item p {
+    font-size: 18.5px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+.bana-app .app-benefit .contents .benefit-list .list-item p span {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    -webkit-transform: skew(-.1deg);
+    transform: skew(-.1deg)
+}
+
+.bana-app .app-benefit .contents .app-qr {
+    align-items: flex-end;
+    background: #f6f7f7;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 44px 0
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap .title {
+    color: #000;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 26px
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap form {
+    display: flex;
+    margin-top: 19px
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap form input {
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+    font-family: NanumSquare,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    height: 56px;
+    text-indent: 19px;
+    width: 309px
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap form input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: 700
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap form input::placeholder {
+    color: #999;
+    font-weight: 700
+}
+
+.bana-app .app-benefit .contents .app-qr .input-wrap form .submit {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18.5px;
+    font-weight: 700;
+    height: 56px;
+    text-indent: 0;
+    width: 110px
+}
+
+.bana-app .app-benefit .contents .app-qr .scan {
+    background: var(--primary-color);
+    padding: 0 8px 8px;
+    text-align: center
+}
+
+.bana-app .app-benefit .contents .app-qr .scan p {
+    color: #fff;
+    font-size: 18.5px;
+    font-weight: 700
+}
+
+.bana-app .app-benefit .contents .app-qr .scan img {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 4px
+}
+
+.bana-app .app-info {
+    margin-bottom: 171px;
+    margin-top: 162px
+}
+
+.bana-app .app-info .app-info-image {
+    margin-left: 31px;
+    margin-top: 50px;
+    min-height: 500px;
+    position: relative
+}
+
+.bana-app .app-info .app-info-image.active img {
+    opacity: 1
+}
+
+.bana-app .app-info .app-info-image.active img:first-child {
+    transition-delay: 1s
+}
+
+.bana-app .app-info .app-info-image.active img:nth-child(3) {
+    left: 144px
+}
+
+.bana-app .app-info .app-info-image.active img:nth-child(4) {
+    left: 418px
+}
+
+.bana-app .app-info .app-info-image.active img:nth-child(5) {
+    left: 696px
+}
+
+.bana-app .app-info .app-info-image img {
+    opacity: 0;
+    position: absolute;
+    transition: 1s ease
+}
+
+.bana-app .app-info .app-info-image img:first-child {
+    left: -31px;
+    top: 59px
+}
+
+.bana-app .app-info .app-info-image img:nth-child(2) {
+    position: static
+}
+
+.bana-app .app-info .app-info-image img:nth-child(3),.bana-app .app-info .app-info-image img:nth-child(4),.bana-app .app-info .app-info-image img:nth-child(5) {
+    left: 0;
+    top: 34px
+}
+
+.bana-app .app-info .app-info-description {
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: space-between;
+    margin-left: 46px;
+    margin-top: 97px
+}
+
+.bana-app .app-info .app-info-description div {
+    position: relative
+}
+
+.bana-app .app-info .app-info-description div p {
+    -webkit-transform: skew(-.1deg);
+    transform: skew(-.1deg)
+}
+
+.bana-app .app-info .app-info-description div:before {
+    background: var(--primary-color);
+    content: "";
+    height: 0;
+    left: 4px;
+    position: absolute;
+    top: -141px;
+    transition: 1s ease;
+    transition-delay: .4s;
+    width: 1px;
+    z-index: -1
+}
+
+.bana-app .app-info .app-info-description.active div:before {
+    height: 128px
+}
+
+.bana-app .app-info .app-info-description div:after {
+    background: var(--primary-color);
+    border-radius: 100%;
+    content: "";
+    height: 9px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: -17px;
+    transition: 1s ease;
+    width: 9px;
+    z-index: -1
+}
+
+.bana-app .app-info .app-info-description.active div:after {
+    opacity: 1;
+    transition-delay: 1.5s
+}
+#contents {
+    z-index: auto
+}
+
+#btn_top {
+    display: block;
+    z-index: 50
+}
+/*  */
+h1 {
+    margin: 0
+}
+
+button {
+    font-family: inherit
+}
+
+img {
+    aspect-ratio: attr(width) /attr(height)
+}
+
+.foot_copy {
+    line-height: 1
+}
+
+/* @media */
+@media screen and (max-height:1000px) {
+    .popup {
+        margin: 150px 0 50px
+    }
+}
+
+@media (max-width:360px) {
+    html {
+        font-size: 11px
+    }
+}
+
+@media (min-width:361px) and (max-width:399px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media (min-width:400px) and (max-width:439px) {
+    html {
+        font-size: 13px
+    }
+}
+
+@media (min-width:440px) and (max-width:479px) {
+    html {
+        font-size: 14px
+    }
+}
+
+@media (min-width:480px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media (min-width:480px) and (max-width:519px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media (min-width:520px) and (max-width:559px) {
+    html {
+        font-size: 16px
+    }
+}
+
+@media (min-width:560px) and (max-width:599px) {
+    html {
+        font-size: 17px
+    }
+}
+
+@media (min-width:600px) and (max-width:639px) {
+    html {
+        font-size: 18px
+    }
+}
+
+@media (min-width:640px) and (max-width:679px) {
+    html {
+        font-size: 19px
+    }
+}
+
+@media (min-width:680px) and (max-width:719px) {
+    html {
+        font-size: 20px
+    }
+}
+
+@media (min-width:720px) and (max-width:759px) {
+    html {
+        font-size: 21px
+    }
+}
+
+@media (min-width:760px) and (max-width:799px) {
+    html {
+        font-size: 22px
+    }
+}
+
+@media (min-width:800px) and (max-width:839px) {
+    html {
+        font-size: 23px
+    }
+}
+
+@media (min-width:840px) and (max-width:879px) {
+    html {
+        font-size: 24px
+    }
+}
+
+@media (min-width:880px) {
+    html {
+        font-size: 25px
+    }
+}
+/*  */
+
+/*  */
+</style>
 <body>
-    <!-- 상단 메뉴바 공통 수정 영역 시작 -->
-    <header>
-        <div class="inner">
-            <h1 class="logo"><a href="#"><img 
-                src="https://www.banapresso.com/from_open_storage?ws=fprocess&amp;file=banapresso/open/logo/h_logo_3138e3904929.png"
-                alt="호랭다방"></a></h1>
-            <nav>
-            <ul class="menu-list">
-                <li class="list-item depth"><a href="banapresso"><span>소개</span></a>
-                    <ul class="i-depth-view">
-                        <li class="introd"><a href="banapresso"><span>브랜드 소개</span></a></li>
-                        <li class="introd"><a href="app"><span>앱 소개</span></a></li>
-                    </ul>
-                </li>
-                <li class="list-item"><a href="menu"><span>메뉴</span></a></li>
-                <li class="list-item"><a href="store"><span>매장 찾기</span></a></li>
-                <li class="list-item"><a href="news"><span>소식</span></a></li>
-                <li class="list-item"><a href="recruit"><span>채용</span></a></li>
-                <li class="list-item depth "><a href="/app"><span>직가맹점</span></a>
-                    <ul class="f-depth-view">
-                        <li class="fran"><a href="franchise/compete"><span>브랜드 경쟁력</span></a></li>
-                        <li class="fran"><a href="franchise/interior"><span>인테리어 특장점</span></a></li>
-                        <li class="fran"><a href="store/partner"><span>직영점 입점제안</span></a></li>
-                        <li class="fran"><a href="franchise/partner"><span>가맹점 창업문의</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-            </nav>
-        </div>
-        <a class="btn_franchisee" href="franchise/partner"></a>
-    </header>
-    <!-- 상단 메뉴바 공통 수정 영역 끝 -->
-    <!-- 메인 컨텐츠 시작 -->
-    <main>
-        <div class="horang-app">
-            <div class="title-wrap">
-                <h2 class="title">HORANG APP</h2>
-            </div>
-            <div class="layout-wrap">
-                <div class="introduce">
-                    <div class="description">
-                        <p>호랭다방 공식 모바일 앱은 고객님께서<br>보다 편리하게 호랭다방을 <br>이용하실 수 있도록 돕는 서비스입니다.<br></p>
-                        <p>호랭앱을 설치하면<br>기다리지 않고 원하는 시간에 <span>음료 선주문/후픽업 가능</span>하며<br><span>스탬프 및 포인트 실시간
-                                적립내역</span>및<br>매장과 SNS 등에서 진행되는 온ㆍ오프라인 이벤트 안내 등<br>다양한 정보 확인이 가능합니다.</p><img
-                            class="" src="./resources/img/Introduction_app/i-splash.png"
-                            alt=""><img class=""
-                            src="./resources/img/Introduction_app/i-appicon.png" alt=""><img
-                            class="" src="./resources/img/Introduction_app/i-cup.png" alt="">
+<div id="root">
+    <div class="App">
+        <div id="wrap" class="warp_app">
+            <div id="contents">
+                <header width="100%" id="header" class="sc-gLLvby dEzzaX sc-fHekdT hDfwhw">
+                    <div class="inner">
+                        <h1 class="logo"><a href="/"><img
+                                    src="https://www.banapresso.com/from_open_storage?ws=fprocess&amp;file=banapresso/open/logo/h_logo_3138e3904929.png"
+                                    alt="Banapresso"></a></h1>
+                        <ul class="menu-list">
+                            <li class="list-item depth "><a href="banapresso"><span>소개</span></a>
+                                <ul class="depth-view">
+                                    <li class="  "><a href="banapresso"><span>브랜드 소개</span></a></li>
+                                    <li class="  "><a href="app"><span>앱 소개</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="list-item  "><a href="menu"><span>메뉴</span></a></li>
+                            <li class="list-item  "><a href="store"><span>매장 찾기</span></a></li>
+                            <li class="list-item  "><a href="news"><span>소식</span></a></li>
+                            <li class="list-item  "><a href="recruit"><span>채용</span></a></li>
+                            <li class="list-item depth "><a href="/app"><span>직가맹점</span></a>
+                                <ul class="depth-view">
+                                    <li class="  "><a href="franchise/compete"><span>브랜드 경쟁력</span></a></li>
+                                    <li class="  "><a href="franchise/interior"><span>인테리어 특장점</span></a></li>
+                                    <li class="  "><a href="store/partner"><span>직영점 입점제안</span></a></li>
+                                    <li class="  "><a href="franchise/partner"><span>가맹점 창업문의</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><a class="btn_franchisee" href="/franchise/partner"></a>
+                </header>
+                <div class="bana-app">
+                    <div class="page-top-visual app"></div>
+                    <div class="title-wrap">
+                        <h2 class="title">BANA APP</h2>
                     </div>
-                    <ul class="app-function-list">
-                        <li class="list-item"><img class=""
-                                src="./resources/img/Introduction_app/i-moible-pickup.png" alt="">모바일로 주문, 결제 후<br>매장에서 바로<span>PICK
-                                UP</span></li>
-                        <li class="list-item"><img class=""
-                                src="./resources/img/Introduction_app/i-stemp-point.png" alt=""><span>스탬프 및 포인트</span><br>실시간 적립내역 확인
-                            가능</li>
-                        <li class="list-item"><img class=""
-                                src="./resources/img/Introduction_app/i-event.png" alt="">매장 및 SNS에서 진행되는<br><span>이벤트를 한 번에
-                                확인</span></li>
-                        <li class="list-item"><img class=""
-                                src="./resources/img/Introduction_app/i-community.png" alt="">자유롭게 의견을 나눌 수 있는<br><span>커뮤니티 공간
-                                존재</span></li>
-                    </ul>
-                </div>
-                <div class="app-benefit">
-                    <h3 class="title">APP 베네핏</h3>
-                    <div class="contents">
-                        <ul class="">
-                            <li class="list-item"><img class=""
-                                    src="./resources/img/Introduction_app/i-free-coupon.png" alt="">
-                                <h4>아메리카노 무료쿠폰 발급</h4>
-                                <p>제조음료 1잔 결제 시<br>스탬프 1개가 적립됩니다.<br><span>(스탬프 10개 적립 시 아메리카노 쿠폰이
-                                        지급됩니다.)</span></p>
-                            </li>
-                            <li class="list-item"><img class=""
-                                    src="./resources/img/Introduction_app/i-5-accumulate.png" alt="">
-                                <h4>구매 금액의 5% 적립</h4>
-                                <p>사이드 제품(브레드 &amp; 디저트 류) 구매 시<br>구매 금액의 5%가 적립됩니다.<br><span>1,500P 이상 적립 시,
-                                        호랭다방 모든메뉴 구매시<br>현금처럼 사용할 수 있습니다. (1포인트=1원)</span></p>
-                            </li>
-                        </ul>
-                        <ul class="">
-                            <li class="list-item"><img class=""
-                                    src="./resources/img/Introduction_app/i-discount-coupon.png" alt="">
-                                <h4>할인 쿠폰 지급</h4>
-                                <p>앱 설치 시<br>음료 및 디저트 할인 쿠폰이<br>지급됩니다.</p><i class="icon-app">APP<br>전용</i>
-                            </li>
-                            <li class="list-item"><img class=""
-                                    src="./resources/img/Introduction_app/i-bana-tag.png" alt="">
-                                <h4>호랭태그 이벤트 참여 가능</h4>
-                                <p>컵에 부착된<br>호랭태그에 사은품 당첨 시<br>사은품이 증정됩니다.</p><i class="icon-app">APP<br>전용</i>
-                            </li>
-                            <li class="list-item"><img class=""
-                                    src="./resources/img/Introduction_app/i-delivery-order.png" alt="">
-                                <h4>배달 주문 하기</h4>
-                                <p>집이나 회사에서 배달로<br>편리하게 호랭다방을 만날 수 있습니다.<br><span>(보유 쿠폰 사용 가능, 포인트 적립
-                                        가능)</span></p><i class="icon-app">APP<br>전용</i>
-                            </li>
-                        </ul>
-                        <div class="app-qr">
-                            <div class="input-wrap">
-                                <p class="title">앱 설치 문자 받기!</p>
-                                <form><input type="number" placeholder="(-)없이 휴대폰 번호 입력" value=""><input
-                                        class="submit" type="submit" value="URL 받기"></form>
+                    <div class="layout-wrap">
+                        <div class="introduce">
+                            <div class="description">
+                                <p>호랭다방 공식 모바일 앱은 고객님께서<br>보다 편리하게 호랭다방을 <br>이용하실 수 있도록 돕는 서비스입니다.<br></p>
+                                <p>호랭앱을 설치하면<br>기다리지 않고 원하는 시간에 <span>음료 선주문/후픽업 가능</span>하며<br><span>스탬프 및 포인트 실시간
+                                        적립내역</span>및<br>매장과 SNS 등에서 진행되는 온ㆍ오프라인 이벤트 안내 등<br>다양한 정보 확인이 가능합니다.</p><img
+                                    class="phone-image action fadeinbottom active" src="images/app/i-splash.png"
+                                    alt=""><img class="phone-icon-01 action fadeinright active"
+                                    src="images/app/i-appicon.png" alt=""><img
+                                    class="phone-icon-02 action fadeinleft active" src="images/app/i-cup.png" alt="">
                             </div>
-                            <div class="scan">
-                                <p>SCAN ME</p><img src="./resources/img/Introduction_app/app-qr.png" alt="">
+                            <ul class="app-function-list">
+                                <li class="list-item"><img class="action fadeinbottom active"
+                                        src="images/app/i-moible-pickup.png" alt="">모바일로 주문, 결제 후<br>매장에서 바로<span>PICK
+                                        UP</span></li>
+                                <li class="list-item"><img class="action fadeinbottom active"
+                                        src="images/app/i-stemp-point.png" alt=""><span>스탬프 및 포인트</span><br>실시간 적립내역 확인
+                                    가능</li>
+                                <li class="list-item"><img class="action fadeinbottom active"
+                                        src="images/app/i-event.png" alt="">매장 및 SNS에서 진행되는<br><span>이벤트를 한 번에
+                                        확인</span></li>
+                                <li class="list-item"><img class="action fadeinbottom active"
+                                        src="images/app/i-community.png" alt="">자유롭게 의견을 나눌 수 있는<br><span>커뮤니티 공간
+                                        존재</span></li>
+                            </ul>
+                        </div>
+                        <div class="app-benefit">
+                            <h3 class="title">APP 베네핏</h3>
+                            <div class="contents">
+                                <ul class="benefit-list first">
+                                    <li class="list-item"><img class="action fadeinbottom active"
+                                            src="images/app/i-free-coupon.png" alt="">
+                                        <h4>아메리카노 무료쿠폰 발급</h4>
+                                        <p>제조음료 1잔 결제 시<br>스탬프 1개가 적립됩니다.<br><span>(스탬프 10개 적립 시 아메리카노 쿠폰이
+                                                지급됩니다.)</span></p>
+                                    </li>
+                                    <li class="list-item"><img class="action fadeinbottom active"
+                                            src="images/app/i-5-accumulate.png" alt="">
+                                        <h4>구매 금액의 5% 적립</h4>
+                                        <p>사이드 제품(브레드 &amp; 디저트 류) 구매 시<br>구매 금액의 5%가 적립됩니다.<br><span>1,500P 이상 적립 시,
+                                                호랭다방 모든메뉴 구매시<br>현금처럼 사용할 수 있습니다. (1포인트=1원)</span></p>
+                                    </li>
+                                </ul>
+                                <ul class="benefit-list last">
+                                    <li class="list-item"><img class="action fadeinbottom active"
+                                            src="images/app/i-discount-coupon.png" alt="">
+                                        <h4>할인 쿠폰 지급</h4>
+                                        <p>앱 설치 시<br>음료 및 디저트 할인 쿠폰이<br>지급됩니다.</p><i class="icon-app">APP<br>전용</i>
+                                    </li>
+                                    <li class="list-item"><img class="action fadeinbottom active"
+                                            src="images/app/i-bana-tag.png" alt="">
+                                        <h4>호랭태그 이벤트 참여 가능</h4>
+                                        <p>컵에 부착된<br>호랭태그에 사은품 당첨 시<br>사은품이 증정됩니다.</p><i class="icon-app">APP<br>전용</i>
+                                    </li>
+                                    <li class="list-item"><img class="action fadeinbottom active"
+                                            src="images/app/i-delivery-order.png" alt="">
+                                        <h4>배달 주문 하기</h4>
+                                        <p>집이나 회사에서 배달로<br>편리하게 호랭다방을 만날 수 있습니다.<br><span>(보유 쿠폰 사용 가능, 포인트 적립
+                                                가능)</span></p><i class="icon-app">APP<br>전용</i>
+                                    </li>
+                                </ul>
+                                <div class="app-qr">
+                                    <div class="input-wrap">
+                                        <p class="title">앱 설치 문자 받기!</p>
+                                        <form><input type="number" placeholder="(-)없이 휴대폰 번호 입력" value=""><input
+                                                class="submit" type="submit" value="URL 받기"></form>
+                                    </div>
+                                    <div class="scan">
+                                        <p>SCAN ME</p><img src="images/app/app-qr.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-info">
+                            <h3 class="title">APP 이용 안내</h3>
+                            <div class="app-info-image action active"><img src="images/app/img-app-0.png" alt=""><img
+                                    src="images/app/img-app-1.png" alt=""><img src="images/app/img-app-2.png"
+                                    alt=""><img src="images/app/img-app-3.png" alt=""><img
+                                    src="images/app/img-app-4.png" alt=""></div>
+                            <div class="app-info-description action active">
+                                <div>
+                                    <p>앱스토어 / 구글 플레이스토어에서<br>'호랭다방' 검색해 다운받거나<br>QR 코드를 스캔해주세요.</p>
+                                </div>
+                                <div>
+                                    <p>회원가입 없이 휴대전화 인증만<br>마치면 앱을 사용할 수 있습니다.</p>
+                                </div>
+                                <div>
+                                    <p>가까운 매장을 설정한 후<br>음료를 주문하고 결제를 합니다.</p>
+                                </div>
+                                <div>
+                                    <p>결제 완료 후, 설정한 매장을 방문해<br>음료를 가져가시면 됩니다.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="app-info">
-                    <h3 class="title">APP 이용 안내</h3>
-                    <div class=""><img src="./resources/img/Introduction_app/img-app-0.png" alt=""><img
-                            src="./resources/img/Introduction_app/img-app-1.png" alt=""><img src="./resources/img/Introduction_app/img-app-2.png"
-                            alt=""><img src="./resources/img/Introduction_app/img-app-3.png" alt=""><img
-                            src="./resources/img/Introduction_app/img-app-4.png" alt=""></div>
-                    <div class="app-info-description action active">
-                        <div>
-                            <p>앱스토어 / 구글 플레이스토어에서<br>'호랭다방' 검색해 다운받거나<br>QR 코드를 스캔해주세요.</p>
-                        </div>
-                        <div>
-                            <p>회원가입 없이 휴대전화 인증만<br>마치면 앱을 사용할 수 있습니다.</p>
-                        </div>
-                        <div>
-                            <p>가까운 매장을 설정한 후<br>음료를 주문하고 결제를 합니다.</p>
-                        </div>
-                        <div>
-                            <p>결제 완료 후, 설정한 매장을 방문해<br>음료를 가져가시면 됩니다.</p>
-                        </div>
+            </div>
+            <footer width="100%" id="footer" class="sc-eDLJxc diMtfd">
+                <div width="1200px" class="sc-jTQDnj kylotc"><button type="button" id="btn_top"
+                        class="sc-blmETK cxRRkY btn_top_animation"><img src="images/app/btn_top.png" alt="TOP"
+                            loading="eager" width="68" height="68" class="sc-iBdmCd blJlrD"></button>
+                    <div class="foot_cont">
+                        <div class="foot_copy"><img src="images/app/footer_logo.png" alt="banapresso"></div>
+                        <ul class="foot_menu">
+                            <li class="privacy "><button class="sc-ifyqMZ dOCgaz">개인정보처리방침</button>
+                                <ul>
+                                    <li><a href="privacy">호랭다방앱 개인정보 처리방침</a></li>
+                                    <li><a href="companyPrivacy">기업사이트 개인정보 처리방침</a></li>
+                                </ul>
+                            </li>
+                            <li class="privacy "><button class="sc-ifyqMZ eCrSIr">이용약관</button>
+                                <ul>
+                                    <li><a href="termsofservice">이용약관</a></li>
+                                    <li><a href="termsofgift">충전식 상품권 약관</a></li>
+                                    <li><a href="termsofpoint">잔돈포인트 약관</a></li>
+                                </ul>
+                            </li>
+                            <li class="bold"><a href="recruit">채용</a></li>
+                            <li class="bold"><a href="store/partner">입점제안</a></li>
+                            <li class="bold"><a href="franchise/partner">가맹점 문의</a></li>
+                            <li class="bold module-layer-btn"><a href="#" role="none">제휴 문의</a></li>
+                            <li class="bold module-layer2-btn"><a href="#" role="none">매장 이용 및 고객 문의</a></li>
+                        </ul>
+                        <address><span><strong><b>상호명</b> : 주식회사 호랭플에프엔비</strong></span><span><b>대표자명</b> : 호랭이 <i
+                                    class="foot_bar">|</i><b>사업장 소재지</b> : 서울특별시 강남구 테헤란로 10길 9 7층 <i
+                                    class="foot_bar">|</i><b>사업자번호</b> : 000-00-00860</span><span><b>대표전화</b> :
+                                1811-1111 <i class="foot_bar">|</i><b>Fax </b> : 000-0000-0000 <i
+                                    class="foot_bar">|</i><b>이메일</b> : <a
+                                    href="mailto:qna@horangdabang.com">qna@horangdabang.com 또는 0000-0000</a></span><span
+                                class="text_copy">© horangple F&amp;B. All Rights Reserved.</span></address>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </main>
-<!-- 메인 컨텐츠 끝 -->
-<!-- 하단 시작 -->
-    <footer width="100%" id="footer">
-        <div width="1200px"><button type="button" id="btn_top"
-                class="btn_top_animation"><img src="./resources/img/Introduction_app/btn_top.png" alt="TOP"
-                    loading="eager" width="68" height="68" class=""></button>
-            <div class="foot_cont">
-                <div class="foot_copy"><img src="./resources/img/Introduction_app/footer_logo.png" alt="banapresso"></div>
-                <ul class="foot_menu">
-                    <li class="privacy "><button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
-                        <ul>
-                            <li><a href="privacy">호랭다방앱 개인정보 처리방침</a></li>
-                            <li><a href="companyPrivacy">기업사이트 개인정보 처리방침</a></li>
-                        </ul>
-                    </li>
-                    <li class="privacy "><button>이용약관</button>
-                        <ul>
-                            <li><a href="termsofservice">이용약관</a></li>
-                            <li><a href="termsofgift">충전식 상품권 약관</a></li>
-                            <li><a href="termsofpoint">잔돈포인트 약관</a></li>
-                        </ul>
-                    </li>
-                    <li class="bold"><a href="recruit">채용</a></li>
-                    <li class="bold"><a href="store/partner">입점제안</a></li>
-                    <li class="bold"><a href="franchise/partner">가맹점 문의</a></li>
-                    <li class="bold module-layer-btn"><a href="#" role="none">제휴 문의</a></li>
-                    <li class="bold module-layer2-btn"><a href="#" role="none">매장 이용 및 고객 문의</a></li>
-                </ul>
-                <address><span><strong><b>상호명</b> : 주식회사 호랭플에프엔비</strong></span><span><b>대표자명</b> : 호랭이 <i
-                            class="foot_bar">|</i><b>사업장 소재지</b> : 서울특별시 강남구 테헤란로 10길 9 7층 <i
-                            class="foot_bar">|</i><b>사업자번호</b> : 000-00-00860</span><span><b>대표전화</b> :
-                        1811-1111 <i class="foot_bar">|</i><b>Fax </b> : 000-0000-0000 <i
-                            class="foot_bar">|</i><b>이메일</b> : <a
-                            href="mailto:qna@horangdabang.com">qna@horangdabang.com 또는 0000-0000</a></span><span
-                        class="text_copy">© horangple F&amp;B. All Rights Reserved.</span></address>
-            </div>
-        </div>
-    </footer>
-    <!-- 하단 끝 -->
+    </div>
+</div>
+<script>
+const backToTopButton = document.querySelector("#btn_top");
+window.addEventListener("scroll", function(){
+    if(window.pageYOffset > 200){
+        backToTopButton.style.display = "block";
+    } else{
+        backToTopButton.style.display = "none";
+    }
+});
+backToTopButton.addEventListener("click", function(){
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+
+const title_1 = document.querySelector(".privacy>button");
+const content_1 = document.querySelector(".privacy ul");
+const content_2 = document.querySelector(".privacy:nth-child(2) ul");
+const title_2 = document.querySelector(".privacy:nth-child(2)>button");
+function handleClick(){
+    if(title_1.className === 'sc-ifyqMZ eCrSIr'){
+        title_1.className = 'sc-ifyqMZ dOCgaz';
+        content_1.style.display = "block";
+        content_2.style.display = "none";
+        if(content_2.style.display === "none"){
+            title_2.className = 'sc-ifyqMZ eCrSIr';
+        }
+    } else if(title_1.className === 'sc-ifyqMZ dOCgaz'){
+        title_1.className = 'sc-ifyqMZ eCrSIr';
+        content_1.style.display = "none";
+    }
+}
+title_1.addEventListener('click', handleClick);
+function handleClick2(){
+    if(title_2.className === 'sc-ifyqMZ eCrSIr'){
+        title_2.className = 'sc-ifyqMZ dOCgaz';
+        content_2.style.display = "block";
+        content_1.style.display = "none";
+        if(content_1.style.display === "none"){
+            title_1.className = 'sc-ifyqMZ eCrSIr';
+        }
+    } else if(title_2.className === 'sc-ifyqMZ dOCgaz'){
+        title_2.className = 'sc-ifyqMZ eCrSIr';
+        content_2.style.display = "none";
+    }
+}
+title_2.addEventListener('click', handleClick2);
+</script>
 </body>
 </html>
