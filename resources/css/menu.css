@@ -239,7 +239,7 @@ header .menu-list .list-item.depth:hover .depth-view a:hover {
 }
 
 .page-top-visual {
-    background: #d9ccbb url(/resources/img/menu/menu-top-visual.45cf0e7117d728f653eb.png);
+    background: #d9ccbb url(/resources/img/menu/menu-top-visual.45cf0e7117d728f653eb.png) 50% no-repeat;
     height: 216px;
     width: 100%;
 }
