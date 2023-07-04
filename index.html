@@ -730,7 +730,6 @@
             flex-shrink: 0;
             height: 100%;
             position: relative;
-            /* transition-property: transform; */
             /* width: 100%; */
         }
 
@@ -758,6 +757,20 @@
             width: 200px;
         }
 
+        .main-menu .contents-wrap .menu-swiper .swiper-slide .product {
+            opacity: 0;
+            -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+            transition: 1s ease
+        }
+
+        .main-menu .contents-wrap .menu-swiper .swiper-slide.swiper-slide-active .product,
+        .main-menu .contents-wrap .menu-swiper .swiper-slide.swiper-slide-next .product {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
         .main-menu .contents-wrap .menu .product-wrap .name-wrap .ko-name {
             color: #666;
             font-size: 20px;
@@ -769,20 +782,6 @@
             font-size: 12px;
             font-weight: 900;
         }
-
-        /* .swiper-button-prev {
-            background: url(//resources/img/index/index07.png) no-repeat;
-            width: 100%;
-            height: 100%;
-            text-indent: -9999px;
-        }
-
-        .swiper-button-next {
-            background: url(//resources/img/index/index08.png) no-repeat;
-            width: 100%;
-            height: 100%;
-            text-indent: -9999px;
-        } */
 
         .swiper-button-prev,
         .swiper-button-next {
@@ -943,8 +942,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next first"></div>
+                                <div class="swiper-button-prev first"></div>
                             </div>
                         </div>
                     </div>
@@ -1019,8 +1018,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next second"></div>
+                                <div class="swiper-button-prev second"></div>
                             </div>
                         </div>
                     </div>
@@ -1094,8 +1093,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next third"></div>
+                                <div class="swiper-button-prev third"></div>
                             </div>
                         </div>
                     </div>
@@ -1170,8 +1169,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next fourth"></div>
+                                <div class="swiper-button-prev fourth"></div>
                             </div>
                         </div>
                     </div>
@@ -1342,10 +1341,12 @@
 <script>
     var swiper = new Swiper('.swiper.first', {
         loop: true,
+        loopAdditionalSlides : 1,
         slidesPerView: 2,
+        spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next.first',
+            prevEl: '.swiper-button-prev.first',
         },
         autoplay: {
             delay: 3000,
@@ -1355,10 +1356,12 @@
 
     new Swiper('.swiper.second', {
         loop: true,
+        loopAdditionalSlides : 1,
         slidesPerView: 2,
+        spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next.second',
+            prevEl: '.swiper-button-prev.second',
         },
         autoplay: {
             delay: 3000,
@@ -1368,10 +1371,12 @@
 
     new Swiper('.swiper.third', {
         loop: true,
+        loopAdditionalSlides : 1,
         slidesPerView: 2,
+        spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next.third',
+            prevEl: '.swiper-button-prev.third',
         },
         autoplay: {
             delay: 3000,
@@ -1381,10 +1386,12 @@
 
     new Swiper('.swiper.fourth', {
         loop: true,
+        loopAdditionalSlides : 1,
         slidesPerView: 2,
+        spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next.fourth',
+            prevEl: '.swiper-button-prev.fourth',
         },
         autoplay: {
             delay: 3000,
