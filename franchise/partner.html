@@ -645,14 +645,14 @@ a {
                             <td>
                                 <select id="offer_name4" onchange="categoryChange(this)">
                                     <option value>시/도 (필수)</option>
-                                    <option value="con1">서울특별시</option>
-                                    <option value="con2">인천광역시</option>
-                                    <option value="con3">대전광역시</option>
-                                    <option value="con3">광주광역시</option>
-                                    <option value="con4">울산광역시</option>
+                                    <option value="a">서울특별시</option>
+                                    <option value="b">인천광역시</option>
+                                    <option value="c">대전광역시</option>
+                                    <option value="d">광주광역시</option>
+                                    <option value="e">울산광역시</option>
                                 </select>
                                 <select id="offer_name4">
-                                    <option value>시/구/군 (필수)</option>
+                                    <option>시/구/군 (필수)</option>
                                 </select>
                                 <select id="offer_name">
                                     <option value>읍/면/동 (선택)</option>
@@ -673,7 +673,7 @@ a {
                             </td>
                         </tr>
                         <div class="topt">
-                            <a href="#"><img src="/resources/img/directfranchise_compete/btn_top.png"></a>
+                            <a id="MOVE_TOP_BIN" href="#"><img src="/resources/img/directfranchise_compete/btn_top.png"></a>
                         </div>
                     </tbody>
                 </table>
@@ -775,10 +775,22 @@ a {
         window.scrollTo({top: 0, behavior: "smooth"});
         }); */
 
-        function btntop(){
-
-            window.scrollTo({top: 0, behavior: "smooth"});  
-        }
+        /* $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 0){
+                    $('#MOVE_TOP_BIN').fadeIn();
+                }else{
+                    $('#MOVE_TOP_BIN').fadeOut();
+                }
+            });
+            $("#MOVE_TOP_BIN").click(function(){
+                $('html, boby').animate({
+                    scrollTop : 0
+                }, 100);
+                return false;
+            });
+        }) */
+        
    </script>
 
 </body>
