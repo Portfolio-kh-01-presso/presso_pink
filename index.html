@@ -7,7 +7,7 @@
     <title>바나프레소</title>
     <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <style>
         .idEnbl {
             width: 100%;
@@ -568,7 +568,8 @@
             width: 1138px;
         }
 
-        .main-menu:nth-of-type(2) .contents-wrap, .main-menu:nth-of-type(4) .contents-wrap {
+        .main-menu:nth-of-type(2) .contents-wrap,
+        .main-menu:nth-of-type(4) .contents-wrap {
             flex-direction: row-reverse;
             padding: 0 62px 0 0;
         }
@@ -661,29 +662,130 @@
             color: #677d9d;
         }
 
+        .main-menu .contents-wrap .menu-swiper {
+            overflow: hidden;
+            padding: 20px 62px;
+            position: relative;
+            width: 680px;
+        }
+
+        .main-menu .contents-wrap .menu-swiper:after,
+        .main-menu .contents-wrap .menu-swiper:before {
+            background: #98EECC;
+            content: "";
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            z-index: 9;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(2) .contents-wrap .menu-swiper:before {
+            background: #D0F5BE;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(3) .contents-wrap .menu-swiper:before {
+            background: #FBFFDC;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(4) .contents-wrap .menu-swiper:before {
+            background: #A4907C;
+        }
+
+        .main-menu .contents-wrap .menu-swiper:before {
+            left: 0;
+            width: 62px;
+        }
+
         .swiper {
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .swiper-wrapper {
+            box-sizing: content-box;
+            display: flex;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .main-menu .contents-wrap .menu-swiper .swiper-slide {
+            width: 330px;
+            margin-right: 20px;
+            display: flex;
+        }
+
+        .swiper-slide {
+            flex-shrink: 0;
+            height: 100%;
+            position: relative;
+            /* transition-property: transform; */
+            /* width: 100%; */
+        }
+
+        .main-menu .contents-wrap .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap {
+            align-items: center;
+            background: #fff;
+            box-shadow: 6.4px 7.7px 12px 0 rgba(0, 0, 0, .15);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: 330px;
+            justify-content: center;
+            text-align: center;
+            width: 330px;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap .product {
+            /* transition: 1s ease; */
             width: 200px;
         }
 
-        .swiper-slide>img{
-            width: 200px;
+        .main-menu .contents-wrap .menu .product-wrap .name-wrap .ko-name {
+            color: #666;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap .name-wrap .en-name {
+            color: #666;
+            font-size: 12px;
+            font-weight: 900;
         }
 
         /* .swiper-button-prev {
-            background: url(/resources/img/index/index07.png) no-repeat;
+            background: url(//resources/img/index/index07.png) no-repeat;
             width: 100%;
             height: 100%;
             text-indent: -9999px;
         }
 
         .swiper-button-next {
-            background: url(/resources/img/index/index08.png) no-repeat;
+            background: url(//resources/img/index/index08.png) no-repeat;
             width: 100%;
             height: 100%;
             text-indent: -9999px;
         } */
 
-        .swiper-button-prev, .swiper-button-next {
+        .swiper-button-prev,
+        .swiper-button-next {
             color: gray;
         }
     </style>
@@ -784,13 +886,61 @@
                                 </div>
                                 <a href="/menu.html" class="more-btn" role="none">더보기</a>
                             </div>
-                            <div class="swiper first">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index05.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index06.png">
+                            <div class="menu-swiper">
+                                <div class="swiper first">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index05.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수크리미라떼</p>
+                                                            <p class="en-name">Sweet Corn Creamy Latte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index06.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수바나치노</p>
+                                                            <p class="en-name">Sweet Corn Banaccino</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index05.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수크리미라떼</p>
+                                                            <p class="en-name">Sweet Corn Creamy Latte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index06.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수바나치노</p>
+                                                            <p class="en-name">Sweet Corn Banaccino</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -812,19 +962,61 @@
                                 </div>
                                 <a href="/menu.html" class="more-btn" role="none">더보기</a>
                             </div>
-                            <div class="swiper second">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index09.png" style="width: 200px; height: 200px;">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index10.png" style="width: 200px; height: 200px;">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index11.png" style="width: 200px; height: 200px;">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index12.png" style="width: 200px; height: 200px;">
+                            <div class="menu-swiper">
+                                <div class="swiper second">
+                                    <div class="swiper-wrapper" style="width: 330px; margin-right: 20px;">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index09.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">딸기 코코스무디</p>
+                                                            <p class="en-name">Strawberry Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index10.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">피스타치오 코코스무디</p>
+                                                            <p class="en-name">Pistachio Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index11.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">플레인요거트 코코스무디</p>
+                                                            <p class="en-name">Plain Yogurt Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index12.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">망고요거트 코코스무디</p>
+                                                            <p class="en-name">Mango Yogurt Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -845,13 +1037,61 @@
                                 </div>
                                 <a href="/menu.html" class="more-btn" role="none">더보기</a>
                             </div>
-                            <div class="swiper third">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index13.png" style="width: 200px; height: 200px;">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index14.png" style="width: 200px; height: 200px;">
+                            <div class="menu-swiper">
+                                <div class="swiper third">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index13.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">문경오미자티</p>
+                                                            <p class="en-name">Munkyeong Omija Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index14.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">하동매실피치티</p>
+                                                            <p class="en-name">Hadong Plum Peach Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index13.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">문경오미자티</p>
+                                                            <p class="en-name">Munkyeong Omija Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index14.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">하동매실피치티</p>
+                                                            <p class="en-name">Hadong Plum Peach Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -873,13 +1113,61 @@
                                 </div>
                                 <a href="/menu.html" class="more-btn" role="none">더보기</a>
                             </div>
-                            <div class="swiper fourth">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index15.png" style="width: 200px; height: 200px;">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="resources/img/index/index16.png" style="width: 200px; height: 200px;">
+                            <div class="menu-swiper">
+                                <div class="swiper fourth">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index15.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">수박생과일쥬스</p>
+                                                            <p class="en-name">Watermelon Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index16.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">토마토생과일쥬스</p>
+                                                            <p class="en-name">Tomato Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index15.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">수박생과일쥬스</p>
+                                                            <p class="en-name">Watermelon Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index16.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">토마토생과일쥬스</p>
+                                                            <p class="en-name">Tomato Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
@@ -891,12 +1179,12 @@
                 <footer width="100%" id="footer" class="sc-eDLJxc diMtfd">
                     <div width="1200px" class="sc-jTQDnj kylotc">
                         <button type="button" id="btn_top" class="sc-blmETK eNxgBZ btn_top_animation">
-                            <img src="/resources/img/menu/btn_top.png" alt="TOP" loading="eager" width="68" height="68"
+                            <img src="//resources/img/menu/btn_top.png" alt="TOP" loading="eager" width="68" height="68"
                                 class="sc-iBdmCd blJlrD">
                         </button>
                         <div class="foot_cont">
                             <div class="foot_copy">
-                                <img src="/resources/img/menu/footer_logo.png" alt="banapresso">
+                                <img src="//resources/img/menu/footer_logo.png" alt="banapresso">
                             </div>
                             <ul class="foot_menu">
                                 <li class="privacy">
@@ -1054,42 +1342,54 @@
 <script>
     var swiper = new Swiper('.swiper.first', {
         loop: true,
-        slidesPerView: 1,
-
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
     });
 
     new Swiper('.swiper.second', {
         loop: true,
-        slidesPerView: 1,
-
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
     });
 
     new Swiper('.swiper.third', {
         loop: true,
-        slidesPerView: 1,
-
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
     });
 
     new Swiper('.swiper.fourth', {
         loop: true,
-        slidesPerView: 1,
-
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
     });
 </script>
 
