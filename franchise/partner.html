@@ -216,8 +216,7 @@ th {
     padding: 15px;
 }
 
-#offer_name,
-#offer_hp {
+#offer_name,#offer_hp,#offer_name4 {
     font-size: 18px;
     padding: 0 18px;
     width: 260px;
@@ -229,7 +228,7 @@ th {
     height: 48px;
 }
 
-.inp_control {
+#inp_control {
     width: 300px;
     height: 54px;
 }
@@ -347,7 +346,7 @@ ul {
     left: -9999px;
     /* background: rgba(226, 226, 226, 0.466); */
     background: white;
-    width: 97px;
+    width: 82px;
     padding: 0 10px 10px 10px;
     font-size: 11px;
     font-weight: 100;
@@ -475,6 +474,11 @@ footer>ul>li:last-child {
 a {
     text-decoration: none;
 }
+.topt{
+    position: fixed;
+    bottom: 100px;
+    right: 10%;
+}
 </style>
 <body>
     <header>
@@ -598,7 +602,7 @@ a {
                                 <label>이름<span class="red"> *</span></label>
                             </th>
                             <td>
-                                <input type="text" name="name" id="offer_name">
+                                <input type="text" name="name" id="offer_name1">
                             </td>
                         </tr>
                         <tr>
@@ -611,7 +615,7 @@ a {
                                 <div>
                                     <input type="text" name="email" id="offer_name1"><span>@</span>
                                     <input type="text" name="email" id="offer_name">
-                                    <select class="inp_control">
+                                    <select id="inp_control" onchange="seletBoxChange(this.value)">
                                         <option value>직접입력</option>
                                         <option value="naver.com">naver.com</option>
                                         <option value="nate.com">nate.com</option>
@@ -639,15 +643,15 @@ a {
                                 </label>
                             </th>
                             <td>
-                                <select id="offer_name">
+                                <select id="offer_name4" onchange="categoryChange(this)">
                                     <option value>시/도 (필수)</option>
-                                    <option value="서울특별시">서울특별시</option>
-                                    <option value="인천광역시">인천광역시</option>
-                                    <option value="대전광역시">대전광역시</option>
-                                    <option value="광주광역시">광주광역시</option>
-                                    <option value="울산광역시">울산광역시</option>
+                                    <option value="con1">서울특별시</option>
+                                    <option value="con2">인천광역시</option>
+                                    <option value="con3">대전광역시</option>
+                                    <option value="con3">광주광역시</option>
+                                    <option value="con4">울산광역시</option>
                                 </select>
-                                <select id="offer_name">
+                                <select id="offer_name4">
                                     <option value>시/구/군 (필수)</option>
                                 </select>
                                 <select id="offer_name">
@@ -668,6 +672,9 @@ a {
                                 </div>
                             </td>
                         </tr>
+                        <div class="topt">
+                            <a href="#"><img src="/resources/img/directfranchise_compete/btn_top.png"></a>
+                        </div>
                     </tbody>
                 </table>
             </div>
@@ -734,9 +741,46 @@ a {
 
         function footMenuToggle(){
             $(this).next().toggle();
-            
+            if($(this).parent().next().children("ul").css("display")==="block"){
+            $(this).parent().next().children("ul").toggle();
+            }
+         if($(this).parent().prev().children("ul").css("display")==="block"){
+            $(this).parent().prev().children("ul").toggle();
+            }
+        }
+
+        
+        var seletBoxChange =function(value){
+            console.log(value)
+            $("#offer_name").val(value)
+        }
+
+        function categoryChange(e){
+            const state =document.getElementById("state")
+            const con11 = ["서1","서1"]
+            const con22 = ["서2","서1"]
+            const con33 = ["서3","서1"]
+            const con44 = ["서4","서1"]
+
+            if(e.value=="con1"){
+                add = cont11
+            }
+        }
+
+        /* $('#buttop').on("click",function(){
+            $('html , boby').animate({scrollTop:0},'400')
+            return false;
+        }) */
+        /* backToTopButton.addEventListener("click", function(){
+        window.scrollTo({top: 0, behavior: "smooth"});
+        }); */
+
+        function btntop(){
+
+            window.scrollTo({top: 0, behavior: "smooth"});  
         }
    </script>
+
 </body>
 
 </html>
