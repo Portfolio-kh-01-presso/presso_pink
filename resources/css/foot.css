@@ -1,0 +1,90 @@
+
+footer {
+    background: #fff;
+    border-top: 1px solid #cecece;
+    padding: 60px 0 50px;
+    position: relative
+}
+
+footer .foot_cont {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px
+}
+
+footer .foot_cont address span {
+    color: #333;
+    display: block;
+    font-size: 15px;
+    line-height: 1.8
+}
+
+footer .foot_cont address span b {
+    color: #333;
+    font-weight: 400
+}
+
+footer .foot_cont address span strong b {
+    font-weight: 700
+}
+
+footer .foot_cont .foot_bar {
+    display: inline-block;
+    font-style: italic;
+    height: 10px;
+    line-height: 11px;
+    margin: 0 15px;
+    width: 1px
+}
+
+footer .foot_cont a {
+    color: #333
+}
+
+footer .foot_cont .foot_copy {
+    margin-bottom: 10px
+}
+
+.foot_menu,
+.foot_menu>li {
+    vertical-align: top
+}
+
+.foot_menu>li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 20px;
+    position: relative
+}
+
+.foot_menu>li:first-child {
+    margin-left: 0
+}
+
+.foot_menu>li>a {
+    display: block;
+    font-size: 15px;
+    line-height: 41px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out
+}
+
+.foot_menu>li>a:hover {
+    color: #000;
+    font-weight: 700
+}
+
+.foot_menu>li.bold {
+    font-weight: 700
+}
+
+.foot_menu .module-layer-btn {
+    cursor: pointer
+}
+
+.foot_copy {
+    line-height: 1
+}
