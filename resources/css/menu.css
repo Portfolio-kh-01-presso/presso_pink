@@ -125,7 +125,7 @@ legend {
 header {
     height: 93px;
     position: static;
-    z-index: 1000
+    z-index: 1000;
 }
 
 header,
