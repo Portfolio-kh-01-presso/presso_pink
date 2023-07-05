@@ -46,13 +46,9 @@
      }
      function footMenuToggle() {
         $(this).next().toggle();
-        if ($(this).parent().next().children("ul").css("display") === "block") {
-            $(this).parent().next().children("ul").toggle();
+            $(this).parent().next().children("ul").css("display","none");
+            $(this).parent().prev().children("ul").css("display","none");
         }
-        if ($(this).parent().prev().children("ul").css("display") === "block") {
-            $(this).parent().prev().children("ul").toggle();
-        }
-    }
     function scroll_EffectHandler() {
         console.log("scroll_Effect 실행됨");
         $(".scrollEffect").each(function (i) {
@@ -399,7 +395,7 @@
         footer ul>li>ul{
             position: absolute;
             background-color: white;
-            top: 100%;
+            bottom: 40px;
             border: 1px solid rgb(116, 113, 113);
             list-style-type: none;
             width: 260px;
@@ -427,14 +423,14 @@
         footer img{
             position: absolute;
             z-index: -10;
-            bottom: 200px;
+            bottom: 160px;
         }
         footer>ul>li:last-child{
             margin-bottom: 50px;
         }
         #btn_top{
-            position: absolute;
-            bottom: -200px;
+            position: fixed;
+            bottom: 100px;
             right: 100px;
         }
     </style>
