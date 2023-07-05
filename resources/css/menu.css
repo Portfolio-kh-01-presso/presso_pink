@@ -117,6 +117,11 @@ legend {
     width: 0;
 }
 
+::selection {
+    background-color: #62edc6;
+    color: #fff;
+}
+
 #contents {
     position: relative;
     z-index: auto;
