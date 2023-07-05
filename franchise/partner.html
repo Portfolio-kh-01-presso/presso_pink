@@ -606,7 +606,7 @@ a {
                                 <label>이름<span class="red"> *</span></label>
                             </th>
                             <td>
-                                <input type="text" name="name" id="offer_name1">
+                                <input type="text" name="mname" id="offer_name1">
                             </td>
                         </tr>
                         <tr>
@@ -714,7 +714,7 @@ a {
         <ul class="foot_menu">
             <li><button type="button">개인정보처리방침</button>
                 <ul>
-                    <li><a href="/privacy/privacy.html">바나프레소앱 개인정보 처리방침</a></li><!--
+                    <li><a href="/privacy/privacy.html">호랭다방앱 개인정보 처리방침</a></li><!--
                     --><li><a href="/privacy/companyPrivacy.html">기업사이트 개인정보 처리방침</a></li>
                 </ul>
             </li>
@@ -744,11 +744,13 @@ a {
 
         function footMenuToggle(){
             $(this).next().toggle();
-            if($(this).parent().next().children("ul").css("display")==="block"){
-            $(this).parent().next().children("ul").toggle();
+
+        if($(this).parent().next().children("ul").css("display")==="block"){
+                $(this).parent().next().children("ul").toggle();
             }
+
          if($(this).parent().prev().children("ul").css("display")==="block"){
-            $(this).parent().prev().children("ul").toggle();
+                $(this).parent().prev().children("ul").toggle();
             }
         }
 
@@ -794,16 +796,17 @@ a {
             });
         }) */
         const backToTopButton = document.querySelector("#btn_top");
-    window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", function () {
         if (window.pageYOffset > 200) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
         }
         });
-    backToTopButton.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
          });
+
 
    </script>
 </body>
