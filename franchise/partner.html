@@ -806,6 +806,16 @@ a {
         backToTopButton.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
          });
+         $("#buttona").click(sumbitHandler);
+         function sumbitHandler(){
+            var hpp = $("[name=hp]").val();
+            var regEx_hpp = /^[0-9]+$/;
+            if(!regEx_hpp.test(hpp)){
+            alert("숫자만 입력하세요")
+            $("[name=hp]").focus;
+            return
+             }
+         }
 
 
    </script>
