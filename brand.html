@@ -46,9 +46,13 @@
      }
      function footMenuToggle() {
         $(this).next().toggle();
-            $(this).parent().next().children("ul").css("display","none");
-            $(this).parent().prev().children("ul").css("display","none");
+        if ($(this).parent().next().children("ul").css("display") === "block") {
+            $(this).parent().next().children("ul").toggle();
         }
+        if ($(this).parent().prev().children("ul").css("display") === "block") {
+            $(this).parent().prev().children("ul").toggle();
+        }
+    }
     function scroll_EffectHandler() {
         console.log("scroll_Effect 실행됨");
         $(".scrollEffect").each(function (i) {
@@ -158,7 +162,7 @@
             font-weight: bold;
         }
         .pink{
-            color: #45e0a2;
+            color: #f1658a;
         }
         p{
             font-size: 20px;
@@ -285,17 +289,17 @@
             top:-45px;            
         }
         main .color_introduce .description ul li:nth-child(1){
-            background-color: #98EECC;
+            background-color: #f1658a;
         }
         main .color_introduce .description ul li:nth-child(2){
-            background-color:#D0F5BE;
+            background-color:#feb0c0;
         }
         main .color_introduce .description ul li:nth-child(3){
-            background-color:#A4907C;
+            background-color:#f29ea3;
         }
         main .color_introduce .description ul li span{
             font-weight: bold;
-            color: black;
+            color: white;
             padding-left: 20px;
             line-height: 190px;
         }
@@ -395,7 +399,7 @@
         footer ul>li>ul{
             position: absolute;
             background-color: white;
-            bottom: 40px;
+            top: 100%;
             border: 1px solid rgb(116, 113, 113);
             list-style-type: none;
             width: 260px;
@@ -423,14 +427,14 @@
         footer img{
             position: absolute;
             z-index: -10;
-            bottom: 160px;
+            bottom: 200px;
         }
         footer>ul>li:last-child{
             margin-bottom: 50px;
         }
         #btn_top{
-            position: fixed;
-            bottom: 100px;
+            position: absolute;
+            bottom: -200px;
             right: 100px;
         }
     </style>
@@ -562,7 +566,7 @@
             <p>바쁜 일상 속에서 잠시 쉬어 갈 수 있는 장소가 되겠다는 브랜드 정체성을 컬러로 표현하였습니다.</p>
             <br>
             <ul>
-            <li class="scrollEffect"><span>호랭 민트 ㅣPantone 709C</span></li><li class="scrollEffect"><span>베이비 민트 ㅣPantone 1767C</span></li><li class="scrollEffect"><span>베이비 브라운 ㅣPantone 1775C</span></li>
+            <li class="scrollEffect"><span>호랭 핑크 ㅣPantone 709C</span></li><li class="scrollEffect"><span>베이비 핑크 ㅣPantone 1767C</span></li><li class="scrollEffect"><span>피치 핑크 ㅣPantone 1775C</span></li>
             </ul>
             </div>
         </div>
@@ -585,7 +589,7 @@
             <ul>
                 <li><img src="" class="comment1"><img src="/resources/img/Introduction_brand/baby_ethi.png" class="scrollEffect"><p class="name pink">에티ETHI</p><p><span class="favort pink">최애음료| </span class="tea"><span>생과일 쥬스</span></p></li>
                 <li><img src="" class="comment2"><img src="/resources/img/Introduction_brand/ethi.png" class="scrollEffect"><p class="name pink" >에티ETHI</p><p><span class="favort pink">최애음료| </span><span class="tea">아메리카노</span></p></li>
-                 <li><img src="" class="comment3"><img src="/resources/img/Introduction_brand/bokthi.png" class="scrollEffect"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
+                <li><img src="" class="comment3"><img src="/resources/img/Introduction_brand/bokthi.png" class="scrollEffect"><p class="name pink">복티 BOKTHI</p><p><span class="favort pink">최애음료 | </span><span class="tea">복숭아 아이스티</span></p></li>
             </ul>
         </div>
         <div class="teen_introduce">
