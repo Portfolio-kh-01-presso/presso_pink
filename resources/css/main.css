@@ -5278,7 +5278,7 @@ input::-ms-input-placeholder {
 }
 
 .store_search input:-internal-autofill-selected {
-    background-color: #f1648a
+    background-color: #62edc6
 }
 
 textarea:-moz-placeholder {
@@ -5323,7 +5323,7 @@ select::-ms-expand {
 }
 
 ::selection {
-    background-color: #f1648a;
+    background-color: #62edc6;
     color: #fff
 }
 
@@ -5395,7 +5395,7 @@ header .menu-list .list-item a {
 }
 
 header .menu-list .list-item a:after {
-    border-bottom: 2px solid #f1648a;
+    border-bottom: 2px solid #62edc6;
     bottom: -5px;
     content: "";
     left: 0;
@@ -5405,7 +5405,7 @@ header .menu-list .list-item a:after {
 }
 
 header .menu-list .list-item:hover>a {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 700
 }
 
@@ -5493,7 +5493,7 @@ header nav #gnb>li>a span {
 }
 
 header nav #gnb>li>a span:before {
-    background: #f1648a;
+    background: #62edc6;
     bottom: -40px;
     box-sizing: content-box;
     content: "";
@@ -5533,7 +5533,7 @@ header nav #gnb .nav_partner a:hover span:before {
 .warp_partner #gnb .nav_partner>a,
 .warp_recruit #gnb .nav_recruit>a,
 .warp_store #gnb .nav_store>a {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 700
 }
 
@@ -5619,7 +5619,7 @@ header nav #gnb .nav_franchisee a {
 }
 
 #gnb .depth li a:hover {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 700
 }
 
@@ -5827,7 +5827,7 @@ footer .foot_cont .foot_copy {
 .layer-contents-wrap .layer-confirm-btn {
     border: 0;
     border-top: 1px solid #000;
-    color: #f1648a;
+    color: #62edc6;
     cursor: pointer;
     font-family: NanumSquare, sans-serif;
     font-size: 24px;
@@ -5974,7 +5974,7 @@ footer .foot_cont .foot_copy {
 }
 
 .btn_franchisee .number {
-    border-top: 1px solid #fd7ead;
+    border-top: 1px solid #62edc6;
     font-size: 20px;
     font-weight: 700;
     padding: 15px 0 0
@@ -6334,7 +6334,7 @@ footer .foot_cont .foot_copy {
 
 .info_tab_cont {
     background: #fff;
-    border: 3px solid #f1648a;
+    border: 3px solid #62edc6;
     border-radius: 7px;
     display: block;
     height: 307px;
@@ -6381,7 +6381,7 @@ footer .foot_cont .foot_copy {
 }
 
 .info_tab_cont strong em {
-    color: #f1648a;
+    color: #62edc6;
     font-style: italic
 }
 
@@ -6534,7 +6534,7 @@ footer .foot_cont .foot_copy {
 }
 
 .bana_logo p em {
-    color: #f1648a
+    color: #62edc6
 }
 
 .bana_logo ul {
@@ -6810,7 +6810,7 @@ footer .foot_cont .foot_copy {
 }
 
 .bana_character h4 {
-    color: #f1648a;
+    color: #62edc6;
     font-size: 26px;
     font-weight: 400;
     line-height: 28px;
@@ -6824,7 +6824,7 @@ footer .foot_cont .foot_copy {
 }
 
 .bana_character dl dt {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 700;
     width: 90px
 }
@@ -7330,7 +7330,7 @@ footer .foot_cont .foot_copy {
 }
 
 .menu_info .menu_top {
-    border-bottom: 2px solid #f1648a;
+    border-bottom: 2px solid #62edc6;
     padding-bottom: 10px;
     position: relative
 }
@@ -7342,7 +7342,7 @@ footer .foot_cont .foot_copy {
 }
 
 .menu_info .menu_top .tit span {
-    color: #f1648a;
+    color: #62edc6;
     display: block;
     font-size: 15px;
     font-weight: 400
@@ -7509,14 +7509,14 @@ footer .foot_cont .foot_copy {
 }
 
 .prev_next>:hover {
-    border-color: #f1648a
+    border-color: #62edc6
 }
 
 .prev_next .btn_next:hover:after,
 .prev_next .btn_next:hover:before,
 .prev_next .btn_prev:hover:after,
 .prev_next .btn_prev:hover:before {
-    background: #f1648a
+    background: #62edc6
 }
 
 .prev_next .btn_prev:before {
@@ -7815,7 +7815,7 @@ footer .foot_cont .foot_copy {
 
 .store_list ul li a:hover:before,
 .store_list ul li.on a:before {
-    background: #f1648a;
+    background: #62edc6;
     opacity: .7
 }
 
@@ -7854,12 +7854,12 @@ footer .foot_cont .foot_copy {
 .store_list ul {
     scrollbar-arrow-color: #f0f0f0;
     scrollbar-Track-Color: #f0f0f0;
-    scrollbar-base-color: #f1648a;
-    scrollbar-Face-Color: #f1648a;
-    scrollbar-3dLight-Color: #f1648a;
-    scrollbar-DarkShadow-Color: #f1648a;
-    scrollbar-Highlight-Color: #f1648a;
-    scrollbar-Shadow-Color: #f1648a
+    scrollbar-base-color: #62edc6;
+    scrollbar-Face-Color: #62edc6;
+    scrollbar-3dLight-Color: #62edc6;
+    scrollbar-DarkShadow-Color: #62edc6;
+    scrollbar-Highlight-Color: #62edc6;
+    scrollbar-Shadow-Color: #62edc6
 }
 
 .store_list ul::-webkit-scrollbar {
@@ -7869,7 +7869,7 @@ footer .foot_cont .foot_copy {
 
 .store_list ul::-webkit-scrollbar-button:end:increment,
 .store_list ul::-webkit-scrollbar-button:start:decrement {
-    background: #f1648a;
+    background: #62edc6;
     display: block;
     height: 0;
     width: 0
@@ -7881,7 +7881,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_list ul::-webkit-scrollbar-thumb {
-    background: #f1648a
+    background: #62edc6
 }
 
 .store_list ul li.opening img {
@@ -8190,7 +8190,7 @@ footer .foot_cont .foot_copy {
 
 .store_select select:focus,
 .store_select select:hover {
-    border: 2px solid #f1648a;
+    border: 2px solid #62edc6;
     margin: -1px 1px 0
 }
 
@@ -8199,7 +8199,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_select .btn_store {
-    background: #f1648a;
+    background: #62edc6;
     border-radius: 2px;
     color: #fff;
     font-size: 15px;
@@ -8210,7 +8210,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_select input[type=text] {
-    background: #f1648a;
+    background: #62edc6;
     border: 1px solid #f5f5f5;
     height: 39px;
     padding: 0 20px;
@@ -8219,7 +8219,7 @@ footer .foot_cont .foot_copy {
 
 .store_select input[type=text]:focus,
 .store_select input[type=text]:hover {
-    border: 2px solid #f1648a;
+    border: 2px solid #62edc6;
     height: 38px;
     margin: -1px -1px 0
 }
@@ -8244,7 +8244,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_cont .store_total b {
-    color: #f1648a;
+    color: #62edc6;
     font-size: 20px;
     padding: 0 5px
 }
@@ -8304,7 +8304,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_search {
-    background: #f1648a;
+    background: #62edc6;
     margin: 0;
     overflow: hidden;
     padding: 54px 0 0;
@@ -8317,7 +8317,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_search .search_box input {
-    background: #f1648a;
+    background: #62edc6;
     border: 0;
     border-bottom: 1px solid #fff;
     box-sizing: border-box;
@@ -8405,8 +8405,8 @@ footer .foot_cont .foot_copy {
 }
 
 .store_search .filter-wrap .filter-next-btn:after {
-    background: #f1648a;
-    box-shadow: 0 0 5px 5px #f1648a;
+    background: #62edc6;
+    box-shadow: 0 0 5px 5px #62edc6;
     content: "";
     display: block;
     height: 32px;
@@ -8547,8 +8547,8 @@ footer .foot_cont .foot_copy {
 }
 
 .search-filter-view .view-inner .view-filter-wrap .contents .view-filter-list .list-item.active {
-    border: 2px solid #f1648a;
-    color: #f1648a
+    border: 2px solid #62edc6;
+    color: #62edc6
 }
 
 .search-filter-view .btn-wrap {
@@ -8586,7 +8586,7 @@ footer .foot_cont .foot_copy {
 }
 
 .search-filter-view .btn-wrap .apply-btn {
-    color: #f1648a
+    color: #62edc6
 }
 
 .store_tab {
@@ -8754,7 +8754,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_list_box .store_shop_list .store_name_map b {
-    color: #f1648a;
+    color: #62edc6;
     display: block;
     font-size: 14px;
     line-height: 16px
@@ -8784,7 +8784,7 @@ footer .foot_cont .foot_copy {
 .store_list_box .store_shop_list .store_name_map .time .open_txt {
     border: 1px solid #f5afc1;
     border-radius: 3px;
-    color: #f1648a
+    color: #62edc6
 }
 
 .store_list_box .store_shop_list .store_name_map .time .close_txt,
@@ -8816,7 +8816,7 @@ footer .foot_cont .foot_copy {
 }
 
 .store_list_box .store_shop_list .store_name_map .time.open em {
-    color: #f1648a
+    color: #62edc6
 }
 
 .store_list_box .store_shop_list .store_name_map .time.close em {
@@ -8854,7 +8854,7 @@ footer .foot_cont .foot_copy {
 }
 
 .parking {
-    background-color: #f1648a;
+    background-color: #62edc6;
     border-radius: 4px;
     color: #fff;
     display: inline-block;
@@ -8921,13 +8921,13 @@ footer .foot_cont .foot_copy {
 .store_list_box .pagination li.on:hover,
 .store_list_box .pagination li:hover,
 .store_list_box .pagination li:hover a {
-    background: #f1648a;
+    background: #62edc6;
     color: #fff;
     text-decoration: none
 }
 
 .store_list_box .pagination .on {
-    background: #f1648a;
+    background: #62edc6;
     color: #fff;
     font-weight: 700
 }
@@ -9017,7 +9017,7 @@ footer .foot_cont .foot_copy {
 }
 
 .popup_store_info .pop_tit_store h3 span {
-    color: #f1648a;
+    color: #62edc6;
     display: inline-block;
     font-size: 14px;
     height: 16px;
@@ -9026,7 +9026,7 @@ footer .foot_cont .foot_copy {
 }
 
 .popup_store_info .pop_tit_store h3 b {
-    color: #f1648a
+    color: #62edc6
 }
 
 .popup_store_info .pop_tit_store h3 em {
@@ -9432,7 +9432,7 @@ footer .foot_cont .foot_copy {
 }
 
 .app_cont_box strong {
-    color: #f1648a
+    color: #62edc6
 }
 
 .app_method h3 {
@@ -9479,7 +9479,7 @@ footer .foot_cont .foot_copy {
 }
 
 .fc_pink {
-    color: #f1648a !important
+    color: #62edc6 !important
 }
 
 .app_info .app_app_benefit {
@@ -9595,7 +9595,7 @@ footer .foot_cont .foot_copy {
 .app_guide ol li:before {
     -webkit-animation: ping .8s ease-in-out infinite both;
     animation: ping .8s ease-in-out infinite both;
-    background: #f1648a;
+    background: #62edc6;
     border-radius: 100%;
     content: "";
     display: block;
@@ -9618,7 +9618,7 @@ footer .foot_cont .foot_copy {
 }
 
 .app_guide ol li:after {
-    background: linear-gradient(#f1648a, #f1648a);
+    background: linear-gradient(#62edc6, #62edc6);
     content: "";
     display: block;
     height: 144px;
@@ -9893,8 +9893,8 @@ footer .foot_cont .foot_copy {
 }
 
 .icon_point {
-    border: 1px solid #f1648a;
-    color: #f1648a;
+    border: 1px solid #62edc6;
+    color: #62edc6;
     display: inline-block;
     font-size: 15px;
     line-height: 1;
@@ -9912,7 +9912,7 @@ footer .foot_cont .foot_copy {
 
 .view_title {
     border-bottom: 1px solid #d2d2d2;
-    border-top: 2px solid #f1648a;
+    border-top: 2px solid #62edc6;
     padding: 28px 15px 30px
 }
 
@@ -10025,7 +10025,7 @@ footer .foot_cont .foot_copy {
 
 .list_ty1.fc_pk li,
 .list_ty1.fc_pk li a {
-    color: #f1648a
+    color: #62edc6
 }
 
 .tbl_col {
@@ -10855,7 +10855,7 @@ footer .foot_cont .foot_copy {
 }
 
 .pop_hd .dday {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 500;
     padding-left: 16px
 }
@@ -10894,7 +10894,7 @@ footer .foot_cont .foot_copy {
 }
 
 .popup .btn_ty1 {
-    background: #f1648a
+    background: #62edc6
 }
 
 .popup .btn_ty1,
@@ -10927,7 +10927,7 @@ footer .foot_cont .foot_copy {
 }
 
 .board_view .bul_tit:before {
-    background: #f1648a;
+    background: #62edc6;
     content: "";
     height: 5px;
     left: 0;
@@ -11205,7 +11205,7 @@ footer .foot_cont .foot_copy {
 }
 
 .checks input[type=radio]:checked+label:after {
-    background: #f1648a;
+    background: #62edc6;
     border-radius: 100%;
     content: "";
     height: 12px;
@@ -11323,9 +11323,9 @@ footer .foot_cont .foot_copy {
 }
 
 #wrap .news_list .top .tag {
-    border: 1px solid #f1648a;
+    border: 1px solid #62edc6;
     border-radius: 4px;
-    color: #f1648a;
+    color: #62edc6;
     display: inline-block;
     float: left;
     font-size: 14px;
@@ -11427,7 +11427,7 @@ footer .foot_cont .foot_copy {
 }
 
 .open_ready dd strong {
-    color: #f1648a;
+    color: #62edc6;
     font-weight: 700
 }
 
@@ -11639,7 +11639,7 @@ footer .foot_cont .foot_copy {
 }
 
 #wrap .top_visual_txt p a {
-    color: #f1648a;
+    color: #62edc6;
     text-decoration: underline
 }
 
@@ -12212,7 +12212,7 @@ footer .foot_cont .foot_copy {
 }
 
 #wrap .fc_pink {
-    color: #f1648a !important
+    color: #62edc6 !important
 }
 
 #wrap .application_form {
@@ -12272,7 +12272,7 @@ footer .foot_cont .foot_copy {
 .low-cost-wrap .compare-table .head p {
     border-left: 1px solid #d2d2d2;
     box-sizing: border-box;
-    color: #f1648a;
+    color: #62edc6;
     font-size: 22px;
     font-weight: 800;
     height: 60px;
@@ -13669,7 +13669,7 @@ footer .foot_cont .foot_copy {
 }
 
 #wrap .application_form .btn_application {
-    background-color: #f1648a;
+    background-color: #62edc6;
     border-radius: 150px;
     color: #fff;
     font-family: NanumSquare, sans-serif;
@@ -13734,7 +13734,7 @@ footer .foot_cont .foot_copy {
 }
 
 #application_state .popup .pop_btm button {
-    background: #f1648a;
+    background: #62edc6;
     color: #fff;
     font-size: 20px;
     height: 62px;
@@ -13750,7 +13750,7 @@ footer .foot_cont .foot_copy {
 }
 
 #wrap .pop_btm button {
-    color: #f1648a;
+    color: #62edc6;
     font-size: 26px;
     font-weight: 700;
     height: 80px;
@@ -18031,7 +18031,7 @@ video {
 }
 
 .pop_btm button {
-    color: #f1648a;
+    color: #62edc6;
     font-size: 26px;
     font-weight: 700;
     height: 80px;
