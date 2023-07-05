@@ -14,6 +14,9 @@
 <style>
     @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
     @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+}
 body {
     width: 1654px;
     margin: 0;
@@ -474,7 +477,8 @@ footer>ul>li:last-child {
 a {
     text-decoration: none;
 }
-.topt{
+#btn_top{
+    border: none;
     position: fixed;
     bottom: 100px;
     right: 10%;
@@ -539,7 +543,7 @@ a {
             <nav>
                 <div id="menu">
                     <ul class="main1">
-                       <li id="pink"><a href="#">소개</a>
+                       <li id="pink"><a href="/brand.html">소개</a>
                             <ul class="main2">
                                 <li><a href="/brand.html">브랜드소개</a></li>
                                 <hr style="margin: 0 ;">
@@ -547,18 +551,18 @@ a {
                             </ul>
                         </li>
                         <li id="pink"><a href="/menu.html">메뉴</a></li>
-                        <li id="pink"><a href="#">매장찾기</a></li>
+                        <li id="pink"><a href="/store.html">매장찾기</a></li>
                         <li id="pink"><a href="/news.html">소식</a></li>
                         <li id="pink"><a href="/recruit.html">채용</a></li>
-                        <li id="pink"><a href="#">직가맹점</a>
+                        <li id="pink"><a href="/menu.html">직가맹점</a>
                             <ul class="main2" >
-                                <li><a href="#">브랜드 경쟁력</a></li>
+                                <li><a href="/franchise/compete.html">브랜드 경쟁력</a></li>
                                 <hr style="margin: 0 ;">
-                                <li><a href="#">인테리어 특장점</a></li>
+                                <li><a href="/franchise/interior.html">인테리어 특장점</a></li>
                                 <hr style="margin: 0 ;">
-                                <li><a href="#">직영점 입점제안</a></li>
+                                <li><a href="/store/partner.html">직영점 입점제안</a></li>
                                 <hr style="margin: 0 ;">
-                                <li><a href="/partner.html">가맹점 창업문의</a></li>
+                                <li><a href="/franchise/partner.html">가맹점 창업문의</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -645,14 +649,14 @@ a {
                             <td>
                                 <select id="offer_name4" onchange="categoryChange(this)">
                                     <option value>시/도 (필수)</option>
-                                    <option value="con1">서울특별시</option>
-                                    <option value="con2">인천광역시</option>
-                                    <option value="con3">대전광역시</option>
-                                    <option value="con3">광주광역시</option>
-                                    <option value="con4">울산광역시</option>
+                                    <option value="a">서울특별시</option>
+                                    <option value="b">인천광역시</option>
+                                    <option value="c">대전광역시</option>
+                                    <option value="d">광주광역시</option>
+                                    <option value="e">울산광역시</option>
                                 </select>
                                 <select id="offer_name4">
-                                    <option value>시/구/군 (필수)</option>
+                                    <option>시/구/군 (필수)</option>
                                 </select>
                                 <select id="offer_name">
                                     <option value>읍/면/동 (선택)</option>
@@ -672,9 +676,7 @@ a {
                                 </div>
                             </td>
                         </tr>
-                        <div class="topt">
-                            <a href="#"><img src="/resources/img/directfranchise_compete/btn_top.png"></a>
-                        </div>
+                           <button type="button" id="btn_top" ><img src="/resources/img/directfranchise_compete/btn_top.png"></button>
                     </tbody>
                 </table>
             </div>
@@ -730,10 +732,11 @@ a {
         --><li><a href="#" class="bold">매장 이용 및 고객문의</a></li>
         </ul>
         <ul>
-            <li class="bold">상호명: 주식회사 바나플에프엔비</li>
-            <li>대표자명 : 송민기 /사업장 소재지 : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층 /사업자번호 : 358-87-00860</li>
-            <li>대표전화 : 1811-1111 |Fax : 070-4512-0296 |이메일 : qna@banapresso.com 또는 1811-1111</li>
-            <li>© banaple F&B. All Rights Reserved.</li>
+            <li class="bold">상호명: 주식회사 호랭다방</li>
+            <li>대표자명 : 호랑이 /사업장 소재지 : 서울특별시 강남구 테헤란로 10길 9 그랑프리 빌딩 4F,5F,7F /사업자번호 : 851-87-00622</li>
+            <p></p>
+            <li>대표전화 : 1544-9970 |Fax : 070-1234-5678 |이메일 : qna@horangtearoom.com 또는 1544-9970</li>
+            <li>© horangtearoom F&B. All Rights Reserved.</li>
         </ul>
     </footer>
     <script>
@@ -775,12 +778,34 @@ a {
         window.scrollTo({top: 0, behavior: "smooth"});
         }); */
 
-        function btntop(){
-
-            window.scrollTo({top: 0, behavior: "smooth"});  
+        /* $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 0){
+                    $('#MOVE_TOP_BIN').fadeIn();
+                }else{
+                    $('#MOVE_TOP_BIN').fadeOut();
+                }
+            });
+            $("#MOVE_TOP_BIN").click(function(){
+                $('html, boby').animate({
+                    scrollTop : 0
+                }, 100);
+                return false;
+            });
+        }) */
+        const backToTopButton = document.querySelector("#btn_top");
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
         }
-   </script>
+        });
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+         });
 
+   </script>
 </body>
 
 </html>

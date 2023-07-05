@@ -2718,28 +2718,28 @@
                             <address>
                                 <span>
                                     <strong>
-                                        <b>상호명</b> : 주식회사 바나플에프엔비
+                                        <b>상호명</b> : 주식회사 호랭다방
                                     </strong>
                                 </span>
                                 <span>
-                                    <b>대표자명</b> : 송민기 
+                                    <b>대표자명</b> : 호랑이
                                     <i class="foot_bar">|</i>
-                                    <b>사업장 소재지</b> : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층 
+                                    <b>사업장 소재지</b> : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F
                                     <i class="foot_bar">|</i>
-                                    <b>사업자번호</b> : 358-87-00860
+                                    <b>사업자번호</b> : 851-87-00622
                                 </span>
                                 <span>
-                                    <b>대표전화</b> : 1811-1111 
+                                    <b>대표전화</b> : 1544-9970
                                     <i class="foot_bar">|</i>
-                                    <b>Fax </b> : 070-4512-0296 
+                                    <b>Fax </b> : 070-1234-5678
                                     <i class="foot_bar">|</i>
-                                    <b>이메일</b> : 
+                                    <b>이메일</b> :
                                     <a href="mailto:qna@banapresso.com">
-                                        qna@banapresso.com 또는 1811-1111
+                                        qna@horangtearoom.com 또는 1544-9970
                                     </a>
                                 </span>
                                 <span class="text_copy">
-                                    © banaple F&amp;B. All Rights Reserved.
+                                    © horangtearoom F&amp;B. All Rights Reserved.
                                 </span>
                             </address>
                         </div>
@@ -2912,6 +2912,7 @@
             elementList[25].addEventListener("click", function(){
                 document.querySelector(".menu_list_cont").style.display = "none";
                 menuViewContList[25].style.display = "block";
+                window.scrollTo({top: 2000});
             });
             document.querySelectorAll(".btn_area>a").forEach(item=>{
                 item.setAttribute("href","javascript:void(0)");
@@ -3200,6 +3201,31 @@
                 menuViewContList[0].style.display = "block";
                 window.scrollTo({top: 2000});
             });
+        }
+        for(var i=0; i<btnAreaList.length; i++){
+            (function(index) {
+                btnAreaList[index].addEventListener("click", function(){
+                    if(index >= 0 && index <= 2){
+                        window.scrollTo({top: 2258.666748046875});
+                    } else if(index >= 3 && index <= 5){
+                        window.scrollTo({top: 2848.666748046875});
+                    } else if(index >= 6 && index <= 7){
+                        window.scrollTo({top: 3438.666748046875});
+                    } else if(index >= 8 && index <= 10){
+                        window.scrollTo({top: 4028.666748046875});
+                    } else if(index >= 11 && index <= 13){
+                        window.scrollTo({top: 4618.66650390625});
+                    } else if(index >= 14 && index <= 16){
+                        window.scrollTo({top: 5208.66650390625});
+                    } else if(index >= 17 && index <= 19){
+                        window.scrollTo({top: 5798.66650390625});
+                    } else if(index >= 20 && index <= 22){
+                        window.scrollTo({top: 6388.66650390625});
+                    } else if(index >= 23 && index <= 25){
+                        window.scrollTo({top: 6978.66650390625});
+                    }
+                });
+            })(i);
         }
         var menuSidebarAnchorList = document.getElementsByClassName("menu-sidebar-anchor");
         var menuGroupList = document.getElementsByClassName("menu-group");
