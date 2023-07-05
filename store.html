@@ -1,11 +1,522 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>호랭다방 - 매장</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(loadedHandler); // loadedHandler라는 함수를, body의 document가 모두 구성된후 실행함.
+        function loadedHandler() {
+            $(".top_menu ul li a").hover(openTopMenu, closeTopMenu);
+            $(".top_menu ul li ul").hover(openTopMenu1, closeTopMenu1);
+            $(".foot_menu li button").on("click", footMenuToggle);
+            document.body.onscroll = scroll_EffectHandler;
+        }
+        function openTopMenu() {
+            $(this).next().css("display", "block");
+            $(this).css("color", "#62edc6");
+        }
+        function closeTopMenu() {
+            $(this).next().css("display", "none");
+            $(this).css("color", "black");
+        }
+        function openTopMenu1() {
+            $(this).css("display", "block");
+        }
+        function closeTopMenu1() {
+            $(this).css("display", "none");
+        }
+        function footMenuToggle() {
+            $(this).next().toggle();
+            if ($(this).parent().next().children("ul").css("display") === "block") {
+                $(this).parent().next().children("ul").toggle();
+            }
+            if ($(this).parent().prev().children("ul").css("display") === "block") {
+                $(this).parent().prev().children("ul").toggle();
+            }
+        }
+        function scroll_EffectHandler() {
+            console.log("scroll_Effect 실행됨");
+            $(".scrollEffect").each(function (i) {
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                if (bottom_of_window > bottom_of_element) {
+                    console.log($(this));
+                    $(this).animate({ opacity: 1 }, 700);
+                }
+            });
+        }
+
+    </script>
+    <!--body와 header에 대한-->
+    <style>
+        .scrollEffect {
+            opacity: 0;
+        }
+
+        body {
+            position: relative;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 1200px;
+        }
+
+        *::selection {
+            background-color: #62edc6;
+            color: #fff;
+        }
+
+        .Enquiries_for_membership {
+            z-index: 100;
+            position: fixed;
+            top: 150px;
+            right: 100px;
+        }
+
+        header {
+            width: 1200px;
+            margin-bottom: 50px;
+        }
+
+        header .top_logo a {
+            position: relative;
+            top: 15px;
+            left: 400px;
+        }
+
+        header .top_fixed {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.61);
+            z-index: 100;
+            position: fixed;
+            top: 0;
+        }
+
+        header .top_menu {
+            position: relative;
+            top: -30px;
+            left: 900px;
+        }
+
+        header .top_menu>ul {
+            width: 1000px;
+            height: 0px;
+            display: flex;
+            list-style-type: none;
+        }
+
+        header .top_menu ul>li {
+            width: 150px;
+            font-family: 'Nanum Gothic', sans-serif;
+            text-align: center;
+        }
+
+        header .top_menu ul li a {
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(116, 113, 113);
+        }
+
+        header .top_menu ul li ul {
+            background-color: white;
+            display: none;
+            border: 1px solid gainsboro;
+            border-radius: 4%;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        header .top_menu ul li ul li {
+            line-height: 40px;
+            height: 45px;
+            padding: 0;
+            margin: 0;
+        }
+
+        header .top_img {
+            z-index: -9999;
+            position: absolute;
+            margin: 58px 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .content p {
+            font-weight: 200;
+        }
+
+        .title p {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        p span {
+            font-weight: bold;
+        }
+
+        .pink {
+            color: #f1658a;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .history_introduce li,
+        .description p {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        main {
+            position: relative;
+            top: 400px;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .enter {
+            margin-bottom: 50px;
+        }
+
+        main .main_introduce img {
+            position: absolute;
+            top: 220px;
+            right: 0;
+        }
+
+        main .content p {
+            color: rgb(43, 42, 42);
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 0.8;
+        }
+
+        main .point_introduce .content ul {
+            box-sizing: 0;
+            padding: 0;
+            display: inline-block;
+            border: 1px solid black;
+            height: 320px;
+            width: 350px;
+            margin: 200px 0px;
+        }
+
+        main .point_introduce .content ul li {
+            font-size: 17px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: bold;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        main .point_introduce .content ul:nth-of-type(3) {
+            position: relative;
+            top: -20px;
+        }
+
+        main .point_introduce .content ul p {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: bold;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        main .point_introduce .content ul img {
+            margin: 20px 0px 20px 110px;
+        }
+
+        main .youtube_introduce {
+            margin: 200px 0;
+        }
+
+        main .bi_introduce ul {
+            box-sizing: border-box;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        main .bi_introduce ul li {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            box-sizing: border-box;
+            position: relative;
+            display: inline-block;
+            border: 1px solid black;
+            margin: 10px 0px 10px 5px;
+            width: 490px;
+            height: 170px;
+        }
+
+        main .bi_introduce ul li:first-of-type {
+            width: 1000px;
+        }
+
+        main .bi_introduce ul li .icon {
+            line-height: 40px;
+            height: 40px;
+            position: absolute;
+            color: white;
+            background-color: black;
+            top: 0;
+            left: 0;
+        }
+
+        main .bi_introduce ul li:first-child img {
+            display: inline-block;
+            margin: 60px 300px;
+        }
+
+        main .bi_introduce ul li:nth-child(2) img {
+            display: inline-block;
+            margin: 60px 200px;
+        }
+
+        main .bi_introduce ul li:nth-child(3) img {
+            display: inline-block;
+            margin: 60px 160px;
+        }
+
+        main .color_introduce {
+            margin: 200px 0;
+        }
+
+        main .color_introduce .description ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        main .color_introduce .description ul li {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 320.33px;
+            height: 120px;
+            margin: 30px 0;
+        }
+
+        main .bi_introduce ul li:nth-of-type(3) {
+            position: relative;
+            top: -45px;
+        }
+
+        main .color_introduce .description ul li:nth-child(1) {
+            background-color: #f1658a;
+        }
+
+        main .color_introduce .description ul li:nth-child(2) {
+            background-color: #feb0c0;
+        }
+
+        main .color_introduce .description ul li:nth-child(3) {
+            background-color: #f29ea3;
+        }
+
+        main .color_introduce .description ul li span {
+            font-weight: bold;
+            color: white;
+            padding-left: 20px;
+            line-height: 190px;
+        }
+
+        main .character_introduce ul {
+            margin: 80px;
+        }
+
+        main .character_introduce ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 20px;
+        }
+
+        main .character_introduce ul li p {
+            text-align: center;
+        }
+
+        main .character_introduce ul li:last-child img {
+            padding-left: 15px;
+        }
+
+        main .teen_introduce .description p span {
+            background-color: #ffe65a;
+        }
+
+        main .teen_introduce .description img {
+            margin: 40px 140px;
+        }
+
+        main .history_introduce {
+            margin: 80 0 0 -80px;
+        }
+
+        main .history_introduce .description ul img {
+            margin-bottom: 20px;
+        }
+
+        main .history_introduce .description ul li {
+            width: 380px;
+            list-style-type: none;
+        }
+
+        main .history_introduce .description .odd {
+            margin-left: 700px;
+        }
+
+        main .history_introduce .description .even img {
+            margin-left: 285px;
+        }
+
+        main .history_introduce .description .even {
+            box-sizing: border-box;
+            width: 376px;
+            text-align: right;
+        }
+    </style>
+    <!--footer에 대한-->
+    <style>
+        footer {
+            font-family: 'Nanum Gothic', sans-serif;
+            margin: 300px 0 200px 0;
+            padding: 0;
+            width: 1400px;
+        }
+
+        footer .foot_menu {
+            position: relative;
+            bottom: 0px;
+            z-index: 100;
+            height: 40px;
+        }
+
+        footer ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer>ul>li {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 0;
+        }
+
+        footer ul>li a {
+            color: rgb(77, 75, 75);
+            display: inline-block;
+            font-weight: bold;
+            font-size: 17px;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 0;
+        }
+
+        footer ul>li button {
+            color: rgb(77, 75, 75);
+            font-weight: bold;
+            font-size: 17px;
+            padding: 0;
+            border: none;
+            background-color: white;
+        }
+
+        footer .foot_menu>li:nth-of-type(1) {
+            width: 136px;
+            height: 23.4px;
+            z-index: 1;
+        }
+
+        footer .foot_menu>li:nth-of-type(2) {
+            width: 68px;
+            height: 23.4px;
+            z-index: 1;
+        }
+
+        footer ul>li>ul {
+            position: absolute;
+            background-color: white;
+            top: 100%;
+            border: 1px solid rgb(116, 113, 113);
+            list-style-type: none;
+            width: 260px;
+            height: 70px;
+            line-height: 1.5;
+            display: none;
+            padding: 0;
+            margin: 0;
+            text-align: start;
+        }
+
+        footer>ul>li:nth-child(2) ul {
+            z-index: 10;
+            width: 200px;
+            height: 100px;
+            margin: 0;
+        }
+
+        footer ul>li>ul>li {
+            margin: 5px;
+        }
+
+        footer ul>li>ul>li>a {
+            font-size: 15px;
+            margin: 0;
+            color: rgb(77, 75, 75);
+        }
+
+        footer img {
+            position: absolute;
+            z-index: -10;
+            bottom: 200px;
+        }
+
+        footer>ul>li:last-child {
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>준비중</h1>
+    <header>
+        <span class="top_logo">
+            <a href="/index.html"><img src="/resources/img/Introduction_brand/from_open_storage.png"></a>
+        </span>
+        <span class="top_menu">
+            <ul>
+                <li><a href="/brand.html" class="menu">소개</a>
+                    <ul class="menu">
+                        <li><a href="/brand.html">브랜드소개</a></li>
+                        <hr color="gainsboro" width="120px">
+                        <li><a href="/app.html">앱소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="/menu.html">메뉴</a></li>
+                <li><a href="/index.html">매장찾기</a></li>
+                <li><a href="/news.html">소식</a></li>
+                <li><a href="/recruit.html">채용</a></li>
+                <li><a href="/recruit.html" class="menu">직가맹점</a>
+                    <ul class="menu">
+                        <li><a href="/franchise/compete.html">브랜드 경쟁력</a></li>
+                        <hr color="gainsboro" width="120px">
+                        <li><a href="/franchise/interior.html">인테리어 특장점</a></li>
+                        <hr color="gainsboro" width="120px">
+                        <li><a href="/franchise/partner.html">가맹점 창업문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </span>
+    </header>
+        <div>
+            <img src="/resources/img/recruit/FIX.gif">
+        </div>
 </body>
+
 </html>
